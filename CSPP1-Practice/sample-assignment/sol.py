@@ -6,7 +6,7 @@
 
 def main():
     data = input()
-    print(int(data[0])+int(data[1]))
+    print(int(data[0])+int(data[3]))
 
 if __name__ == "__main__":
     main()
