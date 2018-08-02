@@ -1,10 +1,17 @@
-varA = 1
-varB = 2
-if ((type(varA) is str) or (type(varB) is str)):
-	print("Strings involved")
-elif ((varA) > (varB)):
-	print("Bigger")
-elif ((varA) == (varB)):
-	print("equal")
+'''
+
+Author: Chaitanya Prasad Reddy Puritipati
+@Date: 01-08-2018
+
+'''
+
+VARA = 1
+VARB = 2
+if ((isinstance(VARA) is str) or (isinstance(VARB) is str)):
+    print("Strings involved")
+elif VARA > VARB:
+    print("Bigger")
+elif VARA == VARB:
+    print("equal")
 else:
-	print("Smaller")
+    print("Smaller")
