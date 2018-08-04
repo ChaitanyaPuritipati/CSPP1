@@ -13,10 +13,16 @@ def main():
         dig_product = 0
     else:
         dig_product = 1
+        if temp_var < 0:
+            temp_var = abs(temp_var)
         while temp_var != 0:
             dig_remainder = temp_var % 10
             dig_product = dig_product * dig_remainder
             temp_var = temp_var//10
-    print(dig_product)
+    if int_input < 0:
+        dig_product = 0 - dig_product
+        print(dig_product)
+    else:
+        print(dig_product)
 if __name__ == "__main__":
     main()
