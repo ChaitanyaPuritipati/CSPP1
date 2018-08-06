@@ -9,7 +9,7 @@ def paying_debt(balance_num, annual_interest_rate, guess_num):
     balance_temp = balance_num
     i = 1
     while i <= 12:
-        mir_num = annual_interest_rate/12      
+        mir_num = annual_interest_rate/12
         mub_num = balance_temp - guess_num
         balance_temp = mub_num + (mir_num*mub_num)
         i = i+1
