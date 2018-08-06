@@ -2,7 +2,7 @@
 Author: Puritipati Chaitanya Prasad Reddy
 Date: 6-8-2018
 '''
-def paying_debt_in_Year(balance_num, annual_interest_rate, monthly_payment_rate):
+def paying_debt_in_year(balance_num, annual_interest_rate, monthly_payment_rate):
 	'''
 	Function is to calculate the remaining balance
 	'''
