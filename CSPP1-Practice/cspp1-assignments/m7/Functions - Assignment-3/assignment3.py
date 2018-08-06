@@ -26,11 +26,11 @@ def paying_debt_in_year(balance_num, annual_interest_rate):
     low_val = balance_num/12
     middle_val = (low_val + high_val) / 2.0
     while abs(paying_debt(balance_temp, annual_interest_rate, middle_val)) >= approx_num:
-        if approx_num < paying_debt(balance_temp, annual_interest_rate, middle_val):            
+        if approx_num < paying_debt(balance_temp, annual_interest_rate, middle_val):
             low_val = middle_val
         else:
             high_val = middle_val
-        middle_val = (low_val + high_val) / 2.0  
+        middle_val = (low_val + high_val) / 2.0
     k_num = middle_val
     return "Lowest Payment: "+str(round(k_num, 2))
 def main():
@@ -40,6 +40,6 @@ def main():
     input_num = input()
     input_num = input_num.split(' ')
     input_num = list(map(float, input_num))
-    print(paying_debt_in_year(input_num[0], input_num[1]))    
+    print(paying_debt_in_year(input_num[0], input_num[1]))
 if __name__ == "__main__":
     main()
