@@ -20,7 +20,7 @@ def paying_debt_in_year(balance_num, annual_interest_rate):
     Function to calculate lowest payment
     '''
     balance_temp = balance_num
-    approx_num = 0.01
+    approx_num = 0.03
     mir_num = annual_interest_rate/12.0
     high_val = (balance_num * (1 + mir_num)**12) / 12.0
     low_val = balance_num/12
