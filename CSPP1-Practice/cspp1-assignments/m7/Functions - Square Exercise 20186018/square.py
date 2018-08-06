@@ -2,7 +2,7 @@
 Author: Puritipati Chaitanya Prasad Reddy
 Date: 6-8-2018
 '''
-# Exercise: square
+# Exercise: square of a number
 # This function takes in one number and returns one number.
 def square(x_num):
     '''
