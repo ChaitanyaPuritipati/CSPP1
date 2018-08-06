@@ -13,7 +13,10 @@ def main():
     input_char = ""
     while input_char != 'c':
         print("Is your secret number "+str(avg_val)+"?")
-        input_char = input("Enter either 'h' or 'l or 'c'")
+        print("Enter 'h' to indicate the guess is too high.")
+        print("Enter 'l' to indicate the guess is too low.")
+        print("Enter 'c' to indicate I guessed correctly.")
+        input_char = input()
         if input_char in 'hlc':
             if input_char == 'h':
                 max_val = avg_val
