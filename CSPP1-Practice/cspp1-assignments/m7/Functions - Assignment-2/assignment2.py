@@ -9,7 +9,7 @@ def paying_debt(balance_num, annual_interest_rate, guess_num):
     balance_temp = balance_num
     i = 1
     while i <= 12:
-        mir_num = annual_interest_rate/12      
+        mir_num = annual_interest_rate/12
         mub_num = balance_temp - guess_num
         balance_temp = mub_num + (mir_num*mub_num)
         i = i+1
@@ -23,7 +23,7 @@ def paying_debt_in_year(balance_num, annual_interest_rate):
     aprroximation_val = 0.1
     step_val = 1
     guess_num = 0.0
-    while paying_debt(balance_temp, annual_interest_rate, guess_num*10) >= aprroximation_val:      
+    while paying_debt(balance_temp, annual_interest_rate, guess_num*10) >= aprroximation_val:
         guess_num = guess_num + step_val
     round_num = round(guess_num)
     return "Lowest Payment: "+str(round_num*10)
@@ -35,6 +35,5 @@ def main():
     input_num = input_num.split(' ')
     input_num = list(map(float, input_num))
     print(paying_debt_in_year(input_num[0], input_num[1]))
-    
 if __name__ == "__main__":
     main()
