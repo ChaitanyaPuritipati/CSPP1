@@ -8,7 +8,7 @@ def sum_of_digits(n_num):
     n is positive Integer
     returns: a positive integer, the sum of digits of n.
     '''
-    if n_num ==0:
+    if n_num == 0:
         return 0
     return (n_num%10) + sum_of_digits(n_num//10)
 def main():
@@ -19,4 +19,3 @@ def main():
     print(sum_of_digits(int(input_num)))
 if __name__ == "__main__":
     main()
-
