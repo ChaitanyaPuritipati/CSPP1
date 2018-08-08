@@ -18,22 +18,22 @@ def is_word_guessed(secret_word, letters_guessed):
         return True
     length_lettersguessed = len(letters_guessed)
     length_word = len(secret_word)
-    sum = 0
+    sum_count = 0
     temp = letters_guessed[:]
     for i in range(length_lettersguessed):
         if i in temp[0:i]:
             temp = letters_guessed[:]
-        else:   
+        else:
             if letters_guessed[i] in secret_word:
-                sum = sum + secret_word.count(letters_guessed[i])
-            if sum == length_word:
+                sum_count = sum_count + secret_word.count(letters_guessed[i])
+            if sum_count == length_word:
                 return True
-    if sum < length_word:
-        return False    
+    if sum_count < length_word:
+        return False
 
 def main():
     '''
-    Main function for the program   
+    Main function for the program
     '''
     user_input = input()
     if user_input:
