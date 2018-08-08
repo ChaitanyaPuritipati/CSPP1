@@ -16,15 +16,16 @@ def get_guessed_word(secret_word, letters_guessed):
     ln_secretword = len(secret_word)
     i = 0
     list_temp = []
-    while i <ln_secretword:
-    	list_temp[i] = '_'
+    while i < ln_secretword:
+    	list_temp.append('_')
     	i = i+1
     for i in range(len(letters_guessed)):
     	if letters_guessed[i] in secret_word:
     		for j in range(ln_secretword):
     			if letters_guessed[i] == secret_word[j]:
     				list_temp[j] = str(letters_guessed[i])
-    return list_temp						
+    output_string = ''.join(str(e) for e in list_temp)
+    return output_string					
 def main():
     '''
     Main function for current assignment
