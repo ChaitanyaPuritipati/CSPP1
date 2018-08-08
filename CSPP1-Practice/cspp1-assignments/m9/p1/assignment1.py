@@ -14,6 +14,8 @@ def is_word_guessed(secret_word, letters_guessed):
     returns: boolean, True if all the letters of secret_word are in letters_guessed;
       False otherwise
     '''
+    if len(secret_word) is 0:
+        return True
     length_lettersguessed = len(letters_guessed)
     length_word = len(secret_word)
     sum = 0
@@ -31,7 +33,7 @@ def is_word_guessed(secret_word, letters_guessed):
 
 def main():
     '''
-    Main function for the program
+    Main function for the program   
     '''
     user_input = input()
     if user_input:
