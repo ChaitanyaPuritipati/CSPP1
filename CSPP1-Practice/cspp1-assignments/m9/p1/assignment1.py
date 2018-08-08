@@ -15,7 +15,7 @@ def is_word_guessed(secret_word, letters_guessed):
       False otherwise
     '''
     if len(secret_word) is 0:
-        return True
+        return "True"
     length_lettersguessed = len(letters_guessed)
     length_word = len(secret_word)
     sum_count = 0
@@ -27,9 +27,9 @@ def is_word_guessed(secret_word, letters_guessed):
             if letters_guessed[i] in secret_word:
                 sum_count = sum_count + secret_word.count(letters_guessed[i])
             if sum_count == length_word:
-                return True
+                return "True"
     if sum_count < length_word:
-        return False
+        return "False"
 
 def main():
     '''
