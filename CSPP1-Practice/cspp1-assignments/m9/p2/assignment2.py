@@ -21,9 +21,9 @@ def get_guessed_word(secret_word, letters_guessed):
         i = i+1
     k = 0
     while k < len(letters_guessed):
-        if letters_guessed[i] in secret_word:
+        if letters_guessed[k] in secret_word:
             for j in range(ln_secretword):
-                if letters_guessed[i] == secret_word[j]:
+                if letters_guessed[k] == secret_word[j]:
                     list_temp[j] = str(letters_guessed[i])
         k = k + 1
     output_string = ''.join(str(c) for c in list_temp)
