@@ -30,7 +30,7 @@ def is_word_guessed(secret_word, letters_guessed):
                 return "True"
     if sum_count < length_word:
         return "False"
-
+    return "True"
 def main():
     '''
     Main function for the program
