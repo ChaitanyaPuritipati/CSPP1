@@ -9,8 +9,10 @@ def how_many(a_dict1):
 
     #returns: int, how many values are in the dictionary.
     '''
-    values = list(a_dict1.values())
-    return len(values)
+    counter_values = 0
+    for i in a_dict1:
+        counter_values = counter_values + len(a_dict1[i])
+    return counter_values
 def main():
     '''
     Main Function starts here
