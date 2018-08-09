@@ -11,6 +11,7 @@ def get_available_letters(letters_guessed):
     '''
     str_1 = "abcdefghijklmnopqrstuvwxyz"
     str_1 = list(str_1)
+    i = 0
     temp_letters = letters_guessed[:]
     while i < len(letters_guessed):
         if letters_guessed[i] in temp_letters[0:i]:
