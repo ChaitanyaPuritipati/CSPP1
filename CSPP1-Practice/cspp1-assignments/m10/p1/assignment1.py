@@ -16,7 +16,7 @@ def get_available_letters(letters_guessed):
     str_1 = list(str_1)
     temp_letters = letters_guessed[:]
     for i in range(len(letters_guessed)):
-        if letters_guesses[i] in temp_letters[0:i]:
+        if letters_guessed[i] in temp_letters[0:i]:
             temp_letters = letters_guessed[:]
         else:   
             str_1.remove(letters_guessed[i])
