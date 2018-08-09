@@ -20,7 +20,7 @@ def get_available_letters(letters_guessed):
             temp_letters = letters_guessed[:]
         else:   
             str_1.remove(letters_guessed[i])
-    str_1 = ''.join(str_1[e] for e in range(len(str_1)))
+    str_1 = ''.join(str_1(e) for e in range(len(str_1)))
     return str_1        
 def main():
     '''
