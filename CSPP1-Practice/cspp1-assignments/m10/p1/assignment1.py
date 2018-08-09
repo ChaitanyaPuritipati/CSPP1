@@ -1,11 +1,8 @@
 '''
-Exercise : Assignment-1
-implement the function get_available_letters that takes in one parameter -
-a list of letters, letters_guessed. This function returns a string
-that is comprised of lowercase English letters - all lowercase English letters
-that are not in letters_guessed
+Author: Puritipati Chaitanya Prasad Reddy
+Date: 9-8-2018
 '''
-
+#Exercise A1
 def get_available_letters(letters_guessed):
     '''
     :param letters_guessed: list, what letters have been guessed so far
@@ -15,13 +12,14 @@ def get_available_letters(letters_guessed):
     str_1 = "abcdefghijklmnopqrstuvwxyz"
     str_1 = list(str_1)
     temp_letters = letters_guessed[:]
-    for i in range(len(letters_guessed)):
+    while i < len(letters_guessed):
         if letters_guessed[i] in temp_letters[0:i]:
             temp_letters = letters_guessed[:]
-        else:   
+        else:
             str_1.remove(letters_guessed[i])
+        i = i+1    
     str_1 = ''.join(str(e) for e in str_1)
-    return str_1        
+    return str_1
 def main():
     '''
     Main function for the given program
