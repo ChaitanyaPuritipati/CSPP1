@@ -15,11 +15,11 @@ def get_available_letters(letters_guessed):
     str_1 = "abcdefghijklmnopqrstuvwxyz"
     str_1 = list(str_1)
     temp_letters = letters_guessed[:]
-    for i in letters_guessed:
-        if i in temp_letters[0:i]:
+    for i in range(letters_guessed):
+        if letters_guesses[i] in temp_letters[0:i]:
             temp_letters = letters_guessed[:]
         else:   
-            str_1.remove(i)
+            str_1.remove(letters_guessed[i])
     str_1 = ''.join(str_1(e) for e in range(len(str_1)))        
 def main():
     '''
