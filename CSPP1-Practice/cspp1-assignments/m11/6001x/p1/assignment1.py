@@ -1,9 +1,14 @@
 '''
+Author: Puritipati Chaitanya Prasad Reddy
+Date: 10-08-2018
+'''
+'''
 Exercise: Assignment-1
-The first step is to implement some code that allows us to calculate the score for a single word. The function get_word_score should accept as input a string of lowercase letters (a word) and return the integer score for that word, using the game's scoring rules.
+#The first step is to implement some code that allows us to calculate the score for a single word. 
+#The function get_word_score should accept as input a string of lowercase letters (a word) and return the integer score for that word, using the game's scoring rules.
 '''
 
-def get_word_score(word, n):
+def get_word_score(input_word, input_num):
     """
     Returns the score for a word. Assumes the word is a valid word.
 
@@ -23,24 +28,23 @@ def get_word_score(word, n):
     'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 'p': 3, 'q': 10, 'r': 1,\
     's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10\
     }
-    count = 0
-    ln = len(word)
-    
-    for i in word:
+    counter_val = 0
+    len_word = len(input_word)
+    for i in input_word:
         if i in SCRABBLE_LETTER_VALUES:
-            count = count + SCRABBLE_LETTER_VALUES[i]
-    count = count*ln    
-    if  ln == n:
-        count = count + 50    
-    return count         
+            counter_val = counter_val + SCRABBLE_LETTER_VALUES[i]
+    counter_val = counter_val*len_word    
+    if  len_word == input_num:
+        counter_val = counter_val + 50    
+    return counter_val         
 
 def main():
     '''
     Main function for the given problem
     '''
-    data = input()
-    data = data.split()
-    print(get_word_score(data[0], int(data[1])))
+    input_data = input()
+    input_data = input_data.split()
+    print(get_word_score(input_data[0], int(input_data[1])))
 
 
 if __name__ == "__main__":
