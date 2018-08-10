@@ -32,7 +32,7 @@ def main():
     n_data = input()
     a_dict = {}
     i_num = 0
-    while i < int(n_data):
+    while i_num < int(n_data):
         input_data = input()
         l_data = input_data.split()
         a_dict[l_data[0]] = int(l_data[1])
