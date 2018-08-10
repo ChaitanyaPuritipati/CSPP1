@@ -20,30 +20,30 @@ def isValidWord(word, hand, wordList):
     """
     count_word = 0
     for i in word:
-    	if i in hand:
-    		count_word = count_word + 1
+        if i in hand:
+            count_word = count_word + 1
     if count_word != len(word):
-    	return False		
+        return False        
     ln_wordlist = len(wordList)
     for i  in range(ln_wordlist):
-    	if word in wordList[i]:
-    		return True
-    return False		
+        if word in wordList[i]:
+            return True
+    return False        
 def main():
-	'''
-	Main function starts here
-	'''
-	word=input()
-	n=int(input())
-	adict={}
-	for i in range(n):
-		data=input()
-		l=data.split()
-		adict[l[0]]=int(l[1])
-	l2=input().split()
-	print(isValidWord(word,adict,l2))
-		
+    '''
+    Main function starts here
+    '''
+    word=input()
+    n=int(input())
+    adict={}
+    for i in range(n):
+        data=input()
+        l=data.split()
+        adict[l[0]]=int(l[1])
+    l2=input().split()
+    print(isValidWord(word,adict,l2))
+        
 
 
 if __name__== "__main__":
-	main()
+    main()
