@@ -18,6 +18,7 @@ def updateHand(hand, word):
     hand: dictionary (string -> int)    
     returns: dictionary (string -> int)
     """
+    word = list(word)
     for i in hand:
         if i in word:
             hand[i] = hand[i] - 1
