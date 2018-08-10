@@ -20,8 +20,9 @@ def main():
     i_num = 0
     while i_num < (int(n)) :
         input_data = input()
-        l_list=input_data.split()
+        l_list = input_data.split()
         a_dict[l_list[0]]=int(l_list[1])
+        i_num = i_num + 1
     print(calculate_handlen(a_dict))
 if __name__ == "__main__":
     main()
