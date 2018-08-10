@@ -29,13 +29,13 @@ def main():
     '''
     Main function starts here
     '''
-	n_data=input()
-	a_dict={}
-	for i in range(int(n_data)):
-		input_data=input()
-		l_data=input_data.split()
-		a_dict[l_data[0]]=int(l_data[1])
-	data_1=input()
-	print(update_hand(a_dict,data_1))
+    n_data=input()
+    a_dict={}
+    for i in range(int(n_data)):
+        input_data=input()
+        l_data=input_data.split()
+        a_dict[l_data[0]]=int(l_data[1])
+    data_1=input()
+    print(update_hand(a_dict,data_1))
 if __name__ == "__main__":
-	main()
+    main()
