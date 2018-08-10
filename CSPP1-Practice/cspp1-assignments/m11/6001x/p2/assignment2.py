@@ -23,7 +23,7 @@ def updateHand(hand, word):
     for i in range(len_word):
         if word[i] in hand:
             hand[word[i]] = hand[word[i]] - 1
-            word.remove(i)
+            word.remove(word[i])
     return hand        
 def main():
 	n=input()
