@@ -33,15 +33,14 @@ def main():
     '''
     Main function starts here
     '''
-    word=input()
-    n=int(input())
-    adict={}
-    for i in range(n):
-        data=input()
-        l=data.split()
-        adict[l[0]]=int(l[1])
-    l2=input().split()
-    print(isValidWord(word,adict,l2))
+    input_word = input()
+    n_num = int(input())
+    adict = {}
+    for i in range(n_num):
+        input_data = input()
+        l = input_data.split()
+        a_dict[l_list[0]]=int(l_list[1])
+    l_newlist=input().split()
+    print(isValidWord(input_word,a_dict,l_newlist))
 if __name__== "__main__":
     main()
-    
