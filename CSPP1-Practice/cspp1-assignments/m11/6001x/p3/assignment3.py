@@ -19,8 +19,8 @@ def isValidWord(word, hand, wordList):
     wordList: list of lowercase strings
     """
     count_word = 0
-    for i in word:
-        if i in hand:
+    for i_char in word:
+        if i_char in hand:
             count_word = count_word + 1
     if count_word != len(word):
         return False        
@@ -38,7 +38,7 @@ def main():
     adict = {}
     for i in range(n_num):
         input_data = input()
-        l = input_data.split()
+        l_list = input_data.split()
         a_dict[l_list[0]]=int(l_list[1])
     l_newlist=input().split()
     print(isValidWord(input_word,a_dict,l_newlist))
