@@ -26,7 +26,7 @@ def isValidWord(word, hand, wordList):
     	return False		
     ln_wordlist = len(wordList)
     for i  in range(ln_wordlist):
-    	if word in ln_wordlist[i]:
+    	if word in wordlist[i]:
     		return True
     return False		
 def main():
