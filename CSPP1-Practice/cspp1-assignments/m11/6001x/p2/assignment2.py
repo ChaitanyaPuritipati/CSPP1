@@ -31,7 +31,7 @@ def main():
     '''
     n_data = input()
     a_dict = {}
-    for i_num in range(int(n_data)):
+    for i in range(int(n_data)):
         input_data = input()
         l_data = input_data.split()
         a_dict[l_data[0]] = int(l_data[1])
