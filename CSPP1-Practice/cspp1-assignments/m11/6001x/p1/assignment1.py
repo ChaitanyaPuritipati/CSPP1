@@ -27,10 +27,10 @@ def get_word_score(input_word, input_num):
     for i in input_word:
         if i in scrabble_letter_values:
             counter_val = counter_val + scrabble_letter_values[i]
-    counter_val = counter_val*len_word    
+    counter_val = counter_val*len_word
     if  len_word == input_num:
-        counter_val = counter_val + 50    
-    return counter_val         
+        counter_val = counter_val + 50
+    return counter_val
 
 def main():
     '''
