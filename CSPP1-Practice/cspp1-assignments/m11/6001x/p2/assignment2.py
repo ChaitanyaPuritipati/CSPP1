@@ -19,9 +19,10 @@ def updateHand(hand, word):
     returns: dictionary (string -> int)
     """
     word = list(word)
-    for i in hand:
-        if i in word:
-            hand[i] = hand[i] - 1
+    len_word = len(word)
+    for i in range(len_word):
+        if word[i] in hand:
+            hand[word[i]] = hand[word[i]] - 1
             word.remove(i)
     return hand        
 def main():
