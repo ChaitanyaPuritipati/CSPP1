@@ -21,9 +21,9 @@ def update_hand(hand_dict, test_word):
     returns: dictionary (string -> int)
     """
     test_word = list(test_word)
-    for i in test_word:
-        if i in hand_dict:
-            hand_dict[i] = hand_dict[i]-1
+    for i_test in test_word:
+        if i_test in hand_dict:
+            hand_dict[i_test] = hand_dict[i_test]-1
     return hand_dict
 def main():
     '''
@@ -31,7 +31,7 @@ def main():
     '''
     n_data=input()
     a_dict={}
-    for i in range(int(n_data)):
+    for i_num in range(int(n_data)):
         input_data=input()
         l_data=input_data.split()
         a_dict[l_data[0]]=int(l_data[1])
