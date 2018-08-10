@@ -42,8 +42,6 @@ def main():
         adict[l[0]]=int(l[1])
     l2=input().split()
     print(isValidWord(word,adict,l2))
-        
-
-
 if __name__== "__main__":
     main()
+    
