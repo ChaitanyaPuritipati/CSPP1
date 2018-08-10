@@ -26,7 +26,7 @@ def is_valid_word(test_word, test_hand, test_wordlist):
         return False        
     ln_wordlist = len(test_wordlist)
     for i_num  in range(ln_wordlist):
-        if test_word in wordList[i_num]:
+        if test_word in test_wordlist[i_num]:
             return True
     return False        
 def main():
