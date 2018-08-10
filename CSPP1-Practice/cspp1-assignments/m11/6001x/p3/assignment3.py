@@ -8,7 +8,7 @@ def is_valid_word(test_word, test_hand, test_wordlist):
     """
     Returns True if word is in the wordList and is entirely
     composed of letters in the hand. Otherwise, returns False.
-    Does not mutate hand or wordList.  
+    Does not mutate hand or wordList.
     word: string
     hand: dictionary (string -> int)
     wordList: list of lowercase strings
@@ -39,5 +39,5 @@ def main():
         i_test = i_test + 1
     l_newlist = input().split()
     print(is_valid_word(input_word, a_dict, l_newlist))
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
