@@ -41,6 +41,6 @@ def main():
         l_list = input_data.split()
         a_dict[l_list[0]]=int(l_list[1])
     l_newlist=input().split()
-    print(isValidWord(input_word,a_dict,l_newlist))
+    print(is_valid_word(input_word,a_dict,l_newlist))
 if __name__== "__main__":
     main()
