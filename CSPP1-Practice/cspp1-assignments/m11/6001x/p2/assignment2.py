@@ -1,8 +1,10 @@
+'''
+Author: Puritipati Chaitanya Prasad Reddy
+Date: 10-8-2018
+'''
 #Exercise: Assignment-2
-#Implement the updateHand function. Make sure this function has no side effects: i.e., it must not mutate the hand passed in. Before pasting your function definition here, be sure you've passed the appropriate tests in test_ps4a.py.
-
-
-def updateHand(hand, word):
+#module_11
+def update_hand(hand_dict, test_word):
     """
     Assumes that 'hand' has all the letters in word.
     In other words, this assumes that however many times
@@ -18,19 +20,22 @@ def updateHand(hand, word):
     hand: dictionary (string -> int)    
     returns: dictionary (string -> int)
     """
-    word = list(word)
-    for i in word:
-        if i in hand:
-            hand[i] = hand[i]-1
-    return hand
+    test_word = list(test_word)
+    for i in test_word:
+        if i in hand_dict:
+            hand_dict[i] = hand_dict[i]-1
+    return hand_dict
 def main():
-	n=input()
-	adict={}
-	for i in range(int(n)):
-		data=input()
-		l=data.split()
-		adict[l[0]]=int(l[1])
-	data1=input()
-	print(updateHand(adict,data1))
-if __name__== "__main__":
+    '''
+    Main function starts here
+    '''
+	n_data=input()
+	a_dict={}
+	for i in range(int(n_data)):
+		input_data=input()
+		l_data=input_data.split()
+		a_dict[l_data[0]]=int(l_data[1])
+	data_1=input()
+	print(update_hand(a_dict,data_1))
+if __name__ == "__main__":
 	main()
