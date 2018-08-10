@@ -31,11 +31,13 @@ def main():
     input_word = input()
     n_num = int(input())
     a_dict = {}
-    for i in range(n_num):
+    i_test = 0
+    while i_test < n_num:
         input_data = input()
         l_list = input_data.split()
-        a_dict[l_list[0]]=int(l_list[1])
-    l_newlist=input().split()
+        a_dict[l_list[0]] = int(l_list[1])
+        i_test = i_test + 1
+    l_newlist = input().split()
     print(is_valid_word(input_word, a_dict, l_newlist))
 if __name__== "__main__":
     main()
