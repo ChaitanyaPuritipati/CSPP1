@@ -2,10 +2,6 @@
 Author: Puritipati Chaitanya Prasad Reddy
 Date: 10-08-2018
 '''
-'''
-Exercise: Assignment-1
-#The first step is to implement some code that allows us to calculate the score for a single word.
-'''
 def get_word_score(input_word, input_num):
     """
     Returns the score for a word. Assumes the word is a valid word.
