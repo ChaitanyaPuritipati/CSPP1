@@ -16,7 +16,7 @@ def calculate_handlen(test_hand):
     return counter_val
 def main():
     n=input()
-    adict={}
+    a_dict={}
     i_num = 0
     while i_num < (int(n)) :
         input_data = input()
