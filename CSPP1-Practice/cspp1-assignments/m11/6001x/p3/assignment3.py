@@ -35,7 +35,7 @@ def main():
     '''
     input_word = input()
     n_num = int(input())
-    adict = {}
+    a_dict = {}
     for i in range(n_num):
         input_data = input()
         l_list = input_data.split()
