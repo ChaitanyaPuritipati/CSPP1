@@ -15,7 +15,13 @@ def follow(network, arg_1, arg2):
     '''
     # remove the pass below and start writing your code
     print(arg_1)
-    print(type(arg_1)) 
+    print(type(arg_1))
+    if arg_1 in network:
+    	return network[str(arg_1)].append(arg2)
+    else:
+    	network[arg] = arg2
+    	return network	
+
     #print(type(network))
     #return network[str(arg_1)].append(arg2)
 def unfollow(network, arg1, arg2):
