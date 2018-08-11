@@ -55,7 +55,6 @@ def delete_person(network, arg1):
     # remove the pass below and start writing your code
     if arg1 in network:
         del network[str(arg1)]
-        return network
        	for i in network:
        		if arg1 in network.values(i):
        			result = network[i].pop(arg1)
