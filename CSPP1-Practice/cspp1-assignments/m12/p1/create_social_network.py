@@ -39,10 +39,12 @@ def create_social_network(data):
     for j in range(ln):
     	data[j] = data[j].split(" follows ")
     	print(data[j])
-    	if data[j][0] in output_dict:
-    		output_dict[data[j][0]].append(data[j])
+    	temp = data[j][0]
+    	del(data[j][0])
+    	if temp in output_dict:
+    		output_dict[temp].append(data[j])
     	else:
-    		output_dict[data[j][0]] = list(data[j])	
+    		output_dict[temp] = list(data[j])	
     print(output_dict)		
     #data = data.split()
     #print(data)
