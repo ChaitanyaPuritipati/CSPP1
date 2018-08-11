@@ -37,18 +37,18 @@ def create_social_network(data):
     ln = len(data)
     #print(ln)
     for j in range(ln):
-    	if "follows" in data[j]:
-    		data[j] = data[j].split(" follows ")
-    		#print(data[j])
-    		temp = data[j][0]
-    		#print(data[j][1])
-    		data[j][1] = data[j][1].split(",")
-    		#print(data[j][1])
-    		if temp in output_dict:
-    			output_dict[temp].append(data[j][1])
-    		else:
-    			output_dict[temp] = list(data[j][1])	
-    return output_dict		
+        if "follows" in data[j]:
+            data[j] = data[j].split(" follows ")
+            #print(data[j])
+            temp = data[j][0]
+            #print(data[j][1])
+            data[j][1] = data[j][1].split(",")
+            #print(data[j][1])
+            if temp in output_dict:
+                output_dict[temp].append(data[j][1])
+            else:
+                output_dict[temp] = list(data[j][1])    
+    return output_dict      
     #data = data.split()
     #print(data)
 
