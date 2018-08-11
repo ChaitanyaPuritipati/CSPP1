@@ -42,8 +42,8 @@ def create_social_network(data):
     	temp = data[j][0]
     	del(data[j][0])
     	print(data[j])
-    	data[j][1] = data[j][1].split(",")
-    	print(data[j][1])
+    	data[j][0] = data[j][0].split(",")
+    	print(data[j][0])
     	if temp in output_dict:
     		output_dict[temp].append(data[j])
     	else:
