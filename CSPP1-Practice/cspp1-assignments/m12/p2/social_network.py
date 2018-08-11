@@ -54,7 +54,8 @@ def main():
         i += 1
         line = input()
         output = line.split(" ")
-        print(network[output[1]])
+        if output[1] in network:
+        	print(network[output[1]])
         #if output[0] == "follow":
         #    network = follow(network, output[1], output[2])
         #elif output[0] == "unfollow":
