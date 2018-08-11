@@ -20,7 +20,7 @@ def follow(network, arg_1, arg2):
     	network[arg_1].append(arg2)
     	return network
     else:
-    	network[arg_1] = arg2
+    	network[arg_1] = list(arg2)
     	return network	
 
     #print(type(network))
