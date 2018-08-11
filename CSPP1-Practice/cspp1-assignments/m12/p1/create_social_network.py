@@ -42,7 +42,7 @@ def create_social_network(test_data):
             #print(data[j])
             temp_val = test_data[j][0]
             #print(data[j][1])
-            data[j][1] = data[j][1].split(",")
+            test_data[j][1] = test_data[j][1].split(",")
             #print(data[j][1])
             if temp_val in output_dict:
                 output_dict[temp_val].append(test_data[j][1])
