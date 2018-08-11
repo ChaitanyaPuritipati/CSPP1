@@ -17,9 +17,9 @@ def follow(network, arg_1, arg2):
     print(arg_1)
     print(type(arg_1))
     if arg_1 in network:
-    	return network[str(arg_1)].append(arg2)
+    	return network[arg_1].append(arg2)
     else:
-    	network[arg] = arg2
+    	network[arg_1] = arg2
     	return network	
 
     #print(type(network))
