@@ -31,7 +31,7 @@ def create_social_network(data):
         Return a empty dictionary if the string format of the data is invalid
         Empty dictionary is not None, it is a dictionary with no keys
     '''
-    data = data.split('\n')
+    data = data.splitlines()
     print(data)
     data = data.split()
     print(data)
