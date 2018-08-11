@@ -14,7 +14,7 @@ def follow(network, arg_1, arg2):
         update the network dictionary and return it
     '''
     # remove the pass below and start writing your code
-    #print(network)
+    print(network[arg1])
     #print(type(network))
     return network[str(arg_1)].append(arg2)
 def unfollow(network, arg1, arg2):
@@ -54,14 +54,14 @@ def main():
         i += 1
         line = input()
         output = line.split(" ")
-        if output[0] == "follow":
-            network = follow(network, output[1], output[2])
-        elif output[0] == "unfollow":
-            network = unfollow(network, output[1], output[2])
-        elif output[0] == "delete":
-            network = delete_person(network, output[1])
+        #if output[0] == "follow":
+        #    network = follow(network, output[1], output[2])
+        #elif output[0] == "unfollow":
+        #    network = unfollow(network, output[1], output[2])
+        #elif output[0] == "delete":
+         #   network = delete_person(network, output[1])
 
-    #print(network)
+    print(network[output[1]])
 
 if __name__ == "__main__":
     main()
