@@ -17,12 +17,8 @@ def follow(network, arg_1, arg2):
     if arg_1 in network:
         network[arg_1].append(arg2)
         return network
-    else:
-        network[arg_1] = [arg2]
-        return network  
-
-    #print(type(network))
-    #return network[str(arg_1)].append(arg2)
+    network[arg_1] = [arg2]
+    return network  
 def unfollow(network, arg1, arg2):
     '''
         3 arguments are passed to this function
@@ -35,8 +31,8 @@ def unfollow(network, arg1, arg2):
     # remove the pass below and start writing your code
      #network[str(arg1)].remove(arg2)
     if arg1 in network:
-       network[arg1].remove(arg2)
-       return network
+        network[arg1].remove(arg2)
+        return network
     else:
         return network     
 
