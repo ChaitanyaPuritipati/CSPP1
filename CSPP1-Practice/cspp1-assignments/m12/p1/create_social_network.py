@@ -33,8 +33,8 @@ def create_social_network(data):
     '''
     data = data.splitlines()
     print(data)
-    data = data.split()
-    print(data)
+    #data = data.split()
+    #print(data)
 
 
 def main():
