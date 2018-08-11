@@ -1,9 +1,7 @@
 '''
-    This is a continuation of the social network problem
-    There are 3 functions below that have to be completed
-    Note: PyLint score need not be 10/10 for this assignment. We expect 9.5/10
+Author: Puritipati Chaitanya Prasad Reddy
+Date: 11-08-2018
 '''
-
 def follow(network, arg_1, arg2):
     '''
         3 arguments are passed to this function
@@ -17,11 +15,11 @@ def follow(network, arg_1, arg2):
     #print(arg_1)
     #print(type(arg_1))
     if arg_1 in network:
-    	network[arg_1].append(arg2)
-    	return network
+        network[arg_1].append(arg2)
+        return network
     else:
-    	network[arg_1] = [arg2]
-    	return network	
+        network[arg_1] = [arg2]
+        return network  
 
     #print(type(network))
     #return network[str(arg_1)].append(arg2)
@@ -55,11 +53,11 @@ def delete_person(network, arg1):
     # remove the pass below and start writing your code
     if arg1 in network:
         del network[arg1]
-       	for i in network:
-       		values_key = network.get(i)
-       		if arg1 in values_key:
-       			network[i].remove(arg1)
-    return network 				
+        for i in network:
+            values_key = network.get(i)
+            if arg1 in values_key:
+                network[i].remove(arg1)
+    return network              
 
 
 def main():
