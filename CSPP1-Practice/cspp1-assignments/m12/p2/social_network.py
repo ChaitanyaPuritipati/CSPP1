@@ -15,7 +15,7 @@ def follow(network, arg_1, arg2):
     '''
     # remove the pass below and start writing your code
     #print(network)
-    print(type(network))
+    #print(type(network))
 
 def unfollow(network, arg1, arg2):
     '''
