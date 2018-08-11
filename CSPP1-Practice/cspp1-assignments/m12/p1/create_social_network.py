@@ -43,8 +43,8 @@ def create_social_network(test_data):
             if temp_val in output_dict:
                 output_dict[temp_val].append(test_data[j][1])
             else:
-                output_dict[temp_val] = list(test_data[j][1])    
-    return output_dict      
+                output_dict[temp_val] = list(test_data[j][1])
+    return output_dict
 def main():
     '''
     handling testcase input and printing output
