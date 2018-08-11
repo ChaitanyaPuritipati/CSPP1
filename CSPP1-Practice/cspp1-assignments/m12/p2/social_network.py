@@ -14,7 +14,7 @@ def follow(network, arg_1, arg2):
         update the network dictionary and return it
     '''
     # remove the pass below and start writing your code
-    print(network)
+    #print(network)
     print(type(network))
 
 def unfollow(network, arg1, arg2):
@@ -47,7 +47,7 @@ def main():
         handling testcase input and printing output
     '''
     network = eval(input())
-    print(type(network))
+    #print(type(network))
     lines = int(input())
     for i in range(lines):
         i += 1
@@ -60,7 +60,7 @@ def main():
         #elif output[0] == "delete":
             #network = delete_person(network, output[1])
 
-    print(network)
+    #print(network)
 
 if __name__ == "__main__":
     main()
