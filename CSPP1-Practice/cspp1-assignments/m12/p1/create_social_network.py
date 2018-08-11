@@ -33,7 +33,7 @@ def create_social_network(data):
     '''
     data = data.splitlines()
     output_dict = {}
-    print(data)
+    #print(data)
     ln = len(data)
     #print(ln)
     for j in range(ln):
