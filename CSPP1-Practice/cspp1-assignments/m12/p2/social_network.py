@@ -54,6 +54,7 @@ def main():
         i += 1
         line = input()
         output = line.split(" ")
+        print(network[output[1]])
         #if output[0] == "follow":
         #    network = follow(network, output[1], output[2])
         #elif output[0] == "unfollow":
@@ -61,7 +62,6 @@ def main():
         #elif output[0] == "delete":
          #   network = delete_person(network, output[1])
     print(network)     
-    print(network[output[1]])
-
+    
 if __name__ == "__main__":
     main()
