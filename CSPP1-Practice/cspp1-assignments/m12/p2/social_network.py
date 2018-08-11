@@ -16,7 +16,7 @@ def follow(network, arg_1, arg2):
         network[arg_1].append(arg2)
         return network
     network[arg_1] = [arg2]
-    return network  
+    return network
 def unfollow(network, arg1, arg2):
     '''
         3 arguments are passed to this function
@@ -30,7 +30,7 @@ def unfollow(network, arg1, arg2):
     if arg1 in network:
         network[arg1].remove(arg2)
         return network
-    return network     
+    return network
 def delete_person(network, arg1):
     '''
         2 arguments are passed to this function
@@ -48,7 +48,7 @@ def delete_person(network, arg1):
             values_key = network.get(i)
             if arg1 in values_key:
                 network[i].remove(arg1)
-    return network              
+    return network
 def main():
     '''
         handling testcase input and printing output
@@ -65,7 +65,6 @@ def main():
             network = unfollow(network, output[1], output[2])
         elif output[0] == "delete":
             network = delete_person(network, output[1])
-    print(network)     
-    
+    print(network)    
 if __name__ == "__main__":
     main()
