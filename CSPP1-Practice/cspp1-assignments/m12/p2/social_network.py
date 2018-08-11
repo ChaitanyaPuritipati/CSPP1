@@ -14,8 +14,7 @@ def follow(network, arg1, arg2):
         update the network dictionary and return it
     '''
     # remove the pass below and start writing your code
-    network[arg1].append(arg2)
-    print(network)
+    #network[arg1].append(arg2)
 def unfollow(network, arg1, arg2):
     '''
         3 arguments are passed to this function
@@ -46,6 +45,7 @@ def main():
         handling testcase input and printing output
     '''
     network = eval(input())
+    print(network)
     lines = int(input())
     for i in range(lines):
         i += 1
