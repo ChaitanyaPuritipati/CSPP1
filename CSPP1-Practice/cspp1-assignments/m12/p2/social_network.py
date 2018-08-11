@@ -4,7 +4,7 @@
     Note: PyLint score need not be 10/10 for this assignment. We expect 9.5/10
 '''
 
-def follow(network, arg1, arg2):
+def follow(network, arg_1, arg2):
     '''
         3 arguments are passed to this function
         network is a dictionary representing the social network
@@ -15,6 +15,7 @@ def follow(network, arg1, arg2):
     '''
     # remove the pass below and start writing your code
     print(network)
+    print(network[arg_1])
 
 def unfollow(network, arg1, arg2):
     '''
