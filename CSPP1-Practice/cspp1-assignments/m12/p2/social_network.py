@@ -12,8 +12,6 @@ def follow(network, arg_1, arg2):
         update the network dictionary and return it
     '''
     # remove the pass below and start writing your code
-    #print(arg_1)
-    #print(type(arg_1))
     if arg_1 in network:
         network[arg_1].append(arg2)
         return network
@@ -29,12 +27,10 @@ def unfollow(network, arg1, arg2):
         update the network dictionary and return it
     '''
     # remove the pass below and start writing your code
-     #network[str(arg1)].remove(arg2)
     if arg1 in network:
         network[arg1].remove(arg2)
         return network
     return network     
-
 def delete_person(network, arg1):
     '''
         2 arguments are passed to this function
@@ -53,14 +49,11 @@ def delete_person(network, arg1):
             if arg1 in values_key:
                 network[i].remove(arg1)
     return network              
-
-
 def main():
     '''
         handling testcase input and printing output
     '''
     network = eval(input())
-    #print(type(network))
     lines = int(input())
     for i in range(lines):
         i += 1
@@ -68,7 +61,6 @@ def main():
         output = line.split(" ")
         if output[0] == "follow":
             network = follow(network, output[1], output[2])
-            #print(network)
         elif output[0] == "unfollow":
             network = unfollow(network, output[1], output[2])
         elif output[0] == "delete":
