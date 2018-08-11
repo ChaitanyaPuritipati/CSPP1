@@ -63,11 +63,12 @@ def main():
         output = line.split(" ")
         if output[0] == "follow":
             network = follow(network, output[1], output[2])
+            print(network)
         elif output[0] == "unfollow":
             network = unfollow(network, output[1], output[2])
         elif output[0] == "delete":
             network = delete_person(network, output[1])
-    print(network)     
+    #print(network)     
     
 if __name__ == "__main__":
     main()
