@@ -1,7 +1,8 @@
 '''
-    Assignment-1 Create Social Network
+Author: Puritipati Chaitanya Prasad Reddy
+Date: 11-08-2018
 '''
-
+#Assignment-1 Create Social Network
 def create_social_network(test_data):
     '''
         The data argument passed to the function is a string
@@ -33,29 +34,20 @@ def create_social_network(test_data):
     '''
     test_data = test_data.splitlines()
     output_dict = {}
-    #print(data)
     len_data = len(test_data)
-    #print(ln)
     for j in range(len_data):
         if "follows" in test_data[j]:
             test_data[j] = test_data[j].split(" follows ")
-            #print(data[j])
             temp_val = test_data[j][0]
-            #print(data[j][1])
             test_data[j][1] = test_data[j][1].split(",")
-            #print(data[j][1])
             if temp_val in output_dict:
                 output_dict[temp_val].append(test_data[j][1])
             else:
                 output_dict[temp_val] = list(test_data[j][1])    
     return output_dict      
-    #data = data.split()
-    #print(data)
-
-
 def main():
     '''
-        handling testcase input and printing output
+    handling testcase input and printing output
     '''
     string = ''
     lines = int(input())
@@ -63,7 +55,6 @@ def main():
         i += 1
         string += input()
         string += '\n'
-    #print(string)    
     print(create_social_network(string))
 
 if __name__ == "__main__":
