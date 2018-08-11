@@ -1,0 +1,2 @@
+https://stackoverflow.com/questions/11520492/difference-between-del-remove-and-pop-on-lists/11520540
+https://stackoverflow.com/questions/22042948/split-string-using-a-newline-delimiter-with-python
