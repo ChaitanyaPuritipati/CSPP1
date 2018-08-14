@@ -27,6 +27,7 @@ def is_straight(hand):
         ''.join(test_string)
     else:
         j =0
+        print(test_string)
         for i in test_string:
             test_string[j] = keys_list[value_list.index(i)]
             j = j + 1
