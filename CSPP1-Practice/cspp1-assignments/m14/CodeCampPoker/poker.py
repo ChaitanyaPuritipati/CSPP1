@@ -29,11 +29,11 @@ def is_straight(hand):
         test_string = ['A', '2', '3', '4', '5']
         test_string = ''.join(str(x) for x in test_string)
     else:
-        j =0
+        j = 0
         for k in test_string:
             test_string[j] = keys_list[value_list.index(k)]
             j = j + 1
-        test_string =''.join(str(x) for x in test_string)
+        test_string = ''.join(str(x) for x in test_string)
     if test_string in "A23456789TJQKA":
         return True
     return False
