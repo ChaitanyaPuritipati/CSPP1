@@ -3,7 +3,7 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
-
+FACE_VALUES = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -14,10 +14,22 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    test_string = ""
+    test_string = []
+    value_list = list(FACE_VALUES.values())
+    keys_list = list(FACE_VALUES.keys())
     for i in range(len(hand)):
-        test_string = test_string + hand[i][0]
-    if test_string in "A23456789TJQKA":
+        test_string = test_string.append(FACE_VALUES(hand[i][0]))
+    test_string.sort()
+    if test_string[0] == 2 and test_string[4] == 14:
+        test_string = ['A', '2', '3', '4', '5']
+        ''.join(test_string)
+    else:
+        j =0
+        for i in test_string:
+            test_string[j] = keys_list[test_string.index(value_list[i])]
+            j = j + 1
+        ''.join(test_string)
+    if test_string in "A23456789TJQKA"
         return True
     return False
 def is_flush(hand):
