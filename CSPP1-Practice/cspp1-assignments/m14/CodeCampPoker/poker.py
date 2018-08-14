@@ -21,7 +21,7 @@ def is_straight(hand):
     #print(value_list)
     for i in range(len(hand)):
         test_string.append(FACE_VALUES[hand[i][0]])
-    print(test_string)
+    #print(test_string)
     test_string.sort()
     if test_string[0] == 2 and test_string[4] == 14:
         test_string = ['A', '2', '3', '4', '5']
@@ -34,7 +34,7 @@ def is_straight(hand):
             j = j + 1
         #print(test_string)    
         test_string =''.join(str(x) for x in test_string)
-    print(test_string)
+    #print(test_string)
     if test_string in "A23456789TJQKA":
         return True
     return False
