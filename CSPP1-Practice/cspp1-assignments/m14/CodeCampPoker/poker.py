@@ -1,4 +1,8 @@
 '''
+Author: Puritipati Chaitanya Prasad Reddy
+Date: 14-08-2018
+'''
+'''
     Write a program to evaluate poker hands and determine the winner
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
@@ -17,24 +21,18 @@ def is_straight(hand):
     test_string = []
     value_list = list(FACE_VALUES.values())
     keys_list = list(FACE_VALUES.keys())
-    #print(keys_list)
-    #print(value_list)
     for i in range(len(hand)):
         test_string.append(FACE_VALUES[hand[i][0]])
-    #print(test_string)
     test_string.sort()
     if test_string[0] == 2 and test_string[4] == 14:
         test_string = ['A', '2', '3', '4', '5']
         test_string = ''.join(str(x) for x in test_string)
     else:
         j =0
-        #print(test_string)
         for k in test_string:
             test_string[j] = keys_list[value_list.index(k)]
             j = j + 1
-        #print(test_string)    
         test_string =''.join(str(x) for x in test_string)
-    #print(test_string)
     if test_string in "A23456789TJQKA":
         return True
     return False
@@ -121,7 +119,5 @@ if __name__ == "__main__":
         line = input()
         ha = line.split(" ")
         HANDS.append(ha)
-        #print(HANDS)
     # test the poker function to see how it works
-    #print(poker(HANDS))
     print(' '.join(poker(HANDS)))
