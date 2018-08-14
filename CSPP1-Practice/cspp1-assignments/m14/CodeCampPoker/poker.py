@@ -17,6 +17,8 @@ def is_straight(hand):
     test_string = []
     value_list = list(FACE_VALUES.values())
     keys_list = list(FACE_VALUES.keys())
+    print(keys_list)
+    print(value_list)
     for i in range(len(hand)):
         test_string.append(FACE_VALUES[hand[i][0]])
     test_string.sort()
