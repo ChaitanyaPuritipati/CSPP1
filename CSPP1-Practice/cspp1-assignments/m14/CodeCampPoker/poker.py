@@ -30,6 +30,7 @@ def is_straight(hand):
         for i in test_string:
             test_string[j] = keys_list[value_list.index(i)]
             j = j + 1
+        print(test_string)    
         ''.join(test_string)
     print(test_string)    
     if test_string in "A23456789TJQKA":
