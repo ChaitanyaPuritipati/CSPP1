@@ -105,5 +105,5 @@ if __name__ == "__main__":
         HANDS.append(ha)
         #print(HANDS)
     # test the poker function to see how it works
-    print(poker(HANDS))
-    #print(' '.join(poker(HANDS)))
+    #print(poker(HANDS))
+    print(' '.join(poker(HANDS)))
