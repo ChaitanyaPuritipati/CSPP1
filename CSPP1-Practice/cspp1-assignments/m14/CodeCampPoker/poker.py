@@ -47,8 +47,10 @@ def is_flush(hand):
         Write the code for it and return True if it is a flush else return False
     '''
     test_string_flush = ""
-    for i in range(len(hand)):
+    l = 0
+    while i < (len(hand)):
         test_string_flush = test_string_flush + hand[i][1]
+        i = i + 1
     if test_string_flush in "SSSSS":
         return True
     elif test_string_flush in "HHHHH":
