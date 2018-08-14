@@ -29,7 +29,7 @@ def is_straight(hand):
             test_string[j] = keys_list[test_string.index(value_list[i])]
             j = j + 1
         ''.join(test_string)
-    if test_string in "A23456789TJQKA"
+    if test_string in "A23456789TJQKA":
         return True
     return False
 def is_flush(hand):
