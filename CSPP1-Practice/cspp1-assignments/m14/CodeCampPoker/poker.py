@@ -20,8 +20,10 @@ def is_straight(hand):
     test_string = []
     value_list = list(FACE_VALUES.values())
     keys_list = list(FACE_VALUES.keys())
-    for i in range(len(hand)):
+    i = 0
+    while i  < (len(hand)):
         test_string.append(FACE_VALUES[hand[i][0]])
+        i = i + 1
     test_string.sort()
     if test_string[0] == 2 and test_string[4] == 14:
         test_string = ['A', '2', '3', '4', '5']
