@@ -268,7 +268,7 @@ def playGame(wordList):
  
     2) When done playing the hand, repeat from step 1    
     """
-    #new_list = []
+    
     while True:
         start_input = input("Enter n for new hand; r for old hand; e to end the game: ")
         if start_input == 'n':
