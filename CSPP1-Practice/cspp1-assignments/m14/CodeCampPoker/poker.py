@@ -53,11 +53,11 @@ def is_flush(hand):
         l_num = l_num + 1
     if test_string_flush in "SSSSS":
         return True
-    elif test_string_flush in "HHHHH":
+    if test_string_flush in "HHHHH":
         return True
-    elif test_string_flush in "DDDDD":
+    if test_string_flush in "DDDDD":
         return True
-    elif test_string_flush in "CCCCC":
+    if test_string_flush in "CCCCC":
         return True
     return False
 def hand_rank(hand):
