@@ -56,7 +56,7 @@ def is_flush(hand):
     elif test_string_flush in "DDDDD":
         return True
     elif test_string_flush in "CCCCC":
-        return True             
+        return True
     return False
 def hand_rank(hand):
     '''
@@ -88,7 +88,7 @@ def hand_rank(hand):
         return 2
     elif is_straight(hand):
         return 1
-    return 0    
+    return 0
 def poker(hands):
     '''
         This function is completed for you. Read it to learn the code.
