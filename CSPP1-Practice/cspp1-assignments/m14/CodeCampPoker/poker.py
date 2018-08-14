@@ -7,7 +7,8 @@ Date: 14-08-2018
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
-FACE_VALUES = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
+FACE_VALUES = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7,\
+'8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -81,8 +82,6 @@ def hand_rank(hand):
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
-    #print(is_straight(hand))
-    #print(is_flush(hand))
     if is_straight(hand) and is_flush(hand):
         return 3
     elif is_flush(hand):
