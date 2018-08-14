@@ -49,7 +49,7 @@ def is_flush(hand):
     test_string_flush = ""
     l = 0
     while l < (len(hand)):
-        test_string_flush = test_string_flush + hand[i][1]
+        test_string_flush = test_string_flush + hand[l][1]
         l = l + 1
     if test_string_flush in "SSSSS":
         return True
