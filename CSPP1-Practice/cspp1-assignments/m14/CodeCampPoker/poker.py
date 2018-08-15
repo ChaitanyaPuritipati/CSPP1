@@ -80,7 +80,7 @@ def four_of_kind(hand):
             count_list.append(counter)              
         #for i in test_kind:
          #   count_list.append(hand.count(i))
-        #print(count_list)    
+        print(count_list)    
         if 4 in count_list:
             return True
     return False
