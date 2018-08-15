@@ -7,6 +7,15 @@ Date: 14-08-2018
 #https://en.wikipedia.org/wiki/List_of_poker_hands
 FACE_VALUES = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7,\
 '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
+def counter_list_func(hand):
+    count_list =[]
+        for i in test_kind:
+            counter = 0
+            for j in hand:
+                if i is j[0]:
+                    counter = counter + 1
+            count_list.append(counter)
+    return count_list        
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -68,24 +77,8 @@ def four_of_kind(hand):
     while z < len(hand):
         test_kind.update(hand[z][0])
         z = z + 1
-    #print(test_kind)
-    #print(len(test_kind))   
     if len(test_kind) == 2:
-        count_list =[]
-        for i in test_kind:
-            #print(i)
-            counter = 0
-            for j in hand:
-                #print(j)
-                #print(j[0])
-                if i is j[0]:
-                    #print("yes")
-                    counter = counter + 1
-            #print(counter)        
-            count_list.append(counter)              
-        #for i in test_kind:
-         #   count_list.append(hand.count(i))
-        #print(count_list)    
+        count_list = counter_list_func(hand)              
         if 4 in count_list:
             return True
     return False
@@ -95,18 +88,8 @@ def full_house(hand):
     while z < len(hand):
         test_kind.update(hand[z][0])
         z = z + 1
-    #print(test_kind)    
-    #print(len(test_kind))
     if len(test_kind) == 2:
-        count_list =[]
-        for i in test_kind:
-            counter = 0
-            for j in hand:
-                if i is j[0]:
-                    counter = counter + 1
-            count_list.append(counter)    
-            #count_list.append(hand.count(str(i)))
-        #print(count_list)
+        count_list = counter_list_func(hand)   
         if 3 in count_list:
             return True
     return False     
@@ -116,19 +99,8 @@ def three_of_kind(hand):
     while y < len(hand):
         test_kind_new.update(hand[y][0])
         y = y + 1
-    #print(test_kind_new) 
-    #print(len(test_kind_new))   
     if len(test_kind_new) == 3:
-        count_list =[]
-        for i in test_kind_new:
-            counter = 0
-            for j in hand:
-                if i is j[0]:
-                    counter = counter + 1
-            count_list.append(counter)               
-        #for i in test_kind_new:
-        #    count_list.append(hand.count(i))
-        #print(count_list)
+        count_list = counter_list_func(hand)             
         if 3 in count_list:
             return True
     return False  
@@ -138,19 +110,8 @@ def two_pair(hand):
     while y < len(hand):
         test_kind_new.update(hand[y][0])
         y = y + 1
-    #print(test_kind_new)
-    #print(len(test_kind_new)) 
     if len(test_kind_new) == 3:
-        count_list =[]
-        for i in test_kind_new:
-            counter = 0
-            for j in hand:
-                if i is j[0]:
-                    counter = counter + 1
-            count_list.append(counter)
-        #for i in test_kind_new:
-        #    count_list.append(hand.count(i))
-        #print(count_list)
+        count_list = counter_list_func(hand)
         if  count_list.count(2) == 2:
             return True
     return False     
@@ -160,8 +121,6 @@ def one_pair(hand):
     while z < len(hand):
         test_kind.update(hand[z][0])
         z = z + 1
-    #print(test_kind)
-    #print(len(test_kind))
     if len(test_kind) == 4:
         return True
     return False
