@@ -74,7 +74,10 @@ def is_flush(hand):
     if test_string_flush in "CCCCC":
         return True
     return False
-def four_of_kind(hand):
+def is_four_of_kind(hand):
+    '''
+    Function to check four of kind
+    '''
     z_num = 0
     test_kind = set()
     while z_num < len(hand):
@@ -85,7 +88,10 @@ def four_of_kind(hand):
         if 4 in count_list:
             return True
     return False
-def full_house(hand):
+def is_full_house(hand):
+    '''
+    Function to check for full house
+    '''
     z_num = 0
     test_kind = set()
     while z_num < len(hand):
@@ -96,7 +102,10 @@ def full_house(hand):
         if 3 in count_list:
             return True
     return False
-def three_of_kind(hand):
+def is_three_of_kind(hand):
+    '''
+    Function to check three of kind
+    '''
     y_num = 0
     test_kind_new = set()
     while y_num < len(hand):
@@ -107,7 +116,10 @@ def three_of_kind(hand):
         if 3 in count_list:
             return True
     return False
-def two_pair(hand):
+def is_two_pair(hand):
+    '''
+    Function to check two pair
+    '''
     y_num = 0
     test_kind_new = set()
     while y_num < len(hand):
@@ -118,7 +130,10 @@ def two_pair(hand):
         if  count_list.count(2) == 2:
             return True
     return False
-def one_pair(hand):
+def is_one_pair(hand):
+    '''
+    Function to check for one pair
+    '''
     z_num = 0
     test_kind = set()
     while z_num < len(hand):
@@ -161,11 +176,11 @@ def hand_rank(hand):
         return 6
     if is_straight(hand):
         return 5
-    if three_of_kind(hand):
+    if is_three_of_kind(hand):
         return 4
-    if two_pair(hand):
+    if is_two_pair(hand):
         return 3
-    if one_pair(hand):
+    if is_one_pair(hand):
         return 2
     return 1
 def poker(hands):
