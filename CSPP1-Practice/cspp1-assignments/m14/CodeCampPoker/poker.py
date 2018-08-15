@@ -166,7 +166,7 @@ def hand_rank(hand):
     if two_pair(hand):
         return 3
     if one_pair(hand):
-        return 2    
+        return 2
     return 1
 def poker(hands):
     '''
