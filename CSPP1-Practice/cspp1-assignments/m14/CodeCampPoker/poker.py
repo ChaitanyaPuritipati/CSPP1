@@ -113,7 +113,6 @@ def two_pair(hand):
     if len(test_kind_new) == 3:
         count_list = counter_list_func(hand, test_kind_new)
         if  count_list.count(2) == 2:
-            print("yes two pair")
             return True
     return False     
 def one_pair(hand):
