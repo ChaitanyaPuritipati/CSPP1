@@ -95,7 +95,7 @@ def full_house(hand):
     while z < len(hand):
         test_kind.update(hand[z][0])
         z = z + 1
-    print(test_kind)    
+    #print(test_kind)    
     #print(len(test_kind))
     if len(test_kind) == 2:
         count_list =[]
@@ -150,7 +150,7 @@ def two_pair(hand):
             count_list.append(counter)
         #for i in test_kind_new:
         #    count_list.append(hand.count(i))
-        print(count_list)
+        #print(count_list)
         if  count_list.count(2) == 2:
             return True
     return False     
@@ -190,30 +190,30 @@ def hand_rank(hand):
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
     if is_straight(hand) and is_flush(hand):
-        print("test9")
+        #print("test9")
         return 9
     if four_of_kind(hand):
-        print("test8")
+        #print("test8")
         return 8
     if full_house(hand):
-        print("test7")
+        #print("test7")
         return 7
     if is_flush(hand):
-        print("test6")
+        #print("test6")
         return 6
     if is_straight(hand):
-        print("test5")
+        #print("test5")
         return 5
     if three_of_kind(hand):
-        print("test4")
+        #print("test4")
         return 4
     if two_pair(hand):
-        print("test3")
+        #print("test3")
         return 3
     if one_pair(hand):
-        print("test2")
+        #print("test2")
         return 2    
-    print("test1")         
+    #print("test1")         
     return 1
 def poker(hands):
     '''
