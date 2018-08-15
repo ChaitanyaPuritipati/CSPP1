@@ -89,7 +89,7 @@ def full_house(hand):
     if len(test_kind) == 2:
         count_list =[]
         for i in test_kind:
-            count_list.append(hand.count(str(i))
+            count_list.append(hand.count(str(i)))
         print(count_list)
         if 3 in count_list:
             return True
