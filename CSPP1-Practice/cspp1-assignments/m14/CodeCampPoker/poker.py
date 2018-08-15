@@ -72,14 +72,12 @@ def four_of_kind(hand):
     #print(len(test_kind))   
     if len(test_kind) == 2:
         count_list =[]
-        k = 0
         for i in test_kind:
             for j in hand:
                 counter = 0
                 if i in hand:
                     counter = counter + 1
-            count_list[k] = counter
-            k = k + 1               
+            count_list.append(counter)              
         #for i in test_kind:
          #   count_list.append(hand.count(i))
         #print(count_list)    
@@ -96,14 +94,12 @@ def full_house(hand):
     #print(len(test_kind))
     if len(test_kind) == 2:
         count_list =[]
-        k = 0
         for i in test_kind:
             for j in hand:
                 counter = 0
                 if i in hand:
                     counter = counter + 1
-            count_list[k] = counter
-            k = k + 1                    
+            count_list.append(counter)    
             #count_list.append(hand.count(str(i)))
         #print(count_list)
         if 3 in count_list:
@@ -119,14 +115,12 @@ def three_of_kind(hand):
     #print(len(test_kind_new))   
     if len(test_kind_new) == 3:
         count_list =[]
-        k = 0
         for i in test_kind_new:
             for j in hand:
                 counter = 0
                 if i in hand:
                     counter = counter + 1
-            count_list[k] = counter
-            k = k + 1               
+            count_list.append(counter)               
         #for i in test_kind_new:
         #    count_list.append(hand.count(i))
         #print(count_list)
@@ -143,14 +137,12 @@ def two_pair(hand):
     #print(len(test_kind_new)) 
     if len(test_kind_new) == 3:
         count_list =[]
-        k = 0
         for i in test_kind_new:
             for j in hand:
                 counter = 0
                 if i in hand:
                     counter = counter + 1
-            count_list[k] = counter
-            k = k + 1               
+            count_list.append(counter)
         #for i in test_kind_new:
         #    count_list.append(hand.count(i))
         print(count_list)
