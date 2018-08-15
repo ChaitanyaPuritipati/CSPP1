@@ -7,7 +7,10 @@ Date: 14-08-2018
 #https://en.wikipedia.org/wiki/List_of_poker_hands
 FACE_VALUES = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7,\
 '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
-def counter_list_func(hand,test_kind):
+def counter_list_func(hand, test_kind):
+    '''
+    Function to return the frequency of elements in a list
+    '''
     count_list =[]
     for i in test_kind:
         counter = 0
@@ -15,7 +18,7 @@ def counter_list_func(hand,test_kind):
             if i is j[0]:
                 counter = counter + 1
         count_list.append(counter)
-    return count_list        
+    return count_list
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -78,7 +81,7 @@ def four_of_kind(hand):
         test_kind.update(hand[z][0])
         z = z + 1
     if len(test_kind) == 2:
-        count_list = counter_list_func(hand, test_kind)              
+        count_list = counter_list_func(hand, test_kind)
         if 4 in count_list:
             return True
     return False
@@ -92,7 +95,7 @@ def full_house(hand):
         count_list = counter_list_func(hand, test_kind)
         if 3 in count_list:
             return True
-    return False     
+    return False
 def three_of_kind(hand):
     y = 0
     test_kind_new = set()
@@ -103,7 +106,7 @@ def three_of_kind(hand):
         count_list = counter_list_func(hand, test_kind_new)  
         if 3 in count_list:
             return True
-    return False  
+    return False
 def two_pair(hand):
     y = 0
     test_kind_new = set()
@@ -114,7 +117,7 @@ def two_pair(hand):
         count_list = counter_list_func(hand, test_kind_new)
         if  count_list.count(2) == 2:
             return True
-    return False     
+    return False
 def one_pair(hand):
     z = 0
     test_kind = set()
@@ -149,30 +152,21 @@ def hand_rank(hand):
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
     if is_straight(hand) and is_flush(hand):
-        #print("test9")
         return 9
     if four_of_kind(hand):
-        #print("test8")
         return 8
     if full_house(hand):
-        #print("test7")
         return 7
     if is_flush(hand):
-        #print("test6")
         return 6
     if is_straight(hand):
-        #print("test5")
         return 5
     if three_of_kind(hand):
-        #print("test4")
         return 4
     if two_pair(hand):
-        #print("test3")
         return 3
     if one_pair(hand):
-        #print("test2")
         return 2    
-    #print("test1")         
     return 1
 def poker(hands):
     '''
