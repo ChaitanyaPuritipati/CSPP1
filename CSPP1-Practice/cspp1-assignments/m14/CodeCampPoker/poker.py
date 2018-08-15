@@ -68,27 +68,29 @@ def four_of_kind(hand):
     while z < len(hand):
         test_kind.update(hand[z][0])
         z = z + 1
-    print(test_kind)
-    print(len(test_kind))   
+    #print(test_kind)
+    #print(len(test_kind))   
     if len(test_kind) == 2:
         count_list =[]
         for i in test_kind:
             count_list.append(hand.count(i))
+        print(count_list)    
         if 4 in count_list:
             return True
-    return False 
+    return False
 def full_house(hand):
     z = 0
     test_kind = set()
     while z < len(hand):
         test_kind.update(hand[z][0])
         z = z + 1
-    print(test_kind)    
-    print(len(test_kind))
+    #print(test_kind)    
+    #print(len(test_kind))
     if len(test_kind) == 2:
         count_list =[]
         for i in test_kind:
             count_list.append(hand.count(i))
+        print(count_list)
         if 3 in count_list:
             return True
     return False     
@@ -98,12 +100,13 @@ def three_of_kind(hand):
     while y < len(hand):
         test_kind_new.update(hand[y][0])
         y = y + 1
-    print(test_kind_new) 
-    print(len(test_kind_new))   
+    #print(test_kind_new) 
+    #print(len(test_kind_new))   
     if len(test_kind_new) == 3:
         count_list =[]
         for i in test_kind_new:
             count_list.append(hand.count(i))
+        print(count_list)
         if 3 in count_list:
             return True
     return False  
@@ -113,12 +116,13 @@ def two_pair(hand):
     while y < len(hand):
         test_kind_new.update(hand[y][0])
         y = y + 1
-    print(test_kind_new)
-    print(len(test_kind_new)) 
+    #print(test_kind_new)
+    #print(len(test_kind_new)) 
     if len(test_kind_new) == 3:
         count_list =[]
         for i in test_kind_new:
             count_list.append(hand.count(i))
+        print(count_list)
         if  count_list.count(2) == 2:
             return True
     return False     
@@ -128,8 +132,8 @@ def one_pair(hand):
     while z < len(hand):
         test_kind.update(hand[z][0])
         z = z + 1
-    print(test_kind)
-    print(len(test_kind))
+    #print(test_kind)
+    #print(len(test_kind))
     if len(test_kind) == 4:
         return True
     return False
@@ -162,7 +166,7 @@ def hand_rank(hand):
         return 9
     if four_of_kind(hand):
         print("test8")
-        return 8    
+        return 8
     if full_house(hand):
         print("test7")
         return 7
