@@ -9,12 +9,12 @@ FACE_VALUES = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7,\
 '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
 def counter_list_func(hand):
     count_list =[]
-        for i in test_kind:
-            counter = 0
-            for j in hand:
-                if i is j[0]:
-                    counter = counter + 1
-            count_list.append(counter)
+    for i in test_kind:
+        counter = 0
+        for j in hand:
+            if i is j[0]:
+                counter = counter + 1
+        count_list.append(counter)
     return count_list        
 def is_straight(hand):
     '''
