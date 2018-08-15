@@ -76,9 +76,9 @@ def four_of_kind(hand):
             print(i)
             for j in hand:
                 #print(type(j))
-                print(j)
+                print(hand[j])
                 counter = 0
-                if i is hand[j][0]:
+                if i is hand:
                     print("yes")
                     counter = counter + 1
             count_list.append(counter)              
