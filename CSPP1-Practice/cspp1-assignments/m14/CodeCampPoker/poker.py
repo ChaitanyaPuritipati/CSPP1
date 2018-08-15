@@ -68,7 +68,7 @@ def four_of_kind(hand):
     while z < len(hand):
         test_kind.update(hand[z][0])
         z = z + 1
-    #print(test_kind)    
+    print(test_kind)    
     if len(test_kind) == 2:
         count_list =[]
         for i in test_kind:
@@ -82,6 +82,7 @@ def full_house(hand):
     while z < len(hand):
         test_kind.update(hand[z][0])
         z = z + 1
+    print(test_kind)    
     if len(test_kind) == 2:
         count_list =[]
         for i in test_kind:
@@ -95,6 +96,7 @@ def three_of_kind(hand):
     while y < len(hand):
         test_kind_new.update(hand[y][0])
         y = y + 1
+    print(test_kind_new)    
     if len(test_kind_new) == 3:
         count_list =[]
         for i in test_kind_new:
@@ -108,6 +110,7 @@ def two_pair(hand):
     while y < len(hand):
         test_kind_new.update(hand[y][0])
         y = y + 1
+    print(test_kind_new)    
     if len(test_kind_new) == 3:
         count_list =[]
         for i in test_kind_new:
@@ -121,6 +124,7 @@ def one_pair(hand):
     while z < len(hand):
         test_kind.update(hand[z][0])
         z = z + 1
+    print(test_kind)    
     if len(test_kind) == 4:
         return True
     return False
@@ -172,7 +176,7 @@ def hand_rank(hand):
     if one_pair(hand):
         print("test2")
         return 2    
-    print("test1")           
+    print("test1")         
     return 1
 def poker(hands):
     '''
