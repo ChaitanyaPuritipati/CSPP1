@@ -62,6 +62,67 @@ def is_flush(hand):
     if test_string_flush in "CCCCC":
         return True
     return False
+def four_of_kind(hand):
+    z = 0
+    test_kind = set()
+    while z < len(hand):
+        test_kind.update(hand[z][0])
+        z = z + 1
+    if len(test_kind) == 2:
+        count_list =[]
+        for i in test_kind:
+            count_list.append(hand.count(i))
+        if 4 in count_list:
+            return True
+    return False 
+def full_house(hand):
+    z = 0
+    test_kind = set()
+    while z < len(hand):
+        test_kind.update(hand[z][0])
+        z = z + 1
+    if len(test_kind) == 2:
+        count_list =[]
+        for i in test_kind:
+            count_list.append(hand.count(i))
+        if 3 in count_list:
+            return True
+    return False     
+def three_of_kind(hand):
+    y = 0
+    test_kind_new = set()
+    while z < len(hand):
+        test_kind_new.update(hand[y][0])
+        y = y + 1
+    if len(test_kind) == 3:
+        count_list =[]
+        for i in test_kind:
+            count_list.append(hand.count(i))
+        if 3 in count_list:
+            return True
+    return False  
+def two_pair(hand):
+    y = 0
+    test_kind_new = set()
+    while z < len(hand):
+        test_kind_new.update(hand[y][0])
+        y = y + 1
+    if len(test_kind) == 3:
+        count_list =[]
+        for i in test_kind:
+            count_list.append(hand.count(i))
+        if  count_list.count(2) == 2:
+            return True
+    return False     
+def one_pair(hand):
+    z = 0
+    test_kind = set()
+    while z < len(hand):
+        test_kind.update(hand[z][0])
+        z = z + 1
+    if len(test_kind) == 4:
+        return True
+    return False
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
@@ -87,12 +148,22 @@ def hand_rank(hand):
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
     if is_straight(hand) and is_flush(hand):
-        return 3
+        return 9
+    if four_of_kind(hand):
+        return 8    
+    if full_house(hand):
+        return 7
     if is_flush(hand):
-        return 2
+        return 6
     if is_straight(hand):
-        return 1
-    return 0
+        return 5
+    if three_of_kind(hand):
+        return 4
+    if two_pair(hand):
+        return 3
+    if one_pair(hand):
+        return 2           
+    return 1
 def poker(hands):
     '''
         This function is completed for you. Read it to learn the code.
