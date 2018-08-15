@@ -82,7 +82,7 @@ def full_house(hand):
     while z < len(hand):
         test_kind.update(hand[z][0])
         z = z + 1
-    if len(test_kind_new) == 2:
+    if len(test_kind) == 2:
         count_list =[]
         for i in test_kind:
             count_list.append(hand.count(i))
