@@ -11,7 +11,7 @@ def counter_list_func(hand, test_kind):
     '''
     Function to return the frequency of elements in a list
     '''
-    count_list =[]
+    count_list = []
     for i in test_kind:
         counter = 0
         for j in hand:
@@ -75,55 +75,55 @@ def is_flush(hand):
         return True
     return False
 def four_of_kind(hand):
-    z = 0
+    z_num = 0
     test_kind = set()
-    while z < len(hand):
-        test_kind.update(hand[z][0])
-        z = z + 1
+    while z_num < len(hand):
+        test_kind.update(hand[z_num][0])
+        z_num = z_num + 1
     if len(test_kind) == 2:
         count_list = counter_list_func(hand, test_kind)
         if 4 in count_list:
             return True
     return False
 def full_house(hand):
-    z = 0
+    z_num = 0
     test_kind = set()
-    while z < len(hand):
-        test_kind.update(hand[z][0])
-        z = z + 1
+    while z_num < len(hand):
+        test_kind.update(hand[z_num][0])
+        z_num = z_num + 1
     if len(test_kind) == 2:
         count_list = counter_list_func(hand, test_kind)
         if 3 in count_list:
             return True
     return False
 def three_of_kind(hand):
-    y = 0
+    y_num = 0
     test_kind_new = set()
-    while y < len(hand):
-        test_kind_new.update(hand[y][0])
-        y = y + 1
+    while y_num < len(hand):
+        test_kind_new.update(hand[y_num][0])
+        y_num = y_num + 1
     if len(test_kind_new) == 3:
         count_list = counter_list_func(hand, test_kind_new)
         if 3 in count_list:
             return True
     return False
 def two_pair(hand):
-    y = 0
+    y_num = 0
     test_kind_new = set()
-    while y < len(hand):
-        test_kind_new.update(hand[y][0])
-        y = y + 1
+    while y_num < len(hand):
+        test_kind_new.update(hand[y_num][0])
+        y_num = y_num + 1
     if len(test_kind_new) == 3:
         count_list = counter_list_func(hand, test_kind_new)
         if  count_list.count(2) == 2:
             return True
     return False
 def one_pair(hand):
-    z = 0
+    z_num = 0
     test_kind = set()
-    while z < len(hand):
-        test_kind.update(hand[z][0])
-        z = z + 1
+    while z_num < len(hand):
+        test_kind.update(hand[z_num][0])
+        z_num = z_num + 1
     if len(test_kind) == 4:
         return True
     return False
