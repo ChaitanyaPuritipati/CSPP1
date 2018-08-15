@@ -26,7 +26,9 @@ def is_straight(hand):
         i = i + 1
     test_string.sort()
     if test_string[0] == 2 and test_string[4] == 14:
-        test_string = ['A', '2', '3', '4', '5']
+        temp = test_string[0]  
+        test_string[0] = test_string[4]
+        test_string[4] = temp
         test_string = ''.join(str(x) for x in test_string)
     else:
         j = 0
