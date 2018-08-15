@@ -103,7 +103,7 @@ def three_of_kind(hand):
         test_kind_new.update(hand[y][0])
         y = y + 1
     if len(test_kind_new) == 3:
-        count_list = counter_list_func(hand, test_kind_new)  
+        count_list = counter_list_func(hand, test_kind_new)
         if 3 in count_list:
             return True
     return False
