@@ -91,7 +91,7 @@ def full_house(hand):
 def three_of_kind(hand):
     y = 0
     test_kind_new = set()
-    while z < len(hand):
+    while y < len(hand):
         test_kind_new.update(hand[y][0])
         y = y + 1
     if len(test_kind) == 3:
@@ -104,7 +104,7 @@ def three_of_kind(hand):
 def two_pair(hand):
     y = 0
     test_kind_new = set()
-    while z < len(hand):
+    while y < len(hand):
         test_kind_new.update(hand[y][0])
         y = y + 1
     if len(test_kind) == 3:
