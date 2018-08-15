@@ -110,7 +110,7 @@ def two_pair(hand):
         y = y + 1
     if len(test_kind_new) == 3:
         count_list =[]
-        for i in test_kind:
+        for i in test_kind_new:
             count_list.append(hand.count(i))
         if  count_list.count(2) == 2:
             return True
