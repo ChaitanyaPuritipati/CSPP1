@@ -46,7 +46,7 @@ def is_check_one_pair(hands, test_index):
         keys_list_dict = list(first_values.keys())
         list_test = []
         #var_max = values_list_dict.index(max(values_list_dict))
-        key_max = int(keys_list_dict[values_list_dict.index(max(values_list_dict))])
+        key_max = (keys_list_dict[values_list_dict.index(max(values_list_dict))])
         print(key_max)
         keys_list_dict.remove(keys_list_dict[values_list_dict.index(max(values_list_dict))])
         for l in keys_list_dict:
