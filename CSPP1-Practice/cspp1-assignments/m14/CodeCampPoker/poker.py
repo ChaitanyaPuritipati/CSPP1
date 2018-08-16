@@ -9,10 +9,25 @@ FACE_VALUES = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7,\
 '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
 def is_check_four_kind(hands, test_index):
     list_check_four = []
+    #list_test = []
     for j in test_index:
-        list_check_four.append(set(j[0]))
-
-
+        first_values = {}
+        for k in hands[j]:
+            if k[0] in first_values:
+                first_values[k[0]] = first_values[k[0]] + 1
+            else:
+                first_values[k[0]] = 1
+        values_list_dict = first_values.values()
+        keys_list_dict = first_values.keys()
+        list_test = []
+        var_max = values_list_dict.index(max(values_list_dict))
+        key_max = keys_list_dict[var_max]
+        keys_list_dict.remove(keys_list_dict[var_max])
+        for l in keys_list_dict:
+            list_test.append(FACE_VALUES[l])
+        list_test.sort(reverse=True)
+        list_test.insert(0, key_max)    
+        list_check_four.append(list_test)    
 def counter_list_func(hand, test_kind):
     '''
     Function to return the frequency of elements in a list
