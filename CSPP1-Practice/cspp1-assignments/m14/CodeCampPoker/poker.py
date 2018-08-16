@@ -284,7 +284,8 @@ def poker(hands):
     test_index = []
     for j in hands:
         test_list.append(hand_rank(j))
-    for j in range(len(test_list)):
+    test_len = len(test_list)
+    for j in range(test_len):
         if max(test_list) is test_list[j]:
             test_index.append(j)
     if len(test_index) > 1:
