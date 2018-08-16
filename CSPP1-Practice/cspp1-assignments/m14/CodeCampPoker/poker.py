@@ -7,9 +7,9 @@ Date: 14-08-2018
 #https://en.wikipedia.org/wiki/List_of_poker_hands
 FACE_VALUES = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7,\
 '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
-def is_check_four_kind(hands, test_index):
+
+def is_check_one_pair(hands, test_index):
     list_check_four = []
-    #list_test = []
     for j in test_index:
         first_values = {}
         for k in hands[j]:
@@ -26,8 +26,51 @@ def is_check_four_kind(hands, test_index):
         for l in keys_list_dict:
             list_test.append(FACE_VALUES[l])
         list_test.sort(reverse=True)
-        list_test.insert(0, key_max)    
-        list_check_four.append(list_test)    
+        list_test.insert(0, key_max)
+        list_check_four.append(list_test)
+    i = 0
+    while True:
+        list_hand_values = []
+        for j in list_check_four:
+            list_hand_values.append(j[i])
+        max_val = max(list_hand_values)
+        max_count = list_hand_values.count(max_val)
+        if max_count = 1:
+            return hands[max_val]
+        i = i + 1
+    return hands[0]
+
+def is_check_four_kind(hands, test_index):
+    list_check_four = []
+    for j in test_index:
+        first_values = {}
+        for k in hands[j]:
+            if k[0] in first_values:
+                first_values[k[0]] = first_values[k[0]] + 1
+            else:
+                first_values[k[0]] = 1
+        values_list_dict = first_values.values()
+        keys_list_dict = first_values.keys()
+        list_test = []
+        var_max = values_list_dict.index(max(values_list_dict))
+        key_max = keys_list_dict[var_max]
+        keys_list_dict.remove(keys_list_dict[var_max])
+        for l in keys_list_dict:
+            list_test.append(FACE_VALUES[l])
+        list_test.sort(reverse=True)
+        list_test.insert(0, key_max)
+        list_check_four.append(list_test)
+    i = 0
+    while True:
+        list_hand_values = []
+        for j in list_check_four:
+            list_hand_values.append(j[i])
+        max_val = max(list_hand_values)
+        max_count = list_hand_values.count(max_val)
+        if max_count = 1:
+            return hands[max_val]
+        i = i + 1
+    return hands[0]
 def counter_list_func(hand, test_kind):
     '''
     Function to return the frequency of elements in a list
@@ -238,11 +281,11 @@ def poker(hands):
         if max(test_list) is test_list[j]:
             test_index.append(j)
     if len(test_index) > 1:
-        for j in range(3):
-            test_count.append(set([1,2,3]))
-        print(test_count)    
-
-    #return max(hands, key=hand_rank)
+        if max(test_list) == 8:
+            return is_check_four_kind(hands, test_index)
+        if max(test_list) == 2:
+            return is_check_one_pair(hands, test_index)
+    return max(hands, key=hand_rank)
 
 if __name__ == "__main__":
     # read the number of test cases
