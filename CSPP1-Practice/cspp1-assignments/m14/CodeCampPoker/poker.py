@@ -32,8 +32,7 @@ def is_check_other(hands, test_index):
     return hands[0]
 
 
-
-def is_check_one_pair(hands, test_index):
+def frequency_func(hands):
     list_check_four = []
     for j in test_index:
         first_values = {}
@@ -45,23 +44,21 @@ def is_check_one_pair(hands, test_index):
         values_list_dict = list(first_values.values())
         keys_list_dict = list(first_values.keys())
         list_test = []
-        #var_max = values_list_dict.index(max(values_list_dict))
-        #key_max = keys_list_dict[values_list_dict.index(max(values_list_dict))]
-        #print(key_max)
         keys_list_dict.remove(keys_list_dict[values_list_dict.index(max(values_list_dict))])
         for l in keys_list_dict:
             list_test.append(FACE_VALUES[l])
         list_test.sort(reverse=True)
         list_test.insert(0, keys_list_dict[values_list_dict.index(max(values_list_dict))])
         list_check_four.append(list_test)
+    return list_check_four
+def is_check_one_pair(hands, test_index):
+    list_check_four = frequency_func(hands, test_index)
     i = 0
     o = 0
     while o < len(list_check_four):
         list_hand_values = []
         for j in list_check_four:
             list_hand_values.append(j[i])
-        #max_val = max(list_hand_values)
-        #max_count = list_hand_values.count(max_val)
         if list_hand_values.count(max(list_hand_values)) == 1:
             list_hand_values.index(max(list_hand_values))
             return hands[list_hand_values.index(max(list_hand_values))]
@@ -69,35 +66,14 @@ def is_check_one_pair(hands, test_index):
         o = o + 1
     return hands[0]
 def is_check_four_kind(hands, test_index):
-    list_check_four = []
-    for j in test_index:
-        first_values = {}
-        for k in hands[j]:
-            if k[0] in first_values:
-                first_values[k[0]] = first_values[k[0]] + 1
-            else:
-                first_values[k[0]] = 1
-        values_list_dict = list(first_values.values())
-        keys_list_dict = list(first_values.keys())
-        list_test = []
-        var_max = values_list_dict.index(max(values_list_dict))
-        key_max = int(keys_list_dict[var_max])
-        keys_list_dict.remove(keys_list_dict[var_max])
-        for l in keys_list_dict:
-            list_test.append(FACE_VALUES[l])
-        list_test.sort(reverse=True)
-        list_test.insert(0, key_max)
-        list_check_four.append(list_test)
+    list_check_four = frequency_func(hands, test_index)    
     i = 0
     o = 0
     while o < len(list_check_four):
         list_hand_values = []
         for j in list_check_four:
             list_hand_values.append(j[i])
-        #max_val = max(list_hand_values)
-        #max_count = list_hand_values.count(max_val)
         if list_hand_values.count(max(list_hand_values)) == 1:
-            #v = list_hand_values.index(max_val)
             return hands[list_hand_values.index(max(list_hand_values))]
         i = i + 1
         o = o + 1
