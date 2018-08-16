@@ -23,7 +23,7 @@ def is_check_other(hands, test_index):
     while o_num < len(list_first_values):
         list_hand_values = []
         for j_num in list_first_values:
-            list_hand_values.append(j_num[i_num])    
+            list_hand_values.append(j_num[i_num])
         max_val = max(list_hand_values)
         max_count = list_hand_values.count(max_val)
         if max_count == 1:
@@ -74,7 +74,7 @@ def is_check_four_kind(hands, test_index):
     '''
     Function to execute if inputs have multiple four_kind ranks
     '''
-    list_check_four = frequency_func(hands, test_index)    
+    list_check_four = frequency_func(hands, test_index)
     i_num = 0
     o_num = 0
     while o_num < len(list_check_four):
@@ -292,11 +292,11 @@ def poker(hands):
         if max(test_list) == 8:
             return is_check_four_kind(hands, test_index)
         if max(test_list) == 1:
-            return is_check_other(hands, test_index)    
+            return is_check_other(hands, test_index)
         if max(test_list) == 2:
             return is_check_one_pair(hands, test_index)
         if max(test_list) == 2:
-            return is_check_other(hands, test_index)    
+            return is_check_other(hands, test_index)
     return max(hands, key=hand_rank)
 
 if __name__ == "__main__":
