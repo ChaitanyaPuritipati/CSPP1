@@ -216,7 +216,7 @@ def poker(hands):
             test_count = test_list.count(k)
         for l in test_count:
             if l > 1:
-            test_index = test_list.index(l)   
+                test_index = test_list.index(l)   
         print(test_index)
 
     return max(hands, key=hand_rank)
