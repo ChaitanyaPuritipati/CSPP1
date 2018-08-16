@@ -36,17 +36,16 @@ def is_check_one_pair(hands, test_index):
         list_hand_values = []
         for j in list_check_four:
             list_hand_values.append(j[i])
-        print(list_hand_values)    
+        #print(list_hand_values)    
         max_val = max(list_hand_values)
         max_count = list_hand_values.count(max_val)
-        print(max_count)
+        #print(max_count)
         if max_count == 1:
             v = list_hand_values.index(max_val)
             return hands[v]
         i = i + 1
         o = o + 1
     return hands[0]
-
 def is_check_four_kind(hands, test_index):
     list_check_four = []
     for j in test_index:
@@ -56,11 +55,12 @@ def is_check_four_kind(hands, test_index):
                 first_values[k[0]] = first_values[k[0]] + 1
             else:
                 first_values[k[0]] = 1
-        values_list_dict = first_values.values()
-        keys_list_dict = first_values.keys()
+        values_list_dict = list(first_values.values())
+        keys_list_dict = list(first_values.keys())
         list_test = []
         var_max = values_list_dict.index(max(values_list_dict))
-        key_max = keys_list_dict[var_max]
+        key_max = int(keys_list_dict[var_max])
+        print(key_max)
         keys_list_dict.remove(keys_list_dict[var_max])
         for l in keys_list_dict:
             list_test.append(FACE_VALUES[l])
@@ -68,15 +68,21 @@ def is_check_four_kind(hands, test_index):
         list_test.insert(0, key_max)
         list_check_four.append(list_test)
     i = 0
-    while True:
+    print(list_check_four)
+    o = 0
+    while o < len(list_check_four):
         list_hand_values = []
         for j in list_check_four:
             list_hand_values.append(j[i])
+        #print(list_hand_values)    
         max_val = max(list_hand_values)
         max_count = list_hand_values.count(max_val)
+        #print(max_count)
         if max_count == 1:
-            return hands[max_val]
+            v = list_hand_values.index(max_val)
+            return hands[v]
         i = i + 1
+        o = o + 1
     return hands[0]
 def counter_list_func(hand, test_kind):
     '''
