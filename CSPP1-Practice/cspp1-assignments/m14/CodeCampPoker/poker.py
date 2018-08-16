@@ -32,7 +32,7 @@ def is_check_other(hands, test_index):
     return hands[0]
 
 
-def frequency_func(hands):
+def frequency_func(hands, test_index):
     list_check_four = []
     for j in test_index:
         first_values = {}
