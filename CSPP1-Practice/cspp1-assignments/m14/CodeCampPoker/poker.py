@@ -8,6 +8,9 @@ Date: 14-08-2018
 FACE_VALUES = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7,\
 '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
 def is_check_other(hands, test_index):
+    '''
+    Function to check the other equal condition
+    '''
     list_first_values = []
     for j_num in test_index:
         first_values = []
@@ -29,6 +32,9 @@ def is_check_other(hands, test_index):
         o_num = o_num + 1
     return hands[0]
 def frequency_func(hands, test_index):
+    '''
+    Function to get the frequency of elements
+    '''
     list_check_four = []
     for j_num in test_index:
         first_values = {}
@@ -48,6 +54,9 @@ def frequency_func(hands, test_index):
         list_check_four.append(list_test)
     return list_check_four
 def is_check_one_pair(hands, test_index):
+    '''
+    Function to execute if inputs have multiple one pair ranks
+    '''
     list_check_four = frequency_func(hands, test_index)
     i_num = 0
     o_num = 0
@@ -62,6 +71,9 @@ def is_check_one_pair(hands, test_index):
         o_num = o_num + 1
     return hands[0]
 def is_check_four_kind(hands, test_index):
+    '''
+    Function to execute if inputs have multiple four_kind ranks
+    '''
     list_check_four = frequency_func(hands, test_index)    
     i_num = 0
     o_num = 0
