@@ -17,8 +17,8 @@ def is_check_one_pair(hands, test_index):
                 first_values[k[0]] = first_values[k[0]] + 1
             else:
                 first_values[k[0]] = 1
-        values_list_dict = first_values.values()
-        keys_list_dict = first_values.keys()
+        values_list_dict = list(first_values.values())
+        keys_list_dict = list(first_values.keys())
         list_test = []
         var_max = values_list_dict.index(max(values_list_dict))
         key_max = keys_list_dict[var_max]
