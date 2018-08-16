@@ -31,7 +31,7 @@ def is_check_one_pair(hands, test_index):
         list_check_four.append(list_test)
     i = 0
     print(list_check_four)
-    while True:
+    while o < len(list_check_four):
         list_hand_values = []
         for j in list_check_four:
             list_hand_values.append(j[i])
@@ -43,6 +43,7 @@ def is_check_one_pair(hands, test_index):
             v = list_hand_values.index(max_val)
             return hands[v]
         i = i + 1
+        o = o + 1
     return hands[0]
 
 def is_check_four_kind(hands, test_index):
