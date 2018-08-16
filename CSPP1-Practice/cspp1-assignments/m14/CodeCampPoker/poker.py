@@ -12,7 +12,7 @@ def is_check_other(hands, test_index):
     for j in test_index:
         first_values = []
         for k in hands[j]:
-            print(k[0])
+            #print(k[0])
             first_values.append(FACE_VALUES[k[0]])
         first_values.sort(reverse=True)
         list_first_values.append(first_values)
