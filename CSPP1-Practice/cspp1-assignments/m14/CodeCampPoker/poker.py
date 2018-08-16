@@ -38,6 +38,7 @@ def is_check_one_pair(hands, test_index):
         print(list_hand_values)    
         max_val = max(list_hand_values)
         max_count = list_hand_values.count(max_val)
+        print(max_count)
         if max_count == 1:
             return hands[int(max_val)]
         i = i + 1
