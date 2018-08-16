@@ -214,6 +214,7 @@ def poker(hands):
     if len(test_set) < len(hands):
         for k in test_set:
             test_count = test_list.count(k)
+        print(type(test_count))    
         for l in test_count:
             if l > 1:
                 test_index = test_list.index(l)   
