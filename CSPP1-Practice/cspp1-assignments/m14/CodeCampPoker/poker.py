@@ -98,7 +98,7 @@ def is_check_four_kind(hands, test_index):
         #max_count = list_hand_values.count(max_val)
         if list_hand_values.count(max(list_hand_values)) == 1:
             #v = list_hand_values.index(max_val)
-            return hands[list_hand_values.index(max_val)]
+            return hands[list_hand_values.index(max(list_hand_values))]
         i = i + 1
         o = o + 1
     return hands[0]
