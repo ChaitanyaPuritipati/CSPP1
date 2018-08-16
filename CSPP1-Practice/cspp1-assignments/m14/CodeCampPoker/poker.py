@@ -7,6 +7,12 @@ Date: 14-08-2018
 #https://en.wikipedia.org/wiki/List_of_poker_hands
 FACE_VALUES = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7,\
 '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
+def is_check_four_kind(hands, test_index):
+    list_check_four = []
+    for j in test_index:
+        list_check_four.append(set(j[0]))
+
+
 def counter_list_func(hand, test_kind):
     '''
     Function to return the frequency of elements in a list
@@ -203,7 +209,7 @@ def poker(hands):
     # max uses the rank returned by hand_rank and returns the best hand
     #test_set = set()
     test_list = []
-    #test_count = []
+    test_count = []
     test_index = []
     for j in hands:
         #print(hands[j])
@@ -211,22 +217,15 @@ def poker(hands):
         test_list.append(hand_rank(j))
     #print(test_set)
     #print(test_list)
-    print(test_list)
-    print(max(test_list))
+    #print(test_list)
+    #print(max(test_list))
     for j in range(len(test_list)):
         if max(test_list) is test_list[j]:
             test_index.append(j)
     if len(test_index) > 1:
-        print(test_index)      
-    #if len(test_set) < len(hands):
-        #for k in test_set:
-         #   v = test_list.count(k)
-          #  if v > 1:
-           #     for l in 
-        #for l in test_count:
-         #   if l > 1:
-          #      test_index = test_list.index(   
-        #print(test_index)
+        for j in range(len(3)):
+            test_count.append(set(j))
+        print(test_count)    
 
     #return max(hands, key=hand_rank)
 
