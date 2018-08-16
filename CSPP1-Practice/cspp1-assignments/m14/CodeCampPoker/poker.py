@@ -7,6 +7,31 @@ Date: 14-08-2018
 #https://en.wikipedia.org/wiki/List_of_poker_hands
 FACE_VALUES = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7,\
 '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
+def is_check_other(hands, test_index):
+    list_first_values = []
+    for j in test_index:
+        first_values = []
+        for k in hands[j]:
+            first_values.append(int(k[0]))
+        first_values.sort(reverse=True)    
+        list_first_values.append(first_values)
+    o = 0
+    i = 0
+    while o < len(list_first_values):
+        list_hand_values = []
+        for j in list_first_values:
+            list_hand_values.append(j[i])    
+        max_val = max(list_hand_values)
+        max_count = list_hand_values.count(max_val)
+        if max_count == 1:
+            v = list_hand_values.index(max_val)
+            return hands[v]
+        i = i + 1
+        o = o + 1
+
+    return hands[0]
+
+
 
 def is_check_one_pair(hands, test_index):
     list_check_four = []
@@ -22,7 +47,6 @@ def is_check_one_pair(hands, test_index):
         list_test = []
         var_max = values_list_dict.index(max(values_list_dict))
         key_max = int(keys_list_dict[var_max])
-        #print(key_max)
         keys_list_dict.remove(keys_list_dict[var_max])
         for l in keys_list_dict:
             list_test.append(FACE_VALUES[l])
@@ -30,16 +54,13 @@ def is_check_one_pair(hands, test_index):
         list_test.insert(0, key_max)
         list_check_four.append(list_test)
     i = 0
-    #print(list_check_four)
     o = 0
     while o < len(list_check_four):
         list_hand_values = []
         for j in list_check_four:
             list_hand_values.append(j[i])
-        #print(list_hand_values)    
         max_val = max(list_hand_values)
         max_count = list_hand_values.count(max_val)
-        #print(max_count)
         if max_count == 1:
             v = list_hand_values.index(max_val)
             return hands[v]
@@ -74,10 +95,8 @@ def is_check_four_kind(hands, test_index):
         list_hand_values = []
         for j in list_check_four:
             list_hand_values.append(j[i])
-        #print(list_hand_values)    
         max_val = max(list_hand_values)
         max_count = list_hand_values.count(max_val)
-        #print(max_count)
         if max_count == 1:
             v = list_hand_values.index(max_val)
             return hands[v]
@@ -283,21 +302,19 @@ def poker(hands):
     test_count = []
     test_index = []
     for j in hands:
-        #print(hands[j])
-        #test_set.update(str(hand_rank(j)))
         test_list.append(hand_rank(j))
-    #print(test_set)
-    #print(test_list)
-    #print(test_list)
-    #print(max(test_list))
     for j in range(len(test_list)):
         if max(test_list) is test_list[j]:
             test_index.append(j)
     if len(test_index) > 1:
         if max(test_list) == 8:
             return is_check_four_kind(hands, test_index)
+        if max(test_list) == 1:
+            return is_check_other(hands, test_index)    
         if max(test_list) == 2:
             return is_check_one_pair(hands, test_index)
+        if max(test_list) == 2:
+            return is_check_other(hands, test_index)    
     return max(hands, key=hand_rank)
 
 if __name__ == "__main__":
