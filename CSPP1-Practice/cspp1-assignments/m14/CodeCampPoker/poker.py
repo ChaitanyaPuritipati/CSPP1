@@ -32,7 +32,7 @@ def frequency_func(hands, test_index):
     list_check_four = []
     for j_num in test_index:
         first_values = {}
-        for k_num in hands[j]:
+        for k_num in hands[j_num]:
             if k_num[0] in first_values:
                 first_values[k_num[0]] = first_values[k_num[0]] + 1
             else:
