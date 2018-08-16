@@ -212,6 +212,7 @@ def poker(hands):
     #print(test_set)
     #print(test_list)
     print(test_list)
+    max(test_list)
     #if len(test_set) < len(hands):
         #for k in test_set:
          #   v = test_list.count(k)
