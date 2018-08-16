@@ -201,7 +201,11 @@ def poker(hands):
     # hand_rank is a function passed to max
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
-    print(hands[0])
+    test_set = set()
+    for j in hands:
+        test_set.update(hand_rank(j))
+    print(test_set)    
+
     return max(hands, key=hand_rank)
 
 if __name__ == "__main__":
@@ -214,5 +218,4 @@ if __name__ == "__main__":
         ha = line.split(" ")
         HANDS.append(ha)
     # test the poker function to see how it works
-    print(HANDS)
     print(' '.join(poker(HANDS)))
