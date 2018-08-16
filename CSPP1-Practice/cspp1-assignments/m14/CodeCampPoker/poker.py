@@ -31,6 +31,7 @@ def is_check_one_pair(hands, test_index):
         list_check_four.append(list_test)
     i = 0
     print(list_check_four)
+    o = 0
     while o < len(list_check_four):
         list_hand_values = []
         for j in list_check_four:
