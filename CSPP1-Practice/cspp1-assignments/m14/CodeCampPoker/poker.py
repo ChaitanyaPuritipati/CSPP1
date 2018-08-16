@@ -202,7 +202,7 @@ def poker(hands):
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
     test_set = set()
-    test_list
+    test_list = []
     for j in hands:
         #print(hands[j])
         test_set.update(str(hand_rank(j)))
