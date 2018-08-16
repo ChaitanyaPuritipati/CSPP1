@@ -223,7 +223,7 @@ def poker(hands):
         if max(test_list) is test_list[j]:
             test_index.append(j)
     if len(test_index) > 1:
-        for j in range(len(3)):
+        for j in range(3):
             test_count.append(set(j))
         print(test_count)    
 
