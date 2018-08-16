@@ -204,7 +204,7 @@ def poker(hands):
     test_set = set()
     test_list = []
     test_count = []
-    test_index
+    test_index = []
     for j in hands:
         #print(hands[j])
         test_set.update(str(hand_rank(j)))
