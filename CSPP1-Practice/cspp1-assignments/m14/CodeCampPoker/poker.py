@@ -12,7 +12,6 @@ def is_check_other(hands, test_index):
     for j in test_index:
         first_values = []
         for k in hands[j]:
-            #print(k[0])
             first_values.append(FACE_VALUES[k[0]])
         first_values.sort(reverse=True)
         list_first_values.append(first_values)
@@ -296,9 +295,7 @@ def poker(hands):
     # hand_rank is a function passed to max
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
-    #test_set = set()
     test_list = []
-    test_count = []
     test_index = []
     for j in hands:
         test_list.append(hand_rank(j))
