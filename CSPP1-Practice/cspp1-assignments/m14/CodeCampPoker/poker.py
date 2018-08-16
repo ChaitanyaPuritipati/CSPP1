@@ -62,9 +62,9 @@ def is_check_one_pair(hands, test_index):
             list_hand_values.append(j[i])
         max_val = max(list_hand_values)
         max_count = list_hand_values.count(max_val)
-        if max_count == 1:
-            v = list_hand_values.index(max_val)
-            return hands[v]
+        if list_hand_values.count(max(list_hand_values)) == 1:
+            list_hand_values.index(max(list_hand_values))
+            return hands[list_hand_values.index(max(list_hand_values))]
         i = i + 1
         o = o + 1
     return hands[0]
