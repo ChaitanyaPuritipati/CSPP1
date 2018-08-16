@@ -204,6 +204,7 @@ def poker(hands):
     test_set = set()
     test_list = []
     test_count = []
+    test_index
     for j in hands:
         #print(hands[j])
         test_set.update(str(hand_rank(j)))
@@ -213,8 +214,10 @@ def poker(hands):
     if len(test_set) < len(hands):
         for k in test_set:
             test_count = test_list.count(k)
-        print(test_count)    
-
+        for l in test_count:
+            if l > 1:
+            test_index = test_list.index(l)   
+        print(test_index)
 
     return max(hands, key=hand_rank)
 
