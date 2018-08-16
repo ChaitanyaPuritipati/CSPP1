@@ -204,8 +204,8 @@ def poker(hands):
     test_set = set()
     for j in range(len(hands)):
         print(hands[j])
-        #test_set.update(hand_rank(hands[j]))
-    print(test_set) 
+        test_set.update(hands[j])
+    print(test_set)
 
     return max(hands, key=hand_rank)
 
