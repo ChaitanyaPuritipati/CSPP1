@@ -213,4 +213,5 @@ if __name__ == "__main__":
         ha = line.split(" ")
         HANDS.append(ha)
     # test the poker function to see how it works
+    print(HANDS)
     print(' '.join(poker(HANDS)))
