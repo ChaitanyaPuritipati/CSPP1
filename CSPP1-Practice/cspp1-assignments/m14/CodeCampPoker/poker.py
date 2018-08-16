@@ -35,6 +35,7 @@ def is_check_one_pair(hands, test_index):
         list_hand_values = []
         for j in list_check_four:
             list_hand_values.append(j[i])
+        print(list_hand_values)    
         max_val = max(list_hand_values)
         max_count = list_hand_values.count(max_val)
         if max_count == 1:
