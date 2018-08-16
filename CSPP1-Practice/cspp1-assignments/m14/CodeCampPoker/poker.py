@@ -46,12 +46,12 @@ def is_check_one_pair(hands, test_index):
         keys_list_dict = list(first_values.keys())
         list_test = []
         #var_max = values_list_dict.index(max(values_list_dict))
-        #key_max = int(keys_list_dict[values_list_dict.index(max(values_list_dict))])
+        key_max = int(keys_list_dict[values_list_dict.index(max(values_list_dict))])
         keys_list_dict.remove(keys_list_dict[values_list_dict.index(max(values_list_dict))])
         for l in keys_list_dict:
             list_test.append(FACE_VALUES[l])
         list_test.sort(reverse=True)
-        list_test.insert(0, int(keys_list_dict[values_list_dict.index(max(values_list_dict))]))
+        list_test.insert(0, key_max)
         list_check_four.append(list_test)
     i = 0
     o = 0
