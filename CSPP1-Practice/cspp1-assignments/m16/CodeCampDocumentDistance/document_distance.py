@@ -8,8 +8,8 @@ def distance_calculator(common_dict):
     sqr_2 = 0
     for k in common_dict:
         numerator = numerator + (common_dict[k][0])*(common_dict[k][1])
-        sqr_1 = sqr_1 + (common_dict[k][0])**2.0
-        sqr_2 = sqr_2 + (common_dict[k][1])**2.0
+        sqr_1 = sqr_1 + ((common_dict[k][0])**2)
+        sqr_2 = sqr_2 + ((common_dict[k][1])**2)
     sqr_1 = math.sqrt(sqr_1)
     sqr_2 = math.sqrt(sqr_2)
     denominator = (sqr_1)*(sqr_2)
