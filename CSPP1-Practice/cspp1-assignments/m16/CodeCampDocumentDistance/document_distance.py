@@ -16,13 +16,13 @@ def similarity(dict1, dict2):
         dict2[j] = dict2[j].split(" ")
     for i in range(len(dict1)):
         for j in range(len(dict1[i])):
-            dict1[i][j] = dict1[i][j].strip(",.!@#$%^&*?")
+            dict1[i][j] = dict1[i][j].strip(",.!@#$%^&*?-")
             if "'" in dict1[i][j]:
                 dict1[i][j] = dict1[i][j].split("'")
                 dict1[i][j] = ''.join(e for e in dict1[i][j])
     for i in range(len(dict2)):
         for j in range(len(dict2[i])):
-            dict2[i][j] = dict2[i][j].strip(",.!@#$%^&*?")
+            dict2[i][j] = dict2[i][j].strip(",.!@#$%^&*?-")
             if "'" in dict2[i][j]:
                 dict2[i][j] = dict2[i][j].split("'")
                 dict2[i][j] = ''.join(e for e in dict2[i][j])            
@@ -46,15 +46,12 @@ def similarity(dict1, dict2):
         if i in common_dict:
             common_dict[i][0] = common_dict[i][0] + 1
         else:
-            common_dict[i] = [1] 
-    for j in dict2:
-        if j not in dict1:
-            common_dict[j][0] = [0]
-        elif j in common_dict:
-            common_dict[j][1] = common_dict[j][1] + 1
-        else:
-            common_dict[j].append(1)
+            common_dict[i] = [1, 0]
     print(common_dict)
+    #for j in dict2:
+    #    if j not in dict1:
+    #        common_dict[j] = [0, 1]        
+     
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
