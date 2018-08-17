@@ -15,6 +15,8 @@ def similarity(dict1, dict2):
     #print(dict1, "before")
     dict1 = dict1.split(". ")
     dict2 = dict2.split(". ")
+    dict1 = dict1.split(",")
+    dict2 = dict2.split(",")
     
     #print(type(dict1))
     #print(type(dict2))
