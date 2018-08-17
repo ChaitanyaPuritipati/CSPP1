@@ -27,7 +27,7 @@ def similarity(dict1, dict2):
     for i in range(len(dict1)):
         for j in dict1[i]:
             if ',' in j:
-                print("True", j)
+                j.replace(',', "true")
     #dict1 = dict1.split(",")
     #dict2 = dict2.split(",")
     #print(dict1)
