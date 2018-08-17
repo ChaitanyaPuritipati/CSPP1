@@ -15,7 +15,13 @@ def distance_calculator(common_dict):
     denominator = (sqr_1)*(sqr_2)
     output = numerator/denominator
     return output
-
+def no_stop_words(dict2):
+    dict2_new = []
+    for i in range(len(dict2)):
+        for j in range(len(dict2[i])):
+            if dict2[i][j] not in stop_words:
+                dict2_new.append(dict2[i][j])
+    return dict2_new            
 def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
@@ -30,28 +36,13 @@ def similarity(dict1, dict2):
         dict2[j] = dict2[j].split(" ")
     for i in range(len(dict1)):
         for j in range(len(dict1[i])):
-            #print(dict1[i][j])
             dict1[i][j] = ''.join(e for e in dict1[i][j] if e.isalpha())
     for i in range(len(dict2)):
         for j in range(len(dict2[i])):
             dict2[i][j] = ''.join(e for e in dict2[i][j] if e.isalpha())
     stop_words = load_stopwords("stopwords.txt")
-    dict1_new = []
-    for i in range(len(dict1)):
-        for j in range(len(dict1[i])):
-            #print(dict1[i][j])
-            if dict1[i][j] not in stop_words:
-            #    if dict1[i][j] != ' ':
-                dict1_new.append(dict1[i][j])
-    dict1 = dict1_new
-    dict2_new = []
-    for i in range(len(dict2)):
-        for j in range(len(dict2[i])):
-            #print(dict2[i][j])
-            if dict2[i][j] not in stop_words:
-            #    if dict2[i][j] != ' ':
-                dict2_new.append(dict2[i][j])
-    dict2 = dict2_new
+    dict1 = no_stop_words(dict1)
+    dict2 = no_stop_words(dict2)
     common_dict = {}
     for i in dict1:
         if i in common_dict:
@@ -64,7 +55,6 @@ def similarity(dict1, dict2):
         else:
             common_dict[j] = [0,1]
     common_dict.pop('',None)
-    #print(common_dict)
     print(distance_calculator(common_dict))
 def load_stopwords(filename):
     '''
