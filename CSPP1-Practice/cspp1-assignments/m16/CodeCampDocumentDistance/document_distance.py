@@ -15,7 +15,7 @@ def distance_calculator(common_dict):
     denominator = (sqr_1)*(sqr_2)
     output = numerator/denominator
     return output
-def no_stop_words(dict2):
+def no_stop_words(dict2, stop_words):
     dict2_new = []
     for i in range(len(dict2)):
         for j in range(len(dict2[i])):
@@ -41,8 +41,8 @@ def similarity(dict1, dict2):
         for j in range(len(dict2[i])):
             dict2[i][j] = ''.join(e for e in dict2[i][j] if e.isalpha())
     stop_words = load_stopwords("stopwords.txt")
-    dict1 = no_stop_words(dict1)
-    dict2 = no_stop_words(dict2)
+    dict1 = no_stop_words(dict1, stop_words)
+    dict2 = no_stop_words(dict2, stop_words)
     common_dict = {}
     for i in dict1:
         if i in common_dict:
