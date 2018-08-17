@@ -23,11 +23,14 @@ def similarity(dict1, dict2):
     for i in range(len(dict1)):
         dict1[i] = dict1[i].split(" ")
     for j in range(len(dict2)):
-        dict2[j] = dict2[j].split(" ")    
+        dict2[j] = dict2[j].split(" ")
+    for i in range(len(dict1)):
+        for j in dict1[i]:
+            print(j)        
     #dict1 = dict1.split(",")
     #dict2 = dict2.split(",")
-    print(dict1)
-    print(dict2) 
+    #print(dict1)
+    #print(dict2) 
 
 def load_stopwords(filename):
     '''
