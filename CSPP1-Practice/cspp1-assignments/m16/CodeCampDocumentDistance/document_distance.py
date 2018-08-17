@@ -29,7 +29,7 @@ def similarity(dict1, dict2):
             j = j.strip(",.!@#$%^&*?")
             if "'" in j:
                 j = j.split("'")
-                ''.join(e for e in j)
+                j = ''.join(e for e in j)
                 print(j, "yes")
             print(j)
     #dict1 = dict1.split(",")
