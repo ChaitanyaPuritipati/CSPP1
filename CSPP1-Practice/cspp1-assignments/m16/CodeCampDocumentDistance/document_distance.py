@@ -36,14 +36,16 @@ def similarity(dict1, dict2):
     dict2 = dict2.lower()
     dict1 = dict1.split(". ")
     dict2 = dict2.split(". ")
-    for i in range(len(dict1)):
+    ln_dict_1 = len(dict1)
+    ln_dict_2 = len(dict2) 
+    for i in range(ln_dict_1):
         dict1[i] = dict1[i].split(" ")
-    for j in range(len(dict2)):
+    for j in range(ln_dict_2):
         dict2[j] = dict2[j].split(" ")
-    for i in range(len(dict1)):
+    for i in range(ln_dict_1):
         for j in range(len(dict1[i])):
             dict1[i][j] = ''.join(e for e in dict1[i][j] if e.isalpha())
-    for i in range(len(dict2)):
+    for i in range(ln_dict_2):
         for j in range(len(dict2[i])):
             dict2[i][j] = ''.join(e for e in dict2[i][j] if e.isalpha())
 
