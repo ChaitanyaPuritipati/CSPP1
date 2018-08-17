@@ -27,7 +27,7 @@ def similarity(dict1, dict2):
         Compute the document distance as given in the PDF
     '''
     dict1 = dict1.lower()
-    dict2= dict2.lower()
+    dict2 = dict2.lower()
     dict1 = dict1.split(". ")
     dict2 = dict2.split(". ")
     for i in range(len(dict1)):
@@ -48,13 +48,13 @@ def similarity(dict1, dict2):
         if i in common_dict:
             common_dict[i][0] = common_dict[i][0] + 1
         else:
-            common_dict[i] = [1,0]
+            common_dict[i] = [1, 0]
     for j in dict2:
         if j in common_dict:
             common_dict[j][1] = common_dict[j][1] + 1
         else:
-            common_dict[j] = [0,1]
-    common_dict.pop('',None)
+            common_dict[j] = [0, 1]
+    common_dict.pop('', None)
     print(distance_calculator(common_dict))
 def load_stopwords(filename):
     '''
