@@ -63,7 +63,7 @@ def similarity(dict1, dict2):
         else:
             common_dict[j] = [0, 1]
     common_dict.pop('', None)
-    print(distance_calculator(common_dict))
+    return (distance_calculator(common_dict))
 def load_stopwords():
     '''
         loads stop words from a file and returns a dictionary
@@ -81,7 +81,7 @@ def main():
     '''
     input1 = input()
     input2 = input()
-    (similarity(input1, input2))
+    print(similarity(input1, input2))
 
 if __name__ == '__main__':
     main()
