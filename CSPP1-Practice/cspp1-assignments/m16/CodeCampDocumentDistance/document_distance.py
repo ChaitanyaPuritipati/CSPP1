@@ -21,7 +21,7 @@ def no_stop_words(dict2, stop_words):
         for j in range(len(dict2[i])):
             if dict2[i][j] not in stop_words:
                 dict2_new.append(dict2[i][j])
-    return dict2_new            
+    return dict2_new
 def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
