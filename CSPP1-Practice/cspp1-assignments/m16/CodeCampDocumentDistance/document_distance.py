@@ -42,7 +42,8 @@ def similarity(dict1, dict2):
         for j in range(len(dict1[i])):
             print(dict1[i][j])
             if dict1[i][j] not in stop_words:
-                dict1_new.append(dict1[i][j])     
+                dict1_new.append(dict1[i][j])
+                print(dict1_new,"new..............")     
     print(dict1)
     dict1 = dict1_new
     print(dict1)         
