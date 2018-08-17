@@ -6,8 +6,8 @@ def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
     '''
-    dict1.lower()
-    dict2.lower()
+    dict1 = dict1.lower()
+    dict2= dict2.lower()
     print(dict1)
     print(dict2)
     #dict1 = dict1.strip()
