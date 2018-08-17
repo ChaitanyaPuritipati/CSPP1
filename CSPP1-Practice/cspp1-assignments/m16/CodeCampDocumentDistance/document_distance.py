@@ -71,8 +71,9 @@ def similarity(dict1, dict2):
         elif j in common_dict:
             common_dict[j][1] = common_dict[j][1] + 1
     common_dict.pop('', None)
-    print(list(common_dict.keys()))     
-    print(len(common_dict))
+    print(common_dict)
+    #print(list(common_dict.keys()))     
+    #print(len(common_dict))
     print(distance_calculator(common_dict))
 def load_stopwords(filename):
     '''
