@@ -15,14 +15,17 @@ def similarity(dict1, dict2):
     dict1 = dict1.split(". ")
     dict2 = dict2.split(". ")
     for i in dict1:
+    	print(i)
     	i = i.split(",")
+    	print(i)
     for j in dict2:
+    	print(j)
         j = j.split(",")	
-
+        print(j)
     #dict1 = dict1.split(",")
     #dict2 = dict2.split(",")
-    print(dict1)
-    print(dict2) 
+    #print(dict1)
+    #print(dict2) 
 
 def load_stopwords(filename):
     '''
