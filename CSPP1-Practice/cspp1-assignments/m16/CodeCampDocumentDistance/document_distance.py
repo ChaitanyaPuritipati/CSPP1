@@ -70,7 +70,7 @@ def similarity(dict1, dict2):
             common_dict[j] = [0, 1]
         elif j in common_dict:
             common_dict[j][1] = common_dict[j][1] + 1
-    common_dict[''] = [0, 2]
+    common_dict.pop('')
     print(common_dict)
     #print(list(common_dict.keys()))     
     #print(len(common_dict))
