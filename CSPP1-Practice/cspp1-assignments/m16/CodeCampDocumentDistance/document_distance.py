@@ -37,7 +37,10 @@ def similarity(dict1, dict2):
                 dict2[i][j] = dict2[i][j].split("'")
                 dict2[i][j] = ''.join(e for e in dict2[i][j])            
     stop_words = load_stopwords("stopwords.txt")
-    print(stop_words) 
+    for i in range(len(dict1)):
+        for j in range(len(dict1[i])):
+            if dict1[i][j] in stop_words:
+                print("true", dict1[i][j])  
 
 def load_stopwords(filename):
     '''
