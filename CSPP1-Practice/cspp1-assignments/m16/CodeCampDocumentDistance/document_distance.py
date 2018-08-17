@@ -32,16 +32,9 @@ def similarity(dict1, dict2):
         for j in range(len(dict1[i])):
             #print(dict1[i][j])
             dict1[i][j] = ''.join(e for e in dict1[i][j] if e.isalpha())
-            #if ' ' in dict1[i][j]:
-            #    dict1[i][j] = dict1[i][j].split(' ')
-            #    dict1[i][j] = ''.join(e for e in dict1[i][j])
     for i in range(len(dict2)):
         for j in range(len(dict2[i])):
-            #print(dict2[i][j])
             dict2[i][j] = ''.join(e for e in dict2[i][j] if e.isalpha())
-            #if ' ' in dict2[i][j]:
-            #    dict2[i][j] = dict2[i][j].split(' ')
-            #    dict2[i][j] = ''.join(e for e in dict2[i][j])          
     stop_words = load_stopwords("stopwords.txt")
     dict1_new = []
     for i in range(len(dict1)):
@@ -70,10 +63,8 @@ def similarity(dict1, dict2):
             common_dict[j][1] = common_dict[j][1] + 1
         else:
             common_dict[j] = [0,1]
-    common_dict.pop('',None)
+    #common_dict.pop('',None)
     print(common_dict)
-    #print(list(common_dict.keys()))     
-    print(len(common_dict))
     print(distance_calculator(common_dict))
 def load_stopwords(filename):
     '''
