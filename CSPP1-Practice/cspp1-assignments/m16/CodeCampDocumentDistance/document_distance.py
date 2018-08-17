@@ -25,11 +25,11 @@ def similarity(dict1, dict2):
     for j in range(len(dict2)):
         dict2[j] = dict2[j].split(" ")
     for i in range(len(dict1)):
-        for j in dict1[i]:
-            j = j.strip(",.!@#$%^&*?")
-            if "'" in j:
-                k = j.split("'")
-                j = ''.join(e for e in k)
+        for j in range(len(dict1[i])):
+            dict1[i][j] = dict1[i][j].strip(",.!@#$%^&*?")
+            if "'" in dict1[i][j]:
+                dict1[i][j] = dict1[i][j].split("'")
+                dict1[i][j] = ''.join(e for e in dict1[i][j])
     #dict1 = dict1.split(",")
     #dict2 = dict2.split(",")
     print(dict1)
