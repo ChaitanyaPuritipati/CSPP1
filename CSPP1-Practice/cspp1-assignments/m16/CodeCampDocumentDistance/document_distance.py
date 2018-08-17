@@ -23,7 +23,7 @@ def similarity(dict1, dict2):
             #    dict1[i][j] = ''.join(e for e in dict1[i][j])
     for i in range(len(dict2)):
         for j in range(len(dict2[i])):
-            print(dict2[i][j])
+            #print(dict2[i][j])
             dict2[i][j] = ''.join(e for e in dict2[i][j] if e.isalpha())
             #if ' ' in dict2[i][j]:
             #    dict2[i][j] = dict2[i][j].split(' ')
@@ -34,14 +34,16 @@ def similarity(dict1, dict2):
         for j in range(len(dict1[i])):
             #print(dict1[i][j])
             if dict1[i][j] not in stop_words:
-                dict1_new.append(dict1[i][j])
+                if dict1[i][j] != ' ':
+                    dict1_new.append(dict1[i][j])
     dict1 = dict1_new
     dict2_new = []
     for i in range(len(dict2)):
         for j in range(len(dict2[i])):
             #print(dict2[i][j])
             if dict2[i][j] not in stop_words:
-                dict2_new.append(dict2[i][j])
+                if dict2[i][j] != ' ':
+                    dict2_new.append(dict2[i][j])
     dict2 = dict2_new
     common_dict = {}
     for i in dict1:
