@@ -23,7 +23,8 @@ def no_stop_words(dict2, stop_words):
     Function to remove stop_words
     '''
     dict2_new = []
-    for i in range(len(dict2)):
+    ln_dict_2 = len(dict2)
+    for i in range(ln_dict_2):
         for j in range(len(dict2[i])):
             if dict2[i][j] not in stop_words:
                 dict2_new.append(dict2[i][j])
@@ -37,7 +38,7 @@ def similarity(dict1, dict2):
     dict1 = dict1.split(". ")
     dict2 = dict2.split(". ")
     ln_dict_1 = len(dict1)
-    ln_dict_2 = len(dict2) 
+    ln_dict_2 = len(dict2)
     for i in range(ln_dict_1):
         dict1[i] = dict1[i].split(" ")
     for j in range(ln_dict_2):
