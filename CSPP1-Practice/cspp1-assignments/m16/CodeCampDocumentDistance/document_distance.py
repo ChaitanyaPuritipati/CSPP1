@@ -16,7 +16,7 @@ def similarity(dict1, dict2):
         dict2[j] = dict2[j].split(" ")
     for i in range(len(dict1)):
         for j in range(len(dict1[i])):
-            print(dict1[i][j])
+            #print(dict1[i][j])
             dict1[i][j] = ''.join(e for e in dict1[i][j] if e.isalpha())
             #if ' ' in dict1[i][j]:
             #    dict1[i][j] = dict1[i][j].split(' ')
@@ -56,8 +56,8 @@ def similarity(dict1, dict2):
             common_dict[j] = [0, 1]
         elif j in common_dict:
             common_dict[j][1] = common_dict[j][1] + 1
-    #print(list(common_dict.keys()))     
-    #print(len(common_dict))
+    print(list(common_dict.keys()))     
+    print(len(common_dict))
 
 def load_stopwords(filename):
     '''
