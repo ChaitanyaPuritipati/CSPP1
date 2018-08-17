@@ -37,7 +37,7 @@ def similarity(dict1, dict2):
     dict2_new = []
     for i in range(len(dict2)):
         for j in range(len(dict2[i])):
-            print(dict2[i][j])
+            #print(dict2[i][j])
             if dict2[i][j] not in stop_words:
                 dict2_new.append(dict2[i][j])
     dict2 = dict2_new
@@ -50,11 +50,11 @@ def similarity(dict1, dict2):
     for j in dict2:
         if j not in dict1:
             common_dict[j] = [0]
-        elif j in common_dict:
-            common_dict[j][1] = common_dict[j][1] + 1
+        #elif j in common_dict:
+            #common_dict[j][1] = common_dict[j][1] + 1
         else:
             common_dict[j].append(1)
-    print(common_dict)                             
+    print(common_dict)
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
