@@ -49,15 +49,15 @@ def similarity(dict1, dict2):
             #print(dict1[i][j])
             if dict1[i][j] not in stop_words:
             #    if dict1[i][j] != ' ':
-            #        dict1_new.append(dict1[i][j])
+                   dict1_new.append(dict1[i][j])
     dict1 = dict1_new
     dict2_new = []
     for i in range(len(dict2)):
         for j in range(len(dict2[i])):
             #print(dict2[i][j])
-            #if dict2[i][j] not in stop_words:
+            if dict2[i][j] not in stop_words:
             #    if dict2[i][j] != ' ':
-            #        dict2_new.append(dict2[i][j])
+                    dict2_new.append(dict2[i][j])
     dict2 = dict2_new
     common_dict = {}
     for i in dict1:
