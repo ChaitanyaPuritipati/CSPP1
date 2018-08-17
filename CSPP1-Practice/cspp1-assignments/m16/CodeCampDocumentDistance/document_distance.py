@@ -30,6 +30,12 @@ def similarity(dict1, dict2):
             if "'" in dict1[i][j]:
                 dict1[i][j] = dict1[i][j].split("'")
                 dict1[i][j] = ''.join(e for e in dict1[i][j])
+    for i in range(len(dict2)):
+        for j in range(len(dict2[i])):
+            dict2[i][j] = dict2[i][j].strip(",.!@#$%^&*?")
+            if "'" in dict2[i][j]:
+                dict2[i][j] = dict2[i][j].split("'")
+                dict2[i][j] = ''.join(e for e in dict2[i][j])            
     #dict1 = dict1.split(",")
     #dict2 = dict2.split(",")
     print(dict1)
