@@ -52,7 +52,8 @@ def similarity(dict1, dict2):
             common_dict[j] = [0, 1]
         elif j in common_dict:
             common_dict[j][1] = common_dict[j][1] + 1            
-    print(common_dict) 
+    print(len(common_dict))
+
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
