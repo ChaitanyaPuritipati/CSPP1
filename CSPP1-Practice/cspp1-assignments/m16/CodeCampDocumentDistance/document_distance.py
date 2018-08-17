@@ -50,8 +50,8 @@ def similarity(dict1, dict2):
     for j in dict2:
         if j not in dict1:
             common_dict[j] = [0]
-        #elif j in common_dict:
-            #common_dict[j][1] = common_dict[j][1] + 1
+        elif j in common_dict:
+            common_dict[j][1] = common_dict[j][1] + 1
         else:
             common_dict[j].append(1)
     print(common_dict)
