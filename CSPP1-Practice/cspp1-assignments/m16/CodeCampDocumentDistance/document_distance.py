@@ -14,14 +14,10 @@ def similarity(dict1, dict2):
     #dict2 = dict2.strip()
     dict1 = dict1.split(". ")
     dict2 = dict2.split(". ")
-    for i in dict1:
-        print(i)
-        i = i.split(" ")
-        print(i)
-    for j in dict2:
-        print(j)
-        j = j.split(" ")    
-        print(j)
+    for i in range(len(dict1)):
+        dict[i] = dict1[i].split(" ")
+    for j in range(len(dict2)):
+        dict2[j] = dict2[j].split(" ")    
     #dict1 = dict1.split(",")
     #dict2 = dict2.split(",")
     print(dict1)
