@@ -73,7 +73,7 @@ def similarity(dict1, dict2):
     common_dict.pop('')
     print(common_dict)
     #print(list(common_dict.keys()))     
-    #print(len(common_dict))
+    print(len(common_dict))
     print(distance_calculator(common_dict))
 def load_stopwords(filename):
     '''
