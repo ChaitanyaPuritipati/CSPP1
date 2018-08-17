@@ -40,8 +40,7 @@ def similarity(dict1, dict2):
     for i in range(len(dict1)):
         for j in range(len(dict1[i])):
             if dict1[i][j] in stop_words:
-                dict1[i][j] = "@"
-        dict1[i] = dict1[i].remove("@")        
+                dict1[i][j] = "@"        
     print(dict1)              
 
 def load_stopwords(filename):
