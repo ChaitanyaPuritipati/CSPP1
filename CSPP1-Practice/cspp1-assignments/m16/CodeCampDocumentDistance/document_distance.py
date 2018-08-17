@@ -30,12 +30,10 @@ def similarity(dict1, dict2):
             if "'" in j:
                 j = j.split("'")
                 j = ''.join(e for e in j)
-                print(j, "yes")
-            print(j)
     #dict1 = dict1.split(",")
     #dict2 = dict2.split(",")
-    #print(dict1)
-    #print(dict2) 
+    print(dict1)
+    print(dict2) 
 
 def load_stopwords(filename):
     '''
