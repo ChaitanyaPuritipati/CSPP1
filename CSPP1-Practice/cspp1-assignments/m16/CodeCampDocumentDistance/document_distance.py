@@ -64,12 +64,12 @@ def similarity(dict1, dict2):
         if i in common_dict:
             common_dict[i][0] = common_dict[i][0] + 1
         else:
-            common_dict[i] = [1, 0]
+            common_dict[i] = [1,0]
     for j in dict2:
-        if j not in dict1:
-            common_dict[j] = [0, 1]
-        elif j in common_dict:
+        if j in common_dict:
             common_dict[j][1] = common_dict[j][1] + 1
+        else:
+            common_dict[j] = [0,1]
     common_dict.pop('')
     print(common_dict)
     #print(list(common_dict.keys()))     
