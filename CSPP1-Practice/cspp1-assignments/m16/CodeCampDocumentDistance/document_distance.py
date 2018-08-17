@@ -8,18 +8,8 @@ def similarity(dict1, dict2):
     '''
     dict1 = dict1.lower()
     dict2= dict2.lower()
-    #print(dict1)
-    #print(dict2)
-    #dict1 = dict1.strip()
-    #dict2 = dict2.strip()
-    #print(dict1, "before")
     dict1 = dict1.split(". ")
     dict2 = dict2.split(". ")
-    
-    #print(type(dict1))
-    #print(type(dict2))
-    #dict1 = dict1.strip(" ")
-    #dict2 = dict2.strip(" ")
     for i in range(len(dict1)):
         dict1[i] = dict1[i].split(" ")
     for j in range(len(dict2)):
@@ -43,10 +33,21 @@ def similarity(dict1, dict2):
             print(dict1[i][j])
             if dict1[i][j] not in stop_words:
                 dict1_new.append(dict1[i][j])
-    print(dict1)
     dict1 = dict1_new
-    print(dict1)         
-
+    dict2_new = []
+    for i in range(len(dict2)):
+        for j in range(len(dict2[i])):
+            print(dict2[i][j])
+            if dict2[i][j] not in stop_words:
+                dict2_new.append(dict2[i][j])
+    dict2 = dict2_new
+    common_dict = {}
+    for i in dict1:
+        if i in common_dict:
+            common_dict[i][0] = common_dict[i][0] + 1
+        else:
+            common_dict[i] = [1] 
+    print(common_dict)              
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
@@ -63,8 +64,6 @@ def main():
     '''
     input1 = input()
     input2 = input()
-    #print(input1)
-    #print(input2)
     (similarity(input1, input2))
 
 if __name__ == '__main__':
