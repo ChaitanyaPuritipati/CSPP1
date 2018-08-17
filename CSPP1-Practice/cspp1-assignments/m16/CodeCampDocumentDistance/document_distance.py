@@ -24,7 +24,8 @@ def main():
     '''
     input1 = input()
     input2 = input()
-    print(input1, input2)
+    print(input1)
+    print(input2)
     print(similarity(input1, input2))
 
 if __name__ == '__main__':
