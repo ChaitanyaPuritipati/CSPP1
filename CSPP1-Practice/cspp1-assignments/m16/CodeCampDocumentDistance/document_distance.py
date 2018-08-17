@@ -14,6 +14,8 @@ def similarity(dict1, dict2):
     #dict2 = dict2.strip()
     dict1 = dict1.strip(". ")
     dict2 = dict2.strip(". ")
+    dict1 = dict1.strip(" ")
+    dict2 = dict2.strip(" ")
     #for i in range(len(dict1)):
         #dict1[i] = dict1[i].strip(" ")
     #for j in range(len(dict2)):
