@@ -24,8 +24,8 @@ def similarity(dict1, dict2):
         print(j)
     #dict1 = dict1.split(",")
     #dict2 = dict2.split(",")
-    #print(dict1)
-    #print(dict2) 
+    print(dict1)
+    print(dict2) 
 
 def load_stopwords(filename):
     '''
