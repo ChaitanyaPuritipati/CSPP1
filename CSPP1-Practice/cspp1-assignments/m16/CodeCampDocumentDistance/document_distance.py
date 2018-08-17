@@ -33,10 +33,10 @@ def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
     '''
-    dict1 = dict1.lower()
-    dict2 = dict2.lower()
-    dict1 = dict1.split(". ")
-    dict2 = dict2.split(". ")
+    dict1 = dict1.lower().split(". ")
+    dict2 = dict2.lower().split(". ")
+    #dict1 = dict1.split(". ")
+    #dict2 = dict2.split(". ")
     ln_dict_1 = len(dict1)
     ln_dict_2 = len(dict2)
     for i in range(ln_dict_1):
