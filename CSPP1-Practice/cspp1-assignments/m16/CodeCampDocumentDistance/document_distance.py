@@ -63,8 +63,8 @@ def similarity(dict1, dict2):
             common_dict[j][1] = common_dict[j][1] + 1
         else:
             common_dict[j] = [0,1]
-    #common_dict.pop('',None)
-    print(common_dict)
+    common_dict.pop('',None)
+    #print(common_dict)
     print(distance_calculator(common_dict))
 def load_stopwords(filename):
     '''
