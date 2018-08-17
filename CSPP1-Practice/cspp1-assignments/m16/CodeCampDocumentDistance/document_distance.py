@@ -1,5 +1,7 @@
 '''
-    Document Distance - A detailed description is given in the PDF
+Author: Puritipati Chaitanya Prasad Reddy
+Date: 17/8/2018
+Roll no: 20186018
 '''
 import math
 def distance_calculator(common_dict):
