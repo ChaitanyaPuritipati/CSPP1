@@ -47,7 +47,8 @@ def similarity(dict1, dict2):
             common_dict[i][0] = common_dict[i][0] + 1
         else:
             common_dict[i] = [1] 
-    print(common_dict['weve'].append(2))              
+    common_dict['weve'].append(2)
+    print(common_dict)              
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
