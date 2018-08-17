@@ -29,7 +29,7 @@ def main():
     input2 = input()
     #print(input1)
     #print(input2)
-    print(similarity(input1, input2))
+    (similarity(input1, input2))
 
 if __name__ == '__main__':
     main()
