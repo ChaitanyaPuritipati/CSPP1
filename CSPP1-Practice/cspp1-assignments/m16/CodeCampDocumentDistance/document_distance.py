@@ -14,8 +14,13 @@ def similarity(dict1, dict2):
     #dict2 = dict2.strip()
     dict1 = dict1.split(". ")
     dict2 = dict2.split(". ")
-    dict1 = dict1.split(",")
-    dict2 = dict2.split(",")
+    for i in dict1:
+    	i = i.split(",")
+    for j in dict2:
+        j = j.split(",")	
+
+    #dict1 = dict1.split(",")
+    #dict2 = dict2.split(",")
     print(dict1)
     print(dict2) 
 
