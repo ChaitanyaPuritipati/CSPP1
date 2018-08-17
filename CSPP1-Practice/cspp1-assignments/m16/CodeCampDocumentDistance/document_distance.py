@@ -8,6 +8,8 @@ def similarity(dict1, dict2):
     '''
     dict1.strip()
     dict2.strip()
+    dict1.split(". ")
+    dict2.split(". ")
     print(dict1)
     print(dict2) 
 
