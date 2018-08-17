@@ -12,12 +12,12 @@ def similarity(dict1, dict2):
     #print(dict2)
     #dict1 = dict1.strip()
     #dict2 = dict2.strip()
-    dict1 = dict1.split(". ")
-    dict2 = dict2.split(". ")
+    dict1 = dict1.strip(". ")
+    dict2 = dict2.strip(". ")
     for i in range(len(dict1)):
-        dict1[i] = dict1[i].split(" ")
+        dict1[i] = dict1[i].strip(" ")
     for j in range(len(dict2)):
-        dict2[j] = dict2[j].split(" ")    
+        dict2[j] = dict2[j].strip(" ")    
     #dict1 = dict1.split(",")
     #dict2 = dict2.split(",")
     print(dict1)
