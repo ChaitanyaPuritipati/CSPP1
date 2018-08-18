@@ -49,7 +49,7 @@ def search(search_index, query):
         print(word_values, len(word_values))    
         for i in range(len(word_values)):
             print(i)
-            output_set.update(word_values[i][0])
+            output_set.update(word_values[i])
     print(output_set)        
 
 
