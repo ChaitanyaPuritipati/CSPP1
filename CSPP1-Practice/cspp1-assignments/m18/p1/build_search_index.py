@@ -45,6 +45,8 @@ def word_list(text):
             text[line][word] = text[line][word].strip("!@#$%^&*.,?;").split("'")
             if len(text[line][word])>1:
                 text[line][word] = (''.join(map(str, text[line][word])))
+            if type(text[line][word]) is str:
+                text[line][word] = list(text[line][word])    
 
             print(text[line][word])         
             
