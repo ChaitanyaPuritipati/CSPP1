@@ -62,9 +62,15 @@ def build_search_index(docs):
 
     # return search index
     docs = word_list(docs)
-    print(docs)
-
-
+    index_dict = {}
+    for line_index in range(len(docs)):
+        line_dict = {}
+        for word in range(len(line_index)):
+            if word in line_dict:
+                line_dict[word] += 1
+            else:
+                line_dict[word] = 1
+        print(line_dict)        
 # helper function to print the search index
 # use this to verify how the search index looks
 def print_search_index(index):
