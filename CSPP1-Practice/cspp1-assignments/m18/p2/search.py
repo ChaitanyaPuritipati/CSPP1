@@ -46,8 +46,10 @@ def search(search_index, query):
         #print(word, type(word))
         if word in search_index:
             word_values = list(search_index.get(word))
+        else:
+            word_values = []
         if len(word_values) == 0:
-            break   
+            break        
         for i in range(len(word_values)):
             #print(word_values[i])
             #print(type(word_values[i]))
