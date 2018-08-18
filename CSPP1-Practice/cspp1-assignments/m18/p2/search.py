@@ -50,9 +50,9 @@ def search(search_index, query):
             word_values = list(search_index.get(word))
         else:
             word_values = []
-        ln_word_values = len(word_values)    
+        ln_word_values = len(word_values)
         if ln_word_values == 0:
-            break        
+            break
         for i in range(ln_word_values):
             output_set.add(word_values[i][0])
     return output_set        
