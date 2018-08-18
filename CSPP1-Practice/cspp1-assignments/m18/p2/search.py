@@ -45,11 +45,11 @@ def search(search_index, query):
     for word in query:
         print(word, type(word))
         if word in search_index:
-            word_values = search_index.get(word)
+            word_values = list(search_index.get(word))
         print(word_values, len(word_values))    
         for i in range(len(word_values)):
             print(i)
-            output_set.update(word_values[i])
+            output_set.update(word_values[i][0])
     print(output_set)        
 
 
