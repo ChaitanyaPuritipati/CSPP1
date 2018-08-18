@@ -41,7 +41,7 @@ def word_list(text):
     '''
     for line in text:
     	line = line.lower().split()
-    print(line)	
+    print(text)	
 def build_search_index(docs):
     '''
         Process the docs step by step as given below
@@ -84,7 +84,7 @@ def main():
     for i in range(lines):
         documents.append(input())
         i += 1
-    print(documents)
+    #print(documents)
     # call print to display the search index
     print_search_index(build_search_index(documents))
 
