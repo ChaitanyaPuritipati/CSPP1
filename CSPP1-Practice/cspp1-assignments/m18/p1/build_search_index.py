@@ -44,7 +44,8 @@ def word_list(text):
         for word in range(len(text[line])):
             text[line][word] = text[line][word].strip("!@#$%^&*.,?;").split("'")
             if len(text[line][word])>1:
-                text[line][word] = list(''.join(map(str, text[line][word])))    
+                text[line][word] = (''.join(map(str, text[line][word])))
+            text[line][word] = list(text[line][word])        
             print(text[line][word])         
             
                     
