@@ -45,9 +45,10 @@ def search(search_index, query):
     for word in query:
         print(word, type(word))
         if word in search_index:
-            print("yes")
             word_values = search_index.get(word)
-            print(word_values)
+            for each_value in word_values:
+                output_set.update(each_value[0])
+        print(output_set)        
 
 
 def process_queries(search_index, queries):
