@@ -56,8 +56,6 @@ def search(search_index, query):
         for i in range(len(word_values)):
             output_set.add(word_values[i][0])
     return output_set        
-
-
 def process_queries(search_index, queries):
     '''
         function to process the search queries
@@ -88,3 +86,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    
