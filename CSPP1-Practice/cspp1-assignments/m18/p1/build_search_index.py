@@ -71,7 +71,8 @@ def build_search_index(docs):
     stop_words = load_stopwords()
     docs = word_list(docs)
     index_dict = {}
-    for line_index in range(len(docs)):
+    ln_docs = len(docs)
+    for line_index in range(ln_docs):
         line_dict = {}
         for word in range(len(docs[line_index])):
             if docs[line_index][word] in line_dict:
