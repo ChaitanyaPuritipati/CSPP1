@@ -42,8 +42,8 @@ def search(search_index, query):
     output_set = set()
     query = query.split()
     print(query)
-    #for word in query:
-        #print(word, type(word))
+    for word in query:
+        print(word, type(word))
         #if word in search_index:
             #print("yes")
             #word_values = search_index.get(word)
