@@ -38,20 +38,20 @@ def search(search_index, query):
         make a set of doc_id and return
     '''
     query = query.lower()
-    print(query)
+    #print(query)
     output_set = set()
     query = query.split()
-    print(query)
+    #print(query)
     for word in query:
-        print(word, type(word))
+        #print(word, type(word))
         if word in search_index:
             word_values = list(search_index.get(word))
-        print(word_values, len(word_values))    
+        #print(word_values, len(word_values))    
         for i in range(len(word_values)):
-            print(word_values[i])
-            print(type(word_values[i]))
+            #print(word_values[i])
+            #print(type(word_values[i]))
             output_set.add(word_values[i][0])
-    print(output_set)        
+    return output_set        
 
 
 def process_queries(search_index, queries):
