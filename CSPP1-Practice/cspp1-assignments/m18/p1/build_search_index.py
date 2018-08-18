@@ -43,8 +43,8 @@ def word_list(text):
         text[line] = text[line].lower().split()
         for word in range(len(text[line])):
             text[line][word] = text[line][word].strip("!@#$%^&*.,?;").split("'")
-            #if len(text[line][word])>1:
-                
+            if len(text[line][word])>1:
+                text[line][word] = ''.join(map(str, text[line][word]))    
             print(text[line][word])         
             
                     
