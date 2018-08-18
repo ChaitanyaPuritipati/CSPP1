@@ -41,7 +41,8 @@ def word_list(text):
     '''
     for line in range(len(text)):
     	text[line] = text[line].lower().split()
-    print(text)	
+        text[line] = (e for e in text[line] if e.isaplha())
+        print(text[line])    	
 def build_search_index(docs):
     '''
         Process the docs step by step as given below
