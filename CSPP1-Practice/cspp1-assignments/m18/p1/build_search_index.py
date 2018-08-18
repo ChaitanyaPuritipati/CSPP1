@@ -82,7 +82,7 @@ def build_search_index(docs):
                     index_dict[key] = []
                     value_tuple = (line_index, line_dict[key])
                     index_dict[key].append(value_tuple)
-    print(index_dict)                         
+    return index_dict                         
 # helper function to print the search index
 # use this to verify how the search index looks
 def print_search_index(index):
