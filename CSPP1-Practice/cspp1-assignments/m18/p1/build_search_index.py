@@ -44,9 +44,9 @@ def word_list(text):
         for word in range(len(text[line])):
             text[line][word] = text[line][word].strip("!@#$%^&*.,?;").split("'")
             text[line][word] = (''.join(map(str, text[line][word])))
-            print(text[line][word])         
-        print(text[line])
-    #print(text)       
+            #print(text[line][word])         
+        #print(text[line])
+    print(text)       
 def build_search_index(docs):
     '''
         Process the docs step by step as given below
