@@ -1,4 +1,9 @@
 '''
+    Author: Puritipati Chaitanya Prasad Reddy
+    Date: 18-08-2018
+    EXAM WEEK 3
+    Roll no: 20186018
+    -----------------------------------------------------------------------------------------
     Tiny Search Engine - Part 1 - Build a search index
 
     In this programming assingment you are given with some text documents as input.
@@ -40,12 +45,13 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    for line in range(len(text)):
+    ln_text = len(text)
+    for line in range(ln_text):
         text[line] = text[line].lower().split()
         for word in range(len(text[line])):
             text[line][word] = text[line][word].strip("!@#$%^&*.,?;").split("'")
             text[line][word] = (''.join(map(str, text[line][word])))
-    return text     
+    return text
 def build_search_index(docs):
     '''
         Process the docs step by step as given below
@@ -68,7 +74,6 @@ def build_search_index(docs):
     for line_index in range(len(docs)):
         line_dict = {}
         for word in range(len(docs[line_index])):
-            #print(docs[line_index][word])
             if docs[line_index][word] in line_dict:
                 line_dict[docs[line_index][word]] += 1
             else:
@@ -82,7 +87,7 @@ def build_search_index(docs):
                     index_dict[key] = []
                     value_tuple = (line_index, line_dict[key])
                     index_dict[key].append(value_tuple)
-    return index_dict                         
+    return index_dict
 # helper function to print the search index
 # use this to verify how the search index looks
 def print_search_index(index):
