@@ -39,8 +39,9 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    pass
-
+    for line in text:
+    	line = line.lower().split()
+    print(line)	
 def build_search_index(docs):
     '''
         Process the docs step by step as given below
@@ -57,7 +58,8 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
-    pass
+    docs = word_list(docs)
+
 
 # helper function to print the search index
 # use this to verify how the search index looks
