@@ -22,10 +22,11 @@
 '''
 
 # helper function to load the stop words from a file
-def load_stopwords(filename):
+def load_stopwords():
     '''
         loads stop words from a file and returns a dictionary
     '''
+    filename = stopwords.txt
     stopwords = {}
     with open(filename, 'r') as f_stopwords:
         for line in f_stopwords:
@@ -61,6 +62,7 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
+    stop_words = load_stopwords()
     docs = word_list(docs)
     index_dict = {}
     for line_index in range(len(docs)):
@@ -72,13 +74,14 @@ def build_search_index(docs):
             else:
                 line_dict[docs[line_index][word]] = 1
         for key in line_dict:
-            if key in index_dict:
-                value_tuple = (line_index, line_dict[key])
-                index_dict[key].append(value_tuple)
-            else:
-                index_dict[key] = []
-                value_tuple = (line_index, line_dict[key])
-                index_dict[key].append(value_tuple)
+            if key not in stop_words:
+                if key in index_dict:
+                    value_tuple = (line_index, line_dict[key])
+                    index_dict[key].append(value_tuple)
+                else:
+                    index_dict[key] = []
+                    value_tuple = (line_index, line_dict[key])
+                    index_dict[key].append(value_tuple)
     print(index_dict)                         
 # helper function to print the search index
 # use this to verify how the search index looks
