@@ -73,10 +73,12 @@ def build_search_index(docs):
                 line_dict[docs[line_index][word]] = 1
         for key in line_dict:
             if key in index_dict:
-                index_dict[key].append(tuple(line_index, line_dict[key]))
+                value_tuple = (index_dict, line_dict[key])
+                index_dict[key].append(value_tuple)
             else:
                 index_dict[key] = []
-                index_dict[key].append(tuple(line_index, line_dict[key]))
+                value_tuple = (index_dict, line_dict[key])
+                index_dict[key].append(value_tuple)
     print(index_dict)                         
 # helper function to print the search index
 # use this to verify how the search index looks
