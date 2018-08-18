@@ -55,7 +55,7 @@ def search(search_index, query):
             break
         for i in range(ln_word_values):
             output_set.add(word_values[i][0])
-    return output_set        
+    return output_set
 def process_queries(search_index, queries):
     '''
         function to process the search queries
