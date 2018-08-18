@@ -44,10 +44,10 @@ def search(search_index, query):
     print(query)
     for word in query:
         print(word, type(word))
-        #if word in search_index:
-            #print("yes")
-            #word_values = search_index.get(word)
-            #print(word_values)
+        if word in search_index:
+            print("yes")
+            word_values = search_index.get(word)
+            print(word_values)
 
 
 def process_queries(search_index, queries):
