@@ -68,9 +68,9 @@ def build_search_index(docs):
         for word in range(len(docs[line_index])):
             print(docs[line_index][word])
             if docs[line_index][word] in line_dict:
-                line_dict[word] += 1
+                line_dict[docs[line_index][word]] += 1
             else:
-                line_dict[word] = 1
+                line_dict[docs[line_index][word]] = 1
         print(line_dict)        
 # helper function to print the search index
 # use this to verify how the search index looks
