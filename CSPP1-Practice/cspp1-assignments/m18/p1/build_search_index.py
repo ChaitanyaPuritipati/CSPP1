@@ -42,8 +42,11 @@ def word_list(text):
     for line in range(len(text)):
         text[line] = text[line].lower().split()
         for word in range(len(text[line])):
-            text[line][word] = text[line][word].strip("!@#$%^&*.,?;").isaplha()
+            text[line][word] = text[line][word].strip("!@#$%^&*.,?;").split("'")
+            ''.join(text[line][word])
             print(text[line][word])
+            
+                    
         print(text[line])
     print(text)       
 def build_search_index(docs):
