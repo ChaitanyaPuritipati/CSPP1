@@ -50,7 +50,7 @@ def search(search_index, query):
         for i in range(len(word_values)):
             print(i)
             output_set.update(word_values[i][0])
-        print(output_set)        
+    print(output_set)        
 
 
 def process_queries(search_index, queries):
