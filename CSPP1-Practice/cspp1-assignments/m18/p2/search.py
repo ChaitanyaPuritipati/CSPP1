@@ -53,7 +53,7 @@ def search(search_index, query):
         ln_word_values = len(word_values)    
         if ln_word_values == 0:
             break        
-        for i in range(len(word_values)):
+        for i in range(ln_word_values):
             output_set.add(word_values[i][0])
     return output_set        
 def process_queries(search_index, queries):
@@ -86,4 +86,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-    
