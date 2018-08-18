@@ -48,7 +48,8 @@ def search(search_index, query):
             word_values = list(search_index.get(word))
         print(word_values, len(word_values))    
         for i in range(len(word_values)):
-            print(i)
+            print(word_values[i])
+            type(word_values[i])
             output_set.update(word_values[i][0])
     print(output_set)        
 
