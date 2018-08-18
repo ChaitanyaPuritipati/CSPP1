@@ -38,6 +38,7 @@ def search(search_index, query):
         make a set of doc_id and return
     '''
     query = query.lower()
+    print(query)
     output_set = set()
     for word in query:
         if word in search_index:
