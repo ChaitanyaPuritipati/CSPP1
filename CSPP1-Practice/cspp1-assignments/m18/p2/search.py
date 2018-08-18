@@ -1,4 +1,9 @@
 '''
+    Author: Puritipati Chaitanya Prasad Reddy
+    Date: 18-08-2018
+    Rollno: 20186018
+    EXAM WEEK 3 CSPP course
+    -------------------------------------------------------------------------------------------
     Tiny Search Engine - Part 2 - Search
     In this programming assingment you are given the search index and search queries as input.
     Complete the program below to search in the index. Don't worry, it is explained below.
@@ -38,21 +43,17 @@ def search(search_index, query):
         make a set of doc_id and return
     '''
     query = query.lower()
-    #print(query)
     output_set = set()
     query = query.split()
-    #print(query)
     for word in query:
-        #print(word, type(word))
         if word in search_index:
             word_values = list(search_index.get(word))
         else:
             word_values = []
-        if len(word_values) == 0:
+        ln_word_values = len(word_values)    
+        if ln_word_values == 0:
             break        
         for i in range(len(word_values)):
-            #print(word_values[i])
-            #print(type(word_values[i]))
             output_set.add(word_values[i][0])
     return output_set        
 
