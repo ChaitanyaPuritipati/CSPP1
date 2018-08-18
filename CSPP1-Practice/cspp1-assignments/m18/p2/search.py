@@ -50,7 +50,7 @@ def search(search_index, query):
         for i in range(len(word_values)):
             print(word_values[i])
             print(type(word_values[i]))
-            output_set = output_set.update(1)
+            output_set = output_set.update(list[word_values[i][0]])
     print(output_set)        
 
 
