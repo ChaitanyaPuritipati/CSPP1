@@ -47,6 +47,7 @@ def search(search_index, query):
         if word in search_index:
             word_values = search_index.get(word)
             for each_value in word_values:
+                print(each_value)
                 output_set.update(each_value[0])
         print(output_set)        
 
