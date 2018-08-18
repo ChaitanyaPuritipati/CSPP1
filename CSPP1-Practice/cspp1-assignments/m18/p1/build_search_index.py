@@ -66,6 +66,7 @@ def build_search_index(docs):
     for line_index in range(len(docs)):
         line_dict = {}
         for word in range(len(docs[line_index])):
+            print(docs[line_index][word])
             if docs[line_index][word] in line_dict:
                 line_dict[word] += 1
             else:
