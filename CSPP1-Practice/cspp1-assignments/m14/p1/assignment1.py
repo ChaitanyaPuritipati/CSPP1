@@ -136,7 +136,10 @@ class Message(object):
         shift_dict = Message.build_shift_dict(self, shift)
         output_string = ""
         for letter in self.message_text:
-            output_string += shift_dict[letter]
+            if letter in shift_dict:
+                output_string += shift_dict[letter]
+            else:
+                output_string += letter    
         return output_string    
 
 def main():
