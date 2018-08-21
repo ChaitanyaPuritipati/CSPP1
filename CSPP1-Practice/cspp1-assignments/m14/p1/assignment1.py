@@ -118,7 +118,7 @@ class Message(object):
         for letter in string.ascii_lowercase:
             shift_dict[letter] = lower_string[(lower_string.index(letter))+shift]
         for letter in string.ascii_uppercase:
-            shift_dict[letter] = upper_string[(upperr_string.index(letter))+shift]
+            shift_dict[letter] = upper_string[(upper_string.index(letter))+shift]
         return shift_dict           
     def apply_shift(self, shift):
         '''
