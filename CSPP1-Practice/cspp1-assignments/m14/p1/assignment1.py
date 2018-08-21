@@ -102,7 +102,7 @@ class Message():
         letters only.
         shift (integer): the amount by which to shift every letter of the
         alphabet. 0 <= shift < 26
-        Returns: a dictionary mapping a letter (string) to 
+        Returns: a dictionary mapping a letter (string) to
                  another letter (string). 
         '''
         lower_string = string.ascii_lowercase*2
