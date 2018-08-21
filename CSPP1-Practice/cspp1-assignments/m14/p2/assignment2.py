@@ -479,7 +479,7 @@ def main():
     data = PlaintextMessage(inp, int(input()))
     print(data.get_shift())
     print(data.get_encrypting_dict())
-    #print(data.get_message_text_encrypted())
+    print(data.get_message_text_encrypted())
     data.change_shift(int(input()))
     print(data.get_shift())
     print(data.get_encrypting_dict())
