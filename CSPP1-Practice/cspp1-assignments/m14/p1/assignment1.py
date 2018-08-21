@@ -70,9 +70,7 @@ class Message():
     def __init__(self, text):
         '''
         Initializes a Message object
-                
         text (string): the message's text
-
         a Message object has two attributes:
             self.message_text (string, determined by input text)
             self.valid_words (list, determined using helper function load_words
@@ -124,11 +122,9 @@ class Message():
         '''
         Applies the Caesar Cipher to self.message_text with the input shift.
         Creates a new string that is self.message_text shifted down the
-        alphabet by some number of characters determined by the input shift        
-        
+        alphabet by some number of characters determined by the input shift
         shift (integer): the shift with which to encrypt the message.
         0 <= shift < 26
-
         Returns: the message text (string) in which every character is shifted
              down the alphabet by the input shift
         '''
@@ -139,8 +135,8 @@ class Message():
             if letter in shift_dict:
                 output_string += shift_dict[letter]
             else:
-                output_string += letter    
-        return output_string    
+                output_string += letter
+        return output_string
 
 def main():
     '''
