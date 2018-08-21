@@ -400,7 +400,7 @@ class PlaintextMessage(Message):
         Hint: consider using the parent class constructor so less 
         code is repeated
         '''
-        Message.text = text
+        self.message_text = text
         self.shift = shift
     def get_shift(self):
         '''
@@ -416,7 +416,7 @@ class PlaintextMessage(Message):
         
         Returns: a COPY of self.encrypting_dict
         '''
-        pass #delete this line and replace with your code here
+         #delete this line and replace with your code here
 
     def get_message_text_encrypted(self):
         '''
