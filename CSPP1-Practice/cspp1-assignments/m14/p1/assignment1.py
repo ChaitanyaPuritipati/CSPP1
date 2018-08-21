@@ -133,7 +133,7 @@ class Message(object):
              down the alphabet by the input shift
         '''
         print(self.message_text, type(self.message_text))
-        shift_dict = build_shift_dict(self,shift)
+        shift_dict = Message.build_shift_dict(self, shift)
         
 
 def main():
