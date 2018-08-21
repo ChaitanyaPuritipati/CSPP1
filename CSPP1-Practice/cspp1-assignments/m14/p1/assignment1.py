@@ -103,7 +103,7 @@ class Message():
         shift (integer): the amount by which to shift every letter of the
         alphabet. 0 <= shift < 26
         Returns: a dictionary mapping a letter (string) to
-                 another letter (string). 
+                 another letter (string).
         '''
         lower_string = string.ascii_lowercase*2
         upper_string = string.ascii_uppercase*2
@@ -112,7 +112,7 @@ class Message():
             shift_dict[letter] = lower_string[(lower_string.index(letter))+shift]
         for letter in string.ascii_uppercase:
             shift_dict[letter] = upper_string[(upper_string.index(letter))+shift]
-        return shift_dict           
+        return shift_dict
     def apply_shift(self, shift):
         '''
         Applies the Caesar Cipher to self.message_text with the input shift.
