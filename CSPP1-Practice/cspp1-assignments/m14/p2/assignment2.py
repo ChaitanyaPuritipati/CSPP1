@@ -75,12 +75,12 @@ class Message():
         Returns: a COPY of self.valid_words
         '''
         return self.valid_words[:]
-    #def get_shift(self):
-        '''
-        Used to safely access self.shift outside of the class
-        Returns: self.shift
-        '''
-        #return self.shift
+    # #def get_shift(self):
+    #     '''
+    #     Used to safely access self.shift outside of the class
+    #     Returns: self.shift
+    #     '''
+    #     #return self.shift
     def build_shift_dict(self, shift):
         '''
         Creates a dictionary that can be used to apply a cipher to a letter.
