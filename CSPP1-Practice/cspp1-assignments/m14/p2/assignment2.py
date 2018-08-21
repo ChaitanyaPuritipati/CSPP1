@@ -424,7 +424,7 @@ class PlaintextMessage(Message):
         
         Returns: self.message_text_encrypted
         '''
-        pass #delete this line and replace with your code here
+        return Message.apply_shift(self.get_shift()) #delete this line and replace with your code here
 
     def change_shift(self, shift):
         '''
@@ -483,7 +483,7 @@ def main():
     data.change_shift(int(input()))
     print(data.get_shift())
     print(data.get_encrypting_dict())
-    #print(data.get_message_text_encrypted())
+    print(data.get_message_text_encrypted())
 
 if __name__ == "__main__":
     main()
