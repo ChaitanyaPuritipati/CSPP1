@@ -66,7 +66,9 @@ WORDLIST_FILENAME = 'words.txt'
 
 
 class Message():
-    ### DO NOT MODIFY THIS METHOD ###
+    '''
+    Message Class is created
+    '''
     def __init__(self, text):
         '''
         Initializes a Message object
