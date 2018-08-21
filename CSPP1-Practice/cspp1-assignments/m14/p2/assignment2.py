@@ -437,8 +437,8 @@ class PlaintextMessage(Message):
 
         Returns: nothing
         '''
-        pass #delete this line and replace with your code here
-        
+        self.shift = shift
+
 
 class CiphertextMessage(Message):
     def __init__(self, text):
@@ -480,9 +480,9 @@ def main():
     print(data.get_shift())
     print(data.get_encrypting_dict())
     #print(data.get_message_text_encrypted())
-    #data.change_shift(int(input()))
-    #print(data.get_shift())
-    #print(data.get_encrypting_dict())
+    data.change_shift(int(input()))
+    print(data.get_shift())
+    print(data.get_encrypting_dict())
     #print(data.get_message_text_encrypted())
 
 if __name__ == "__main__":
