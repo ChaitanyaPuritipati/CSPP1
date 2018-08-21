@@ -40,7 +40,7 @@ def load_words(file_name):
 
 WORDLIST_FILENAME = 'words.txt'
 
-class Message(object):
+class Message():
     ''' Grader's Implementation of Message Object '''
 
     ### DO NOT MODIFY THIS METHOD ###
