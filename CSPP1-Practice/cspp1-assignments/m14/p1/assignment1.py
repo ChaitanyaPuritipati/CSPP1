@@ -132,7 +132,7 @@ class Message(object):
         Returns: the message text (string) in which every character is shifted
              down the alphabet by the input shift
         '''
-        shift_dict = build_shift_dict(shift)
+        shift_dict = Message.build_shift_dict(shift)
         print(self)
         
 
