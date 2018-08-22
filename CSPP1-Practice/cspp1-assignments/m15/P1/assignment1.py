@@ -266,7 +266,7 @@ class CiphertextMessage(Message):
                     new_element = new_element + letter    
                 if new_element in self.valid_words:
                     count = count + 1
-                self.length = count
+            self.length = count
             #print(len(self.message_text))
             print(self.length)
             if self.length == len(self.message_text):
