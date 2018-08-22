@@ -416,7 +416,7 @@ class PlaintextMessage(Message):
         
         Returns: a COPY of self.encrypting_dict
         '''
-        return self.build_shift_dict(self.get_shift()) #delete this line and replace with your code here
+        return Message.build_shift_dict(self, self.get_shift()) #delete this line and replace with your code here
 
     def get_message_text_encrypted(self):
         '''
@@ -424,7 +424,7 @@ class PlaintextMessage(Message):
         
         Returns: self.message_text_encrypted
         '''
-        return self.apply_shift(self.get_shift()) #delete this line and replace with your code here
+        return Message.apply_shift(self, self.get_shift()) #delete this line and replace with your code here
 
     def change_shift(self, shift):
         '''
