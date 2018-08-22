@@ -273,7 +273,8 @@ class CiphertextMessage(Message):
                 self.list = []
                 self.length = count
             if self.length == count:
-                self.list.append(self.shift)        
+                self.list.append(self.shift) 
+            print(self.length)           
             if self.length == len(self.message_text):
                 return (self.shift, new_element)
             self.shift += 1
