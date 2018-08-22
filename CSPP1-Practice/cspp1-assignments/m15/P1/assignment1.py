@@ -247,9 +247,7 @@ class CiphertextMessage(Message):
         and the decrypted message text using that shift value
         '''
         #pass
-        self.message_text = self.message_text.split()
-        for e in range(len(self.message_text)):
-            self.message_text[e] = self.message_text[e].strip(".?!,") 
+        self.message_text = self.message_text.split() 
         print(self.message_text)
 
        
