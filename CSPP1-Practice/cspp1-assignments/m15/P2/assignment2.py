@@ -163,6 +163,7 @@ class PlaintextMessage(Message):
         Hint: consider using the parent class constructor so less
         code is repeated
         '''
+        Message.__init__(self, text)
         self.text = text
         self.shift = shift
         self.valid_words = load_words("words.txt")
@@ -226,6 +227,7 @@ class CiphertextMessage(Message):
             self.message_text (string, determined by input text)
             self.valid_words (list, determined using helper function load_words)
         '''
+        Message.__init__(self, text)
         self.message_text = text
         self.valid_words = load_words("words.txt")[:]
         self.max_valid_words = 0
