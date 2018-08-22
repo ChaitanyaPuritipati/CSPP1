@@ -249,6 +249,8 @@ class CiphertextMessage(Message):
         #pass
         self.message_text = self.message_text.split() 
         print(self.message_text)
+        shift_dict_cypher = Message.shift_dict(self, 3)
+        print(shift_dict_cypher)
 
        
 ### DO NOT MODIFY THIS METHOD ###
