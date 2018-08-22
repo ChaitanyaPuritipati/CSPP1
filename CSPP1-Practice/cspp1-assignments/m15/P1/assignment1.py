@@ -249,7 +249,7 @@ class CiphertextMessage(Message):
         #pass
         self.message_text = self.message_text.split()
         for e in range(len(self.message_text)):
-            self.message_text(e) = self.message_text(e).strip(".?!") 
+            self.message_text[e] = self.message_text[e].strip(".?!") 
         print(self.message_text)
 
        
