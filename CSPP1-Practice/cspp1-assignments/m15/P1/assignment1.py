@@ -257,12 +257,12 @@ class CiphertextMessage(Message):
             cypher_dict_keys = list(shift_dict_cypher.keys())
             #print(cypher_dict_values)
             for element in self.message_text:
-            	new_element = ""
-            	for char in range(len(element)):
-            		if element[char] in cypher_dict_values:
-            			element[char] = cypher_dict_keys[cypher_dict_values.index(element[char])]
+                new_element = ""
+                for char in range(len(element)):
+                    if element[char] in cypher_dict_values:
+                        element[char] = cypher_dict_keys[cypher_dict_values.index(element[char])]
                     new_element = new_element + element[char]    
-            	print(new_element)
+                print(new_element)
             break
 ### DO NOT MODIFY THIS METHOD ###
 def main():
