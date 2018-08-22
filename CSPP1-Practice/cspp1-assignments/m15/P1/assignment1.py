@@ -265,10 +265,9 @@ class CiphertextMessage(Message):
                         letter = cypher_dict_keys[cypher_dict_values.index(element[char])]
                     new_element = new_element + letter    
                 if new_element in self.valid_words:
+                    print("yes")
                     count = count + 1
             self.length = count
-            #print(len(self.message_text))
-            print(self.length)
             if self.length == len(self.message_text):
                 return (self.shift, new_element)
         return (self.shift, new_element)
