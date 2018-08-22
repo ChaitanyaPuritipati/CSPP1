@@ -400,7 +400,7 @@ class PlaintextMessage(Message):
         Hint: consider using the parent class constructor so less 
         code is repeated
         '''
-        self.message_text = text
+        Message.__init__(self, text)
         self.shift = shift
     def get_shift(self):
         '''
