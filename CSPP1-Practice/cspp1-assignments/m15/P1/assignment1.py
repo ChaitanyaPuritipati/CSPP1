@@ -253,6 +253,7 @@ class CiphertextMessage(Message):
         self.shift = CiphertextMessage.Best_shift
         self.length = 0
         self.testshift = 0
+        self.list = []
         while self.shift <= 26:
             shift_dict_cypher = Message.build_shift_dict(self, self.shift)
             cypher_dict_values = list(shift_dict_cypher.values())
@@ -268,14 +269,15 @@ class CiphertextMessage(Message):
                 if new_element in self.valid_words:
                     #print("yes")
                     count = count + 1
-            if self.length <= count:
+            if self.length < count:
+                self.list = []
                 self.length = count
-            #if self.count == count:
-                    
+            if self.length == count:
+                self.list.append(self.shift)        
             if self.length == len(self.message_text):
                 return (self.shift, new_element)
             self.shift += 1
-        return (self.shift, new_element)
+        return (min(self.list, new_element))
 ### DO NOT MODIFY THIS METHOD ###
 def main():
     ''' This method is provided to handle testcases'''
