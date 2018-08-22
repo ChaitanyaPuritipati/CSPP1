@@ -218,6 +218,7 @@ class PlaintextMessage(Message):
 
 class CiphertextMessage(Message):
     ''' CiphertextMessage class '''
+    Best_shift = 1
     def __init__(self, text):
         '''
         Initializes a CiphertextMessage object
@@ -249,8 +250,11 @@ class CiphertextMessage(Message):
         #pass
         self.message_text = self.message_text.split() 
         print(self.message_text)
-        shift_dict_cypher = Message.build_shift_dict(self, 3)
-        print(shift_dict_cypher)
+        self.shift = CiphertextMessage.Best_shift
+        while True:
+            shift_dict_cypher = Message.build_shift_dict(self, self.shift)
+            print(shift_dict_cypher)
+            break
 
        
 ### DO NOT MODIFY THIS METHOD ###
