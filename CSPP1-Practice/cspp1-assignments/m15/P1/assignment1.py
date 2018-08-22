@@ -248,7 +248,7 @@ class CiphertextMessage(Message):
         and the decrypted message text using that shift value
         '''
         self.teststring = self.message_text
-        self.teststring = self.teststring.split()
+        self.teststring = self.teststring.split()   
         self.shift = CiphertextMessage.Best_shift
         self.length = 0
         self.list = []
@@ -260,7 +260,8 @@ class CiphertextMessage(Message):
             for element in self.teststring:
                 new_element = ""
                 for char in range(len(element)):
-                    if element[char] in string.ascii_lowercase or element[char] in string.ascii_uppercase:
+                    if element[char] in string.ascii_lowercase or/
+                    element[char] in string.ascii_uppercase:
                         if element[char] in cypher_dict_values:
                             letter = cypher_dict_keys[cypher_dict_values.index(element[char])].lower()
                         new_element = new_element + letter
