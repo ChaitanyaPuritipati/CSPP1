@@ -265,12 +265,11 @@ class CiphertextMessage(Message):
                 for char in range(len(element)):
                     if element[char] in string.ascii_lowercase or element[char] in string.ascii_uppercase:
                         if element[char] in cypher_dict_values:
-                            letter = cypher_dict_keys[cypher_dict_values.index(element[char])]
+                            letter = cypher_dict_keys[cypher_dict_values.index(element[char])].lower()
                         new_element = new_element + letter
-                print(new_element)
                 if new_element in self.valid_words:
                     count = count + 1
-            print(count)
+            #print(count)
             if self.length < count:
                 self.list = []
                 self.length = count
