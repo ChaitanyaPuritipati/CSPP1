@@ -275,10 +275,10 @@ class CiphertextMessage(Message):
             if self.length == count:
                 self.list.append(self.shift)
             if self.length == len(self.teststring):
-                output_string = Message.apply_shift(self, self.shift)
+                output_string = Message.apply_shift(self, 26-(self.shift))
                 return(self.shift, output_string)
             self.shift += 1
-        return (min(self.list), Message.apply_shift(self, min(self.list)))
+        return (min(self.list), Message.apply_shift(self, 26-min(self.list)))
 ### DO NOT MODIFY THIS METHOD ###
 def main():
     ''' This method is provided to handle testcases'''
