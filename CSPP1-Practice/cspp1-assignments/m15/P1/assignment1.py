@@ -267,9 +267,9 @@ class CiphertextMessage(Message):
                     count = count + 1
             self.length = count
             if self.length == len(self.message_text):
-                return (self.shift, self.message_text)        
+                return (self.shift, new_element)        
             self.shift += 1
-        return (self.shift, self.message_text)        
+        return (self.shift, new_element)        
 ### DO NOT MODIFY THIS METHOD ###
 def main():
     ''' This method is provided to handle testcases'''
