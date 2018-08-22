@@ -277,6 +277,7 @@ class CiphertextMessage(Message):
             if self.length == len(self.message_text):
                 return (self.shift, new_element)
             self.shift += 1
+        print(self.list)    
         return (min(self.list), new_element)
 ### DO NOT MODIFY THIS METHOD ###
 def main():
