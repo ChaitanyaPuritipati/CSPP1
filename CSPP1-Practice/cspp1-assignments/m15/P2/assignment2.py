@@ -265,8 +265,8 @@ def decrypt_story():
         shift value and decrypted string in a tuple.
     '''
 
-    CiphertextMessage(get_story_string())
-    return decrypt_message()
+    A = CiphertextMessage(get_story_string())
+    return A.decrypt_message()
 
 ### DO NOT MODIFY THIS METHOD ###
 def main():
