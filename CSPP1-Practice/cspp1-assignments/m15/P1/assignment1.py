@@ -253,8 +253,10 @@ class CiphertextMessage(Message):
         self.shift = CiphertextMessage.Best_shift
         while True:
             shift_dict_cypher = Message.build_shift_dict(self, self.shift)
-            for e in self.message_text:
-            	print(e)
+            cypher_dict_values = list(shift_dict_cypher.values())
+            print(cypher_dict_values)
+            #for e in self.message_text:
+            	
             break
 ### DO NOT MODIFY THIS METHOD ###
 def main():
