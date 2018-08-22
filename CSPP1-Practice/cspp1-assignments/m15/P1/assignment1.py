@@ -268,7 +268,7 @@ class CiphertextMessage(Message):
                     count = count + 1
             #if self.length <= count:
                 #print("entered check")
-                self.length = count
+            self.length = count
             if self.length == len(self.message_text):
                 return (self.shift, new_element)
         return (self.shift, new_element)
