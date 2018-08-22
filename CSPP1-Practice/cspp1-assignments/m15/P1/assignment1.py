@@ -260,8 +260,8 @@ class CiphertextMessage(Message):
                 new_element = ""
                 for char in range(len(element)):
                     if element[char] in cypher_dict_values:
-                        element[char] = cypher_dict_keys[cypher_dict_values.index(element[char])]
-                    new_element = new_element + element[char]    
+                        letter = cypher_dict_keys[cypher_dict_values.index(element[char])]
+                    new_element = new_element + letter    
                 print(new_element)
             break
 ### DO NOT MODIFY THIS METHOD ###
