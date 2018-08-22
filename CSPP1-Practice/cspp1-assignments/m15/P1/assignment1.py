@@ -248,7 +248,8 @@ class CiphertextMessage(Message):
         and the decrypted message text using that shift value
         '''
         #pass
-        self.message_text = self.message_text.split() 
+        self.teststring = self.message_text
+        self.teststring = self.teststring.split() 
         #print(self.message_text)
         self.shift = CiphertextMessage.Best_shift
         self.length = 0
@@ -259,7 +260,7 @@ class CiphertextMessage(Message):
             cypher_dict_values = list(shift_dict_cypher.values())
             cypher_dict_keys = list(shift_dict_cypher.keys())
             count = 0
-            for element in self.message_text:
+            for element in self.teststring:
                 new_element = ""
                 for char in range(len(element)):
                     if element[char] in string.ascii_lowercase or element[char] in string.ascii_uppercase:
@@ -273,13 +274,11 @@ class CiphertextMessage(Message):
                 self.length = count
             if self.length == count:
                 self.list.append(self.shift)
-            if self.length == len(self.message_text):
-                output_string = Message.apply_shift(self.message_text, self.shift)
+            if self.length == len(self.teststring):
+                output_string = Message.apply_shift(self, self.shift)
                 return(self.shift, output_string)
             self.shift += 1
-        #print(self.list)
-        for e in self.message_text:
-            print(e)
+        return (min(self.list), Message.apply_shift(self, min(self.list)))
 ### DO NOT MODIFY THIS METHOD ###
 def main():
     ''' This method is provided to handle testcases'''
