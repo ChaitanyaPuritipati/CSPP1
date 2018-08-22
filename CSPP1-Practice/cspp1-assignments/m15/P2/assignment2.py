@@ -258,14 +258,14 @@ class CiphertextMessage(Message):
                 self.decrypted_message = (26-shift, decrypted)
         return self.decrypted_message
 
-    def set_text(self, story):
-    	self.message_text = story
+    #def set_text(self, story):
+    	#self.message_text = story
 def decrypt_story():
     ''' Decrypt the story text using CiphertextMessage class and return the
         shift value and decrypted string in a tuple.
     '''
 
-    CiphertextMessage.set_text(self, get_story_string())
+    CiphertextMessage(get_story_string())
     return decrypt_message()
 
 ### DO NOT MODIFY THIS METHOD ###
