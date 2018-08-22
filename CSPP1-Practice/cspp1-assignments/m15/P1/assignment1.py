@@ -248,7 +248,7 @@ class CiphertextMessage(Message):
         '''
         #pass
         self.message_text = self.message_text.split()
-        self.message_text = (e.strip("!,.") for e in self.message_text) 
+        self.message_text = print((e.strip("!,.") for e in self.message_text)) 
         print(self.message_text)
 
        
