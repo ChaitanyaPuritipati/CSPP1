@@ -231,7 +231,7 @@ class CiphertextMessage(Message):
         '''
         Message.__init__(self, text)
         self.teststring = self.message_text
-        self.teststring = self.teststring.split()   
+        self.teststring = self.teststring.split()
         self.shift = 1
         self.length = 0
         self.list = []
