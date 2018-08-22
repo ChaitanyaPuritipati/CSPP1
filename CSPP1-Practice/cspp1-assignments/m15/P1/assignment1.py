@@ -250,7 +250,7 @@ class CiphertextMessage(Message):
         def __init__(self):
             self.teststring = self.message_text
             self.teststring = self.teststring.split()   
-            self.shift = CiphertextMessage.Best_shift
+            self.shift = 1
             self.length = 0
             self.list = []
         while self.shift <= 26:
