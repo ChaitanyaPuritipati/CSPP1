@@ -249,7 +249,7 @@ class CiphertextMessage(Message):
         '''
         #pass
         self.message_text = self.message_text.split() 
-        print(self.message_text)
+        #print(self.message_text)
         self.shift = CiphertextMessage.Best_shift
         self.length = 0
         while self.shift <= 26:
@@ -267,9 +267,9 @@ class CiphertextMessage(Message):
                     count = count + 1
             self.length = count
             if self.length == len(self.message_text):
-                return self.shift        
+                return (self.shift, self.message_text)        
             self.shift += 1
-        return self.shift        
+        return (self.shift, self.message_text)        
 ### DO NOT MODIFY THIS METHOD ###
 def main():
     ''' This method is provided to handle testcases'''
