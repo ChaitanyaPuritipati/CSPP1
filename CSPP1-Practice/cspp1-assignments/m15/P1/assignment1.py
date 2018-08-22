@@ -261,7 +261,6 @@ class CiphertextMessage(Message):
             count = 0
             for element in self.message_text:
                 new_element = ""
-                #print(element)
                 for char in range(len(element)):
                     if element[char] in string.ascii_lowercase or element[char] in string.ascii_uppercase:
                         if element[char] in cypher_dict_values:
@@ -269,18 +268,17 @@ class CiphertextMessage(Message):
                         new_element = new_element + letter
                 if new_element in self.valid_words:
                     count = count + 1
-            #print(count)
             if self.length < count:
                 self.list = []
                 self.length = count
             if self.length == count:
-                self.list.append(self.shift) 
-            #print(self.length)           
+                self.list.append(self.shift)
             if self.length == len(self.message_text):
-                return (self.shift, new_element)
+                output_string = Message.apply_shift(self, self.shift)
+                return(self.shift, output_string)
             self.shift += 1
-        print(self.list)    
-        return (min(self.list), new_element)
+        #print(self.list)    
+        return (min(self.list), Message.apply_shift(self, min(self.list)))
 ### DO NOT MODIFY THIS METHOD ###
 def main():
     ''' This method is provided to handle testcases'''
