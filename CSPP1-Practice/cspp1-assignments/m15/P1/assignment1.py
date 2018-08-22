@@ -163,6 +163,7 @@ class PlaintextMessage(Message):
         Hint: consider using the parent class constructor so less
         code is repeated
         '''
+        Message.__init__(self, text)
         self.text = text
         self.shift = shift
         self.valid_words = load_words("words.txt")
