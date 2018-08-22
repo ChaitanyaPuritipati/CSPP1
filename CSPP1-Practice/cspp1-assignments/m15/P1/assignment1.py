@@ -268,10 +268,13 @@ class CiphertextMessage(Message):
                 if new_element in self.valid_words:
                     #print("yes")
                     count = count + 1
-            self.length = count
+            if self.count <= count:
+                self.count = count
+            #if self.count == count:
+                    
             if self.length == len(self.message_text):
                 return (self.shift, new_element)
-            self.shift += 1    
+            self.shift += 1
         return (self.shift, new_element)
 ### DO NOT MODIFY THIS METHOD ###
 def main():
