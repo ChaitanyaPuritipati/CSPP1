@@ -277,8 +277,9 @@ class CiphertextMessage(Message):
                 output_string = Message.apply_shift(self, 0)
                 return(self.shift, output_string)
             self.shift += 1
-        #print(self.list)    
-        return (min(self.list), Message.apply_shift(self, 0))
+        #print(self.list)
+        for e in self.message_text:
+            print(Message.applyshift(26-(min(self.list))))
 ### DO NOT MODIFY THIS METHOD ###
 def main():
     ''' This method is provided to handle testcases'''
