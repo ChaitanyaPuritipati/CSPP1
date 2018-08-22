@@ -261,11 +261,12 @@ class CiphertextMessage(Message):
             count = 0
             for element in self.message_text:
                 new_element = ""
-                print(element)
+                #print(element)
                 for char in range(len(element)):
                     if element[char] in cypher_dict_values:
                         letter = cypher_dict_keys[cypher_dict_values.index(element[char])]
                     new_element = new_element + letter
+                print(new_element)
                 if new_element in self.valid_words:
                     count = count + 1
             print(count)
