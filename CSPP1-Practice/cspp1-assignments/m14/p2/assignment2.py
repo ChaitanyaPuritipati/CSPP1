@@ -401,6 +401,7 @@ class PlaintextMessage(Message):
         code is repeated
         '''
         Message.__init__(self, text)
+        self.message_text = "love"
         self.shift = shift
     def get_shift(self):
         '''
