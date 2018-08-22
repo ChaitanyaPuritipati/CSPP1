@@ -254,9 +254,13 @@ class CiphertextMessage(Message):
         while True:
             shift_dict_cypher = Message.build_shift_dict(self, self.shift)
             cypher_dict_values = list(shift_dict_cypher.values())
-            print(cypher_dict_values)
-            #for e in self.message_text:
-            	
+            cypher_dict_keys = list(shift_dict_cypher.keys())
+            #print(cypher_dict_values)
+            for element in range(len(self.message_text)):
+            	for char in range(len(element)):
+            		if element[char] in cypher_dict_values:
+            			element[char] = cypher_dict_keys[cypher_dict_values.index(element[char])] 
+            	print(element)
             break
 ### DO NOT MODIFY THIS METHOD ###
 def main():
