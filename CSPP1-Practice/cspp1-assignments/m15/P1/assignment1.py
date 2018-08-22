@@ -256,7 +256,7 @@ class CiphertextMessage(Message):
             cypher_dict_values = list(shift_dict_cypher.values())
             cypher_dict_keys = list(shift_dict_cypher.keys())
             #print(cypher_dict_values)
-            for element in range(len(self.message_text)):
+            for element in self.message_text:
             	for char in range(len(element)):
             		if element[char] in cypher_dict_values:
             			element[char] = cypher_dict_keys[cypher_dict_values.index(element[char])] 
