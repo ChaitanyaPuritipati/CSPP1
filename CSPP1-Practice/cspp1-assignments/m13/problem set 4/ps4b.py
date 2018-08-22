@@ -106,24 +106,26 @@ def compPlayHand(hand, wordList, n):
 #
 #
 def playGame(wordList):
-    start_input = input("Please enter a letter to start the game. It has to be either 'n' or 'r' or 'e'")
-    while  start_input not in 'enr':
-        start_input = input("Enter a valid input. It has to be only 'e', 'r', 'n'")
-    if start_input == 'e':
-        return #score
-    elif start_input == 'n':
-        play_input = input("Who should play the game")
-        while play_input not in 'uc':
-            play_input = input("Please enter a valid input. It has to either 'u' or 'c'")
-        input_hand = dealHand(7)
-        print(input_hand)
-        if play_input == 'u':
-            playHand(input_hand, wordList, 7)
-        elif play_input == 'c':
-            wordList = loadWords()
-            compPlayHand(input_hand, wordList, 7)  
-    elif start_input == 'r':
-        print("Playing with previous hand") 
+    # start_input = input("Please enter a letter to start the game. It has to be either 'n' or 'r' or 'e'")
+    # while  start_input not in 'enr':
+    #     start_input = input("Enter a valid input. It has to be only 'e', 'r', 'n'")
+    # if start_input == 'e':
+    #     return #score
+    # elif start_input == 'n':
+    #     play_input = input("Who should play the game")
+    #     while play_input not in 'uc':
+    #         play_input = input("Please enter a valid input. It has to either 'u' or 'c'")
+    #     input_hand = dealHand(7)
+    #     print(input_hand)
+    #     if play_input == 'u':
+    #         playHand(input_hand, wordList, 7)
+    #     elif play_input == 'c':
+    #         wordList = loadWords()
+    #         compPlayHand(input_hand, wordList, 7)  
+    # elif start_input == 'r':
+    #     print("Playing with previous hand") 
+    while True:
+        
             
 
             
