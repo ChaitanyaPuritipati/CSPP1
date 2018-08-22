@@ -230,7 +230,6 @@ class CiphertextMessage(Message):
         '''
         Message.__init__(self, text)
         self.valid_words = Message.get_valid_words(self)
-        print(self.message_text)
     def decrypt_message(self):
         '''
         Decrypt self.message_text by trying every possible shift value
@@ -248,8 +247,10 @@ class CiphertextMessage(Message):
         and the decrypted message text using that shift value
         '''
         #pass
+        self.message_text = self.message_text.split()
+        print(self.message_text)
 
-
+       
 ### DO NOT MODIFY THIS METHOD ###
 def main():
     ''' This method is provided to handle testcases'''
