@@ -247,11 +247,12 @@ class CiphertextMessage(Message):
         Returns: a tuple of the best shift value used to decrypt the message
         and the decrypted message text using that shift value
         '''
-        self.teststring = self.message_text
-        self.teststring = self.teststring.split()   
-        self.shift = CiphertextMessage.Best_shift
-        self.length = 0
-        self.list = []
+        def __init__(self):
+            self.teststring = self.message_text
+            self.teststring = self.teststring.split()   
+            self.shift = CiphertextMessage.Best_shift
+            self.length = 0
+            self.list = []
         while self.shift <= 26:
             shift_dict_cypher = Message.build_shift_dict(self, self.shift)
             cypher_dict_values = list(shift_dict_cypher.values())
