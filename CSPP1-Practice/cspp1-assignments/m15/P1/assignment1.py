@@ -274,7 +274,7 @@ class CiphertextMessage(Message):
             if self.length == count:
                 self.list.append(self.shift)
             if self.length == len(self.message_text):
-                output_string = Message.apply_shift(self, self.shift)
+                output_string = Message.apply_shift(self.message_text, self.shift)
                 return(self.shift, output_string)
             self.shift += 1
         #print(self.list)
