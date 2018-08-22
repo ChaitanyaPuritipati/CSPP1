@@ -248,7 +248,7 @@ class CiphertextMessage(Message):
         and the decrypted message text using that shift value
         '''
         self.teststring = self.message_text
-        self.teststring = self.teststring.split() 
+        self.teststring = self.teststring.split()
         self.shift = CiphertextMessage.Best_shift
         self.length = 0
         self.list = []
