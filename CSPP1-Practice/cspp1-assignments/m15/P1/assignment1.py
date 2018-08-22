@@ -261,7 +261,8 @@ class CiphertextMessage(Message):
             count = 0
             for element in self.teststring:
                 new_element = ""
-                for char in range(len(element)):
+                ln_element = len(element)
+                for char in range(ln_element):
                     if element[char] in string.ascii_lowercase or\
                     element[char] in string.ascii_uppercase:
                         if element[char] in cypher_dict_values:
