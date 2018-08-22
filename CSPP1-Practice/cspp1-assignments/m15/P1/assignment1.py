@@ -251,19 +251,24 @@ class CiphertextMessage(Message):
         self.message_text = self.message_text.split() 
         print(self.message_text)
         self.shift = CiphertextMessage.Best_shift
-        while True:
+        self.length = 0
+        while self.shift <= 26:
             shift_dict_cypher = Message.build_shift_dict(self, self.shift)
             cypher_dict_values = list(shift_dict_cypher.values())
             cypher_dict_keys = list(shift_dict_cypher.keys())
-            #print(cypher_dict_values)
+            count = 0
             for element in self.message_text:
                 new_element = ""
                 for char in range(len(element)):
                     if element[char] in cypher_dict_values:
                         letter = cypher_dict_keys[cypher_dict_values.index(element[char])]
                     new_element = new_element + letter    
-                print(new_element)
-            break
+                if new_element in valid_words:
+                    count = count + 1
+            self.length = count
+            if self.length == len(self.message_text):
+                return self.shift        
+            self.shift += 1    
 ### DO NOT MODIFY THIS METHOD ###
 def main():
     ''' This method is provided to handle testcases'''
