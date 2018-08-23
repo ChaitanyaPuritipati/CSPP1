@@ -30,7 +30,8 @@ def mult_matrix(m_1, m_2, dimension_matrix1, dimension_matrix2):
         row_list = []
         for test_ele in range(len(m2_val[0])):
             ele_list = []
-            for col_ele in range(len(m2_val)):
+            m2_len = len(m2_val)
+            for col_ele in range(m2_len):
                 ele_list.append((m1_val[row_ele][col_ele])\
                     *(m2_val[col_ele][test_ele]))
             row_list.append(sum(ele_list))
