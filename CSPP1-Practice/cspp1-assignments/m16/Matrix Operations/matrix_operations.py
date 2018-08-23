@@ -21,10 +21,10 @@ def mult_matrix(m1, m2, dimension_matrix1, dimension_matrix2):
     for row_ele in range(len(m1_val)):
         row_list = []
         for col_ele in range(len(m2_val)):
-            print(row_ele, col_ele)
+            print(row_ele, col_ele, m1_val[row_ele][col_ele], m2_val[col_ele][row_ele])
             row_list.append((m1_val[row_ele][col_ele])*(m2_val[col_ele][row_ele]))
-        multi_matrix.append(row_list)    
-    return multi_matrix   
+        multi_matrix.append(row_list)
+    return multi_matrix  
 
 def add_matrix(m1, m2,dimension_matrix1, dimension_matrix2):
     '''
