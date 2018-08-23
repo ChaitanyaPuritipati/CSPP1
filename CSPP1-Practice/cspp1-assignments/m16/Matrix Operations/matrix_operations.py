@@ -19,7 +19,7 @@ def add_matrix(m1, m2):
     m1_val = list(m1.values())
     print(m1_val, type(m1_val))
     for ele in range(len(m1_val)):
-        m1_val[ele] = map(int, m1_val[ele])
+        m1_val[ele] = list(map(int, m1_val[ele]))
     print(m1_val)    
 
 def Matrix_dict(dimension_matrix):
