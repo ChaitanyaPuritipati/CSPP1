@@ -1,3 +1,6 @@
+'''
+Function to find addition and multiplication of matrices
+'''
 from operator import add
 def type_conv(m1):
     m1_val = list(m1.values())
