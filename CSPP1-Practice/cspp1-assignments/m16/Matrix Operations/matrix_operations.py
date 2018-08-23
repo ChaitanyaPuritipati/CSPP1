@@ -52,10 +52,11 @@ def main():
 
     # multiply matrix 1 and matrix 2
     dimension_matrix1 = input().split(',')
-    print(dimension_matrix1)
+    #print(dimension_matrix1)
     matrix_1 = Matrix_dict(dimension_matrix1)[0]
     matrix_1_count = Matrix_dict(dimension_matrix1)[1]
     dimension_matrix2 = input().split(',')
+    print(dimension_matrix2)
     matrix_2 = Matrix_dict(dimension_matrix2)[0]
     matrix_2_count = Matrix_dict(dimension_matrix2)[1]
     print(read_matrix(dimension_matrix1, matrix_1, dimension_matrix2, matrix_2))
