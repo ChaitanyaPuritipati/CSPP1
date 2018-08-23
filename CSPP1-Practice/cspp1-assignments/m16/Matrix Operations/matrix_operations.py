@@ -40,7 +40,7 @@ def read_matrix(dimension_matrix1, matrix_1, dimension_matrix2, matrix_2, matrix
     if matrix_1_count != dimension_matrix1_ele or matrix_2_count != dimension_matrix2_ele:
         print("Error: Invalid input for the matrix") 
         return None
-    if int(dimension_matrix1[1]) != int(dimension_matrix2[2]):
+    if int(dimension_matrix1[1]) != int(dimension_matrix2[0]):
         print("Error: Matrix shapes invalid for mult")
         return None       
 def main():
