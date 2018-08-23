@@ -38,11 +38,14 @@ def read_matrix(dimension_matrix1, matrix_1, dimension_matrix2, matrix_2, matrix
     dimension_matrix1_ele = (int(dimension_matrix1[0]))*(int(dimension_matrix1[1]))
     dimension_matrix2_ele = (int(dimension_matrix2[0]))*(int(dimension_matrix2[1]))
     if matrix_1_count != dimension_matrix1_ele or matrix_2_count != dimension_matrix2_ele:
-        print("Error: Invalid input for the matrix") 
+        print("Error: Invalid input for the matrix")
         return None
     if int(dimension_matrix1[1]) != int(dimension_matrix2[0]):
         print("Error: Matrix shapes invalid for mult")
-        return None       
+        return None
+    if int(dimension_matrix1[0]) != int(dimension_matrix2[0]) or int(dimension_matrix1[1]) != int(dimension_matrix2[1]):
+        print("Error: Matrix shapes invalid for addition")
+        return None         
 def main():
     # read matrix 1
 
@@ -55,7 +58,6 @@ def main():
     matrix_1 = Matrix_dict(dimension_matrix1)
     matrix_1_values = matrix_1[0]
     matrix_1_count = matrix_1[1]
-    print(matrix_1, matrix_1_count)
     dimension_matrix2 = input().split(',')
     matrix_2 = Matrix_dict(dimension_matrix2)
     matrix_2_values = matrix_2[0]
