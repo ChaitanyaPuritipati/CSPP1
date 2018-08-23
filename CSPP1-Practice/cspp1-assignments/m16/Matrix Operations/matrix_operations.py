@@ -19,12 +19,12 @@ def add_matrix(m1, m2):
     pass
 def Matrix_dict(dimension_matrix):
     rows = int(dimension_matrix[0])
-    print(rows)
+    #print(rows)
     row_dict = {}
     count_ele = 0
     for row in range(rows):
-        row_input = input()
-        print(len(row_input), row, row_input)
+        row_input = input().split()
+        count_ele += len(row_input)
         row_dict[row] = row_input
     return (row_dict, count_ele)
 
@@ -52,13 +52,14 @@ def main():
 
     # multiply matrix 1 and matrix 2
     dimension_matrix1 = input().split(',')
-    matrix_1 = Matrix_dict(dimension_matrix1)[0]
-    matrix_1_count = Matrix_dict(dimension_matrix1)[1]
+    matrix_1 = Matrix_dict(dimension_matrix1)
+    matrix_1_values = matrix_1[0]
+    matrix_1_count = matrix[1]
     print(matrix_1, matrix_1_count)
-    #dimension_matrix2 = input().split(',')
-    #print(dimension_matrix2)
-    #matrix_2 = Matrix_dict(dimension_matrix2)[0]
-    #matrix_2_count = Matrix_dict(dimension_matrix2)[1]
-    #print(read_matrix(dimension_matrix1, matrix_1, dimension_matrix2, matrix_2))
+    dimension_matrix2 = input().split(',')
+    matrix_2 = Matrix_dict(dimension_matrix2)
+    matrix_2_values = matrix_2[0]
+    matrix_2_count = matrix_2[1]
+    print(read_matrix(dimension_matrix1, matrix_1_values, dimension_matrix2, matrix_2_values, matrix_1_count, matrix_2_count))
 if __name__ == '__main__':
     main()
