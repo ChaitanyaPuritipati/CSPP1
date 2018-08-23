@@ -18,7 +18,7 @@ def add_matrix(m1, m2):
     '''
     pass
 
-def read_matrix():
+def read_matrix(dimension_matrix):
     '''
         read the matrix dimensions from input
         create a list of lists and read the numbers into it
@@ -26,8 +26,13 @@ def read_matrix():
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    pass
-
+    rows = int(dimension_matrix[0])
+    colums = int(dimension_matrix[1])
+    row_dict = {}
+    for row in range(len(rows)):
+    	for colums in range(len(columns)):
+            row_dict[row] = input()
+    return row_dict        
 def main():
     # read matrix 1
 
@@ -36,7 +41,8 @@ def main():
     # add matrix 1 and matrix 2
 
     # multiply matrix 1 and matrix 2
-    dimension_matrix = input().split(',')
-    print(dimension_matrix)
+    dimension_matrix1 = input().split(',')
+    matrix_1 = read_matrix(dimension_matrix1)
+    
 if __name__ == '__main__':
     main()
