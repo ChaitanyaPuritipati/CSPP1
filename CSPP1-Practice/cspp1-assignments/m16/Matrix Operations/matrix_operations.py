@@ -23,7 +23,8 @@ def add_matrix(m1, m2):
     '''
     m1_val = type_conv(m1)
     m2_val = type_conv(m2)
-    print(m1_val, m2_val)
+    print(m1_val)
+    print(m2_val)
     
 def Matrix_dict(dimension_matrix):
     rows = int(dimension_matrix[0])
