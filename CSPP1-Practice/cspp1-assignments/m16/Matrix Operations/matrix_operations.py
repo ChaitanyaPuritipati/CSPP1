@@ -51,6 +51,7 @@ def main():
 
     # multiply matrix 1 and matrix 2
     dimension_matrix1 = input().split(',')
+    print(dimension_matrix1)
     matrix_1 = Matrix_dict(dimension_matrix1)[0]
     matrix_1_count = Matrix_dict(dimension_matrix1)[1]
     dimension_matrix2 = input().split(',')
