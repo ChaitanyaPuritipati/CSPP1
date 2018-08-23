@@ -3,6 +3,9 @@ Function to find addition and multiplication of matrices
 '''
 from operator import add
 def type_conv(m_1):
+    '''
+    Function to convert string elements to int type
+    '''
     m_1_val = list(m_1.values())
     for ele in range(len(m_1_val)):
         m_1_val[ele] = list(map(int, m_1_val[ele]))
