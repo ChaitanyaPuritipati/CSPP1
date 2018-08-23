@@ -2,12 +2,12 @@
 Function to find addition and multiplication of matrices
 '''
 from operator import add
-def type_conv(m1):
-    m1_val = list(m1.values())
-    for ele in range(len(m1_val)):
-        m1_val[ele] = list(map(int, m1_val[ele]))
-    return m1_val
-def mult_matrix(m1, m2, dimension_matrix1, dimension_matrix2):
+def type_conv(m_1):
+    m_1_val = list(m_1.values())
+    for ele in range(len(m_1_val)):
+        m_1_val[ele] = list(map(int, m_1_val[ele]))
+    return m_1_val
+def mult_matrix(m_1, m_2, dimension_matrix1, dimension_matrix2):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -18,8 +18,8 @@ def mult_matrix(m1, m2, dimension_matrix1, dimension_matrix2):
     if int(dimension_matrix1[1]) != int(dimension_matrix2[0]):
         print("Error: Matrix shapes invalid for mult")
         return None
-    m1_val = type_conv(m1)
-    m2_val = type_conv(m2)
+    m1_val = type_conv(m_1)
+    m2_val = type_conv(m_2)
     multi_matrix = []
     for row_ele in range(len(m1_val)):
         row_list = []
@@ -32,7 +32,7 @@ def mult_matrix(m1, m2, dimension_matrix1, dimension_matrix2):
         multi_matrix.append(row_list)
     return multi_matrix
 
-def add_matrix(m1, m2, dimension_matrix1, dimension_matrix2):
+def add_matrix(m_1, m_2, dimension_matrix1, dimension_matrix2):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -44,8 +44,8 @@ def add_matrix(m1, m2, dimension_matrix1, dimension_matrix2):
     or int(dimension_matrix1[1]) != int(dimension_matrix2[1]):
         print("Error: Matrix shapes invalid for addition")
         return None
-    m1_val = type_conv(m1)
-    m2_val = type_conv(m2)
+    m1_val = type_conv(m_1)
+    m2_val = type_conv(m_2)
     added_matrix = []
     for ele in range(len(m1_val)):
         added_matrix.append(list(map(add, m1_val[ele], m2_val[ele])))
