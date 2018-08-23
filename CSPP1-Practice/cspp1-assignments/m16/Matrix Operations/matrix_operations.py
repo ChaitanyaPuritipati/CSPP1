@@ -54,7 +54,7 @@ def main():
     dimension_matrix1 = input().split(',')
     matrix_1 = Matrix_dict(dimension_matrix1)
     matrix_1_values = matrix_1[0]
-    matrix_1_count = matrix[1]
+    matrix_1_count = matrix_1[1]
     print(matrix_1, matrix_1_count)
     dimension_matrix2 = input().split(',')
     matrix_2 = Matrix_dict(dimension_matrix2)
