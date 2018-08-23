@@ -39,10 +39,8 @@ def read_matrix(dimension_matrix1, matrix_1, dimension_matrix2, matrix_2, matrix
     dimension_matrix1_ele = (int(dimension_matrix1[0]))*(int(dimension_matrix1[1]))
     dimension_matrix2_ele = (int(dimension_matrix2[0]))*(int(dimension_matrix2[1]))
     print(dimension_matrix1_ele, dimension_matrix2_ele)
-    if matrix_1_count != dimension_matrix1_ele:
-        print("Error: Invalid input for the matrix")
-    if matrix_2_count != dimension_matrix2_ele:
-        print("Error: Invalid input for the matrix")    
+    if matrix_1_count != dimension_matrix1_ele or matrix_2_count != dimension_matrix2_el:
+        print("Error: Invalid input for the matrix") 
     return None    
 def main():
     # read matrix 1
