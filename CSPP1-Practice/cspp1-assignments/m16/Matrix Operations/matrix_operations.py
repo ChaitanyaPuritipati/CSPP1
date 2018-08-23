@@ -17,6 +17,7 @@ def add_matrix(m1, m2):
         error message should be "Error: Matrix shapes invalid for addition"
     '''
     print(m1)
+    print(m2)
 def Matrix_dict(dimension_matrix):
     rows = int(dimension_matrix[0])
     row_dict = {}
