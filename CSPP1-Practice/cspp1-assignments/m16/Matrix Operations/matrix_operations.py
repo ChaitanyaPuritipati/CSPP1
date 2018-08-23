@@ -47,6 +47,6 @@ def main():
     matrix_1 = Matrix_dict(dimension_matrix1)
     dimension_matrix2 = input().split(',')
     matrix_2 = Matrix_dict(dimension_matrix2)
-    read_matrix(dimension_matrix1, matrix_1, dimension_matrix2, matrix_2)
+    print(read_matrix(dimension_matrix1, matrix_1, dimension_matrix2, matrix_2))
 if __name__ == '__main__':
     main()
