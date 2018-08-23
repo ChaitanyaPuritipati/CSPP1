@@ -32,9 +32,9 @@ def read_matrix(dimension_matrix1, matrix_1, dimension_matrix2, matrix_2):
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    if dimension_matrix1[0] != len(matrix_1.keys()) or dimension_matrix1[1] != len(matrix_1.values())
+    if dimension_matrix1[0] != len(matrix_1.keys()) or dimension_matrix1[1] != len(matrix_1.values()):
         print(Error: Invalid input for the matrix)
-    if dimension_matrix2[0] != len(matrix_2.keys()) or dimension_matrix2[1] != len(matrix_2.values())
+    if dimension_matrix2[0] != len(matrix_2.keys()) or dimension_matrix2[1] != len(matrix_2.values()):
         print(Error: Invalid input for the matrix)    
     return None    
 def main():
