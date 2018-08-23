@@ -16,11 +16,11 @@ def add_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    m1.val = list(m1.values())
-    print(m1.val, type(m1.val))
-    for ele in range(len(m1.val)):
-        m1.val[ele] = map(int, m1.val[ele])
-    print(m1.val)    
+    m1_val = list(m1.values())
+    print(m1_val, type(m1_val))
+    for ele in range(len(m1_val)):
+        m1_val[ele] = map(int, m1_val[ele])
+    print(m1_val)    
 
 def Matrix_dict(dimension_matrix):
     rows = int(dimension_matrix[0])
