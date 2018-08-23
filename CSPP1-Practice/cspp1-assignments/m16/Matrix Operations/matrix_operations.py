@@ -27,7 +27,7 @@ def read_matrix(dimension_matrix):
         error message should be "Error: Invalid input for the matrix"
     '''
     rows = int(dimension_matrix[0])
-    colums = int(dimension_matrix[1])
+    columns = int(dimension_matrix[1])
     row_dict = {}
     for row in range(rows):
     	for colums in range(columns):
