@@ -25,7 +25,8 @@ def mult_matrix(m_1, m_2, dimension_matrix1, dimension_matrix2):
     m1_val = type_conv(m_1)
     m2_val = type_conv(m_2)
     multi_matrix = []
-    for row_ele in range(len(m1_val)):
+    m1_len = len(m1_val)
+    for row_ele in range(m1_len):
         row_list = []
         for test_ele in range(len(m2_val[0])):
             ele_list = []
