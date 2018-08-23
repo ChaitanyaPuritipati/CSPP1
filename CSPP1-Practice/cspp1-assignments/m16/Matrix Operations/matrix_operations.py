@@ -45,7 +45,8 @@ def read_matrix(dimension_matrix1, matrix_1, dimension_matrix2, matrix_2, matrix
         return None
     if int(dimension_matrix1[0]) != int(dimension_matrix2[0]) or int(dimension_matrix1[1]) != int(dimension_matrix2[1]):
         print("Error: Matrix shapes invalid for addition")
-        return None         
+        return None
+    return [1, 2]    
 def main():
     # read matrix 1
 
