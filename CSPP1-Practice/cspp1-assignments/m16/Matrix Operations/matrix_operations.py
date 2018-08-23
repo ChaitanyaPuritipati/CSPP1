@@ -37,7 +37,8 @@ def add_matrix(m1, m2,dimension_matrix1, dimension_matrix2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    if int(dimension_matrix1[0]) != int(dimension_matrix1[0]) or int(dimension_matrix1[1]) != int(dimension_matrix2[1]):
+    if int(dimension_matrix1[0]) != int(dimension_matrix1[0])\
+    or int(dimension_matrix1[1]) != int(dimension_matrix2[1]):
         print("Error: Matrix shapes invalid for addition")
         return None
     m1_val = type_conv(m1)
