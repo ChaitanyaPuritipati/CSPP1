@@ -27,8 +27,6 @@ def read_matrix(dimension_matrix):
         error message should be "Error: Invalid input for the matrix"
     '''
     rows = int(dimension_matrix[0])
-    columns = int(dimension_matrix[1])
-    print(rows, columns)
     row_dict = {}
     for row in range(rows):
         row_dict[row] = input()    
@@ -43,6 +41,8 @@ def main():
     # multiply matrix 1 and matrix 2
     dimension_matrix1 = input().split(',')
     matrix_1 = read_matrix(dimension_matrix1)
-    print(matrix_1)
+    dimension_matrix2 = input().split(',')
+    matrix_2 = read_matrix(dimension_matrix2)
+    print(matrix_1, matrix_2)
 if __name__ == '__main__':
     main()
