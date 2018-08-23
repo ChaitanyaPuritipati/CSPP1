@@ -29,8 +29,8 @@ def read_matrix(dimension_matrix):
     rows = int(dimension_matrix[0])
     colums = int(dimension_matrix[1])
     row_dict = {}
-    for row in range(len(rows)):
-    	for colums in range(len(columns)):
+    for row in range(rows):
+    	for colums in range(columns):
             row_dict[row] = input()
     return row_dict        
 def main():
@@ -43,6 +43,6 @@ def main():
     # multiply matrix 1 and matrix 2
     dimension_matrix1 = input().split(',')
     matrix_1 = read_matrix(dimension_matrix1)
-    
+
 if __name__ == '__main__':
     main()
