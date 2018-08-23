@@ -21,8 +21,9 @@ def Matrix_dict(dimension_matrix):
     rows = int(dimension_matrix[0])
     row_dict = {}
     for row in range(rows):
-        row_dict[row] = input().split()
-    return row_dict    
+        row_input = input().split()
+        print(row_input)
+    return row_dict
 
 def read_matrix(dimension_matrix1, matrix_1, dimension_matrix2, matrix_2):
     '''
