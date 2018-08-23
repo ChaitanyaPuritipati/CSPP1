@@ -58,6 +58,9 @@ def add_matrix(m_1, m_2, dimension_matrix1, dimension_matrix2):
         added_matrix.append(list(map(add, m1_val[ele], m2_val[ele])))
     return added_matrix
 def matrix_dict(dimension_matrix):
+    '''
+    Function to create matrix dictionary
+    '''
     rows = int(dimension_matrix[0])
     row_dict = {}
     count_ele = 0
