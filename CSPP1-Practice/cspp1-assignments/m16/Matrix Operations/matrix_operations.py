@@ -24,7 +24,7 @@ def Matrix_dict(dimension_matrix):
     count_ele = 0
     for row in range(rows):
         row_input = input().split()
-        print(len(row_input))
+        print(len(row_input), row)
         row_dict[row] = row_input
     return (row_dict, count_ele)
 
