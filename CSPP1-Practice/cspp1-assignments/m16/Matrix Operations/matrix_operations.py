@@ -3,7 +3,7 @@ def type_conv(m1):
     m1_val = list(m1.values())
     for ele in range(len(m1_val)):
         m1_val[ele] = list(map(int, m1_val[ele]))
-    return m1_val    
+    return m1_v
 def mult_matrix(m1, m2, dimension_matrix1, dimension_matrix2):
     '''
         check if the matrix1 columns = matrix2 rows
@@ -15,6 +15,15 @@ def mult_matrix(m1, m2, dimension_matrix1, dimension_matrix2):
     if int(dimension_matrix1[1]) != int(dimension_matrix2[0]):
         print("Error: Matrix shapes invalid for mult")
         return None
+    m1_val = type_conv(m1)
+    m2_val = type_conv(m2)
+    multi_matrix = [] 
+    for row_ele in range(len(m1_val)):
+        row_list = []
+        for col_ele in range(len(m2_val)):
+            row_list.append((m1_val[row_ele][col_ele])*m2_val[col_ele][row_ele])
+        multi_matrix.append(row_list)    
+    return multi_matrix   
 
 def add_matrix(m1, m2,dimension_matrix1, dimension_matrix2):
     '''
