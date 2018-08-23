@@ -55,10 +55,10 @@ def main():
     matrix_1 = Matrix_dict(dimension_matrix1)[0]
     matrix_1_count = Matrix_dict(dimension_matrix1)[1]
     print(matrix_1, matrix_1_count)
-    dimension_matrix2 = input().split(',')
-    print(dimension_matrix2)
-    matrix_2 = Matrix_dict(dimension_matrix2)[0]
-    matrix_2_count = Matrix_dict(dimension_matrix2)[1]
-    print(read_matrix(dimension_matrix1, matrix_1, dimension_matrix2, matrix_2))
+    #dimension_matrix2 = input().split(',')
+    #print(dimension_matrix2)
+    #matrix_2 = Matrix_dict(dimension_matrix2)[0]
+    #matrix_2_count = Matrix_dict(dimension_matrix2)[1]
+    #print(read_matrix(dimension_matrix1, matrix_1, dimension_matrix2, matrix_2))
 if __name__ == '__main__':
     main()
