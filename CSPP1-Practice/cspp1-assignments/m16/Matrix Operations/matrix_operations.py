@@ -22,7 +22,7 @@ def Matrix_dict(dimension_matrix):
     row_dict = {}
     for row in range(rows):
         row_input = input().split()
-        print(row_input)
+        print(len(row_input))
     return row_dict
 
 def read_matrix(dimension_matrix1, matrix_1, dimension_matrix2, matrix_2):
