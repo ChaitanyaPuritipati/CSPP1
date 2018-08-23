@@ -74,7 +74,6 @@ def read_matrix(dimension_matrix1, matrix_1,\
         return None
     print(add_matrix(matrix_1, matrix_2, dimension_matrix1, dimension_matrix2))
     print(mult_matrix(matrix_1, matrix_2, dimension_matrix1, dimension_matrix2))
-     
 def main():
     # read matrix 1
 
@@ -91,6 +90,8 @@ def main():
     matrix_2 = Matrix_dict(dimension_matrix2)
     matrix_2_values = matrix_2[0]
     matrix_2_count = matrix_2[1]
-    read_matrix(dimension_matrix1, matrix_1_values, dimension_matrix2, matrix_2_values, matrix_1_count, matrix_2_count)
+    read_matrix(dimension_matrix1, matrix_1_values,\
+        dimension_matrix2, matrix_2_values,\
+        matrix_1_count, matrix_2_count)
 if __name__ == '__main__':
     main()
