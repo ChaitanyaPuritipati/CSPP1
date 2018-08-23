@@ -24,7 +24,10 @@ def add_matrix(m1, m2):
     '''
     m1_val = type_conv(m1)
     m2_val = type_conv(m2)
-    return list( map(add, m1_val, m2_val))
+    added_matrix = []
+    for ele in range(len(m1_val)):
+        added_matrix.append(list(map(add, m1_val[ele], m2_val[ele])))
+    return added_matrix    
 def Matrix_dict(dimension_matrix):
     rows = int(dimension_matrix[0])
     row_dict = {}
