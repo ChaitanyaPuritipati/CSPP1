@@ -31,7 +31,7 @@ def read_matrix(dimension_matrix):
     row_dict = {}
     for row in range(rows):
         for colums in range(columns):
-             #print(input())
+            #print(input())
     return row_dict        
 def main():
     # read matrix 1
