@@ -82,6 +82,9 @@ def read_matrix(dimension_matrix1, matrix_1,\
     print(add_matrix(matrix_1, matrix_2, dimension_matrix1, dimension_matrix2))
     print(mult_matrix(matrix_1, matrix_2, dimension_matrix1, dimension_matrix2))
 def main():
+    '''
+    Main function starts here
+    '''
     # read matrix 1
 
     # read matrix 2
