@@ -29,7 +29,7 @@ def mult_matrix(m1, m2, dimension_matrix1, dimension_matrix2):
         multi_matrix.append(row_list)
     return multi_matrix
 
-def add_matrix(m1, m2,dimension_matrix1, dimension_matrix2):
+def add_matrix(m1, m2, dimension_matrix1, dimension_matrix2):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -46,7 +46,7 @@ def add_matrix(m1, m2,dimension_matrix1, dimension_matrix2):
     added_matrix = []
     for ele in range(len(m1_val)):
         added_matrix.append(list(map(add, m1_val[ele], m2_val[ele])))
-    return added_matrix    
+    return added_matrix
 def Matrix_dict(dimension_matrix):
     rows = int(dimension_matrix[0])
     row_dict = {}
@@ -57,7 +57,9 @@ def Matrix_dict(dimension_matrix):
         row_dict[row] = row_input
     return (row_dict, count_ele)
 
-def read_matrix(dimension_matrix1, matrix_1, dimension_matrix2, matrix_2, matrix_1_count, matrix_2_count):
+def read_matrix(dimension_matrix1, matrix_1,\
+    dimension_matrix2, matrix_2,\
+    matrix_1_count, matrix_2_count):
     '''
         read the matrix dimensions from input
         create a list of lists and read the numbers into it
