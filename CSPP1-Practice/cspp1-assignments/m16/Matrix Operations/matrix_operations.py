@@ -28,10 +28,11 @@ def read_matrix(dimension_matrix):
     '''
     rows = int(dimension_matrix[0])
     columns = int(dimension_matrix[1])
+    print(rows, columns)
     row_dict = {}
-    for row in range(rows):
-        for columns in range(columns):
-            print(input())
+    #for row in range(rows):
+        #for columns in range(columns):
+            #print(input())
     return row_dict        
 def main():
     # read matrix 1
