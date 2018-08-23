@@ -4,7 +4,7 @@ def type_conv(m1):
     for ele in range(len(m1_val)):
         m1_val[ele] = list(map(int, m1_val[ele]))
     return m1_val    
-def mult_matrix(m1, m2):
+def mult_matrix(m1, m2, dimension_matrix1, dimension_matrix2):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -57,6 +57,7 @@ def read_matrix(dimension_matrix1, matrix_1, dimension_matrix2, matrix_2, matrix
         print("Error: Invalid input for the matrix")
         return None
     print(add_matrix(matrix_1, matrix_2, dimension_matrix1, dimension_matrix2))
+    print(mult_matrix(matrix_1, matrix_2, dimension_matrix1, dimension_matrix2))
      
 def main():
     # read matrix 1
