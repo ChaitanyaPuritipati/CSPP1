@@ -53,7 +53,8 @@ def add_matrix(m_1, m_2, dimension_matrix1, dimension_matrix2):
     m1_val = type_conv(m_1)
     m2_val = type_conv(m_2)
     added_matrix = []
-    for ele in range(len(m1_val)):
+    m1_len = len(m1_val)
+    for ele in range(m1_len):
         added_matrix.append(list(map(add, m1_val[ele], m2_val[ele])))
     return added_matrix
 def matrix_dict(dimension_matrix):
