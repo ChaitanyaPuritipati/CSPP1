@@ -7,7 +7,8 @@ def type_conv(m_1):
     Function to convert string elements to int type
     '''
     m_1_val = list(m_1.values())
-    for ele in range(len(m_1_val)):
+    m1_len = len(m_1_val)
+    for ele in range(m1_len):
         m_1_val[ele] = list(map(int, m_1_val[ele]))
     return m_1_val
 def mult_matrix(m_1, m_2, dimension_matrix1, dimension_matrix2):
