@@ -85,8 +85,8 @@ def read_matrix(dimension_matrix1, matrix_1,\
     if matrix_1_count != dimension_matrix1_ele or matrix_2_count != dimension_matrix2_ele:
         print("Error: Invalid input for the matrix")
         return None
-    return(add_matrix(matrix_1, matrix_2, dimension_matrix1, dimension_matrix2))
-    return(mult_matrix(matrix_1, matrix_2, dimension_matrix1, dimension_matrix2))
+    print(add_matrix(matrix_1, matrix_2, dimension_matrix1, dimension_matrix2))
+    print(mult_matrix(matrix_1, matrix_2, dimension_matrix1, dimension_matrix2))
 def main():
     '''
     Main function starts here
@@ -106,8 +106,8 @@ def main():
     matrix_2 = matrix_dict(dimension_matrix2)
     matrix_2_values = matrix_2[0]
     matrix_2_count = matrix_2[1]
-    print(read_matrix(dimension_matrix1, matrix_1_values,\
+    read_matrix(dimension_matrix1, matrix_1_values,\
         dimension_matrix2, matrix_2_values,\
-        matrix_1_count, matrix_2_count))
+        matrix_1_count, matrix_2_count)
 if __name__ == '__main__':
     main()
