@@ -3,7 +3,7 @@ def type_conv(m1):
     m1_val = list(m1.values())
     for ele in range(len(m1_val)):
         m1_val[ele] = list(map(int, m1_val[ele]))
-    return m1_v
+    return m1_val
 def mult_matrix(m1, m2, dimension_matrix1, dimension_matrix2):
     '''
         check if the matrix1 columns = matrix2 rows
