@@ -19,6 +19,7 @@ def add_matrix(m1, m2):
     pass
 def Matrix_dict(dimension_matrix):
     rows = int(dimension_matrix[0])
+    print(rows)
     row_dict = {}
     count_ele = 0
     for row in range(rows):
