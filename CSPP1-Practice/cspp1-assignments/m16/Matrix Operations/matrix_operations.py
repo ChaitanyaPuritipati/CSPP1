@@ -1,3 +1,8 @@
+def type_conv(m1):
+    m1_val = list(m1.values())
+    for ele in range(len(m1_val)):
+        m1_val[ele] = list(map(int, m1_val[ele]))
+    return m1_val    
 def mult_matrix(m1, m2):
     '''
         check if the matrix1 columns = matrix2 rows
@@ -16,12 +21,10 @@ def add_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    m1_val = list(m1.values())
-    print(m1_val, type(m1_val))
-    for ele in range(len(m1_val)):
-        m1_val[ele] = list(map(int, m1_val[ele]))
-    print(m1_val)    
-
+    m1_val = type_conv(m1)
+    m2_val = type_conv(m2)
+    print(m1_val, m2_val)
+    
 def Matrix_dict(dimension_matrix):
     rows = int(dimension_matrix[0])
     row_dict = {}
