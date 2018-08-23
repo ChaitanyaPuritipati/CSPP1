@@ -27,7 +27,7 @@ def Matrix_dict(dimension_matrix):
         row_dict[row] = row_input
     return (row_dict, count_ele)
 
-def read_matrix(dimension_matrix1, matrix_1, dimension_matrix2, matrix_2):
+def read_matrix(dimension_matrix1, matrix_1, dimension_matrix2, matrix_2, matrix_1_count, matrix_2_count):
     '''
         read the matrix dimensions from input
         create a list of lists and read the numbers into it
@@ -35,11 +35,11 @@ def read_matrix(dimension_matrix1, matrix_1, dimension_matrix2, matrix_2):
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    print(matrix_1.values())
-    print(matrix_2.values())
-    if dimension_matrix1[0] != len(matrix_1.keys()) or dimension_matrix1[1] != row_dict:
+    dimension_matrix1_ele = (int(dimension_matrix1[0]))*(int(dimension_matrix1[1]))
+    dimension_matrix2_ele = (int(dimension_matrix2[0]))*(int(dimension_matrix2[1]))
+    if int(dimension_matrix1[0]) != len(matrix_1.keys()) or matrix_1_count != dimension_matrix1_ele:
         print("Error: Invalid input for the matrix")
-    if dimension_matrix2[0] != len(matrix_2.keys()) or dimension_matrix2[1] != len(matrix_2.values()):
+    if dimension_matrix2[0] != len(matrix_2.keys()) or matrix_2_count != dimension_matrix2_ele:
         print("Error: Invalid input for the matrix")    
     return None    
 def main():
@@ -52,8 +52,10 @@ def main():
     # multiply matrix 1 and matrix 2
     dimension_matrix1 = input().split(',')
     matrix_1 = Matrix_dict(dimension_matrix1)[0]
+    matrix_1_count = Matrix_dict(dimension_matrix1)[1]
     dimension_matrix2 = input().split(',')
     matrix_2 = Matrix_dict(dimension_matrix2)[0]
+    matrix_2_count = Matrix_dict(dimension_matrix2)[1]
     print(read_matrix(dimension_matrix1, matrix_1, dimension_matrix2, matrix_2))
 if __name__ == '__main__':
     main()
