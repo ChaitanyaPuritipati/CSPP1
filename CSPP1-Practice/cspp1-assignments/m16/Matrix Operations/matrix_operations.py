@@ -24,7 +24,8 @@ def mult_matrix(m1, m2, dimension_matrix1, dimension_matrix2):
         for test_ele in range(len(m2_val[0])):
             ele_list = []
             for col_ele in range(len(m2_val)):
-                ele_list.append((m1_val[row_ele][col_ele])*(m2_val[col_ele][test_ele]))
+                ele_list.append((m1_val[row_ele][col_ele])\
+                    *(m2_val[col_ele][test_ele]))
             row_list.append(sum(ele_list))
         multi_matrix.append(row_list)
     return multi_matrix
