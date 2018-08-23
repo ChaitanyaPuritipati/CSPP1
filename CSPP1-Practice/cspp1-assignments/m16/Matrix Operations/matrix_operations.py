@@ -54,7 +54,7 @@ def add_matrix(m_1, m_2, dimension_matrix1, dimension_matrix2):
     for ele in range(len(m1_val)):
         added_matrix.append(list(map(add, m1_val[ele], m2_val[ele])))
     return added_matrix
-def Matrix_dict(dimension_matrix):
+def matrix_dict(dimension_matrix):
     rows = int(dimension_matrix[0])
     row_dict = {}
     count_ele = 0
@@ -90,11 +90,11 @@ def main():
 
     # multiply matrix 1 and matrix 2
     dimension_matrix1 = input().split(',')
-    matrix_1 = Matrix_dict(dimension_matrix1)
+    matrix_1 = matrix_dict(dimension_matrix1)
     matrix_1_values = matrix_1[0]
     matrix_1_count = matrix_1[1]
     dimension_matrix2 = input().split(',')
-    matrix_2 = Matrix_dict(dimension_matrix2)
+    matrix_2 = matrix_dict(dimension_matrix2)
     matrix_2_values = matrix_2[0]
     matrix_2_count = matrix_2[1]
     read_matrix(dimension_matrix1, matrix_1_values,\
