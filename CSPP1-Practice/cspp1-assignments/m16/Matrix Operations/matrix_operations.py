@@ -16,7 +16,7 @@ def add_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    
+    print(m1)
 def Matrix_dict(dimension_matrix):
     rows = int(dimension_matrix[0])
     row_dict = {}
@@ -46,7 +46,7 @@ def read_matrix(dimension_matrix1, matrix_1, dimension_matrix2, matrix_2, matrix
     if int(dimension_matrix1[0]) != int(dimension_matrix2[0]) or int(dimension_matrix1[1]) != int(dimension_matrix2[1]):
         print("Error: Matrix shapes invalid for addition")
         return None
-    return [1, 2]    
+    added_matrix = add_matrix(matrix_1)   
 def main():
     # read matrix 1
 
