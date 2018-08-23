@@ -1,3 +1,4 @@
+from operator import add
 def type_conv(m1):
     m1_val = list(m1.values())
     for ele in range(len(m1_val)):
@@ -23,9 +24,7 @@ def add_matrix(m1, m2):
     '''
     m1_val = type_conv(m1)
     m2_val = type_conv(m2)
-    print(m1_val)
-    print(m2_val)
-    
+    return list( map(add, list1, list2))
 def Matrix_dict(dimension_matrix):
     rows = int(dimension_matrix[0])
     row_dict = {}
