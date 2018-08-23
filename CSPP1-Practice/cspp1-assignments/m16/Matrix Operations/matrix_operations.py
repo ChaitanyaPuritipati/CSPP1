@@ -12,9 +12,11 @@ def mult_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    pass
+    if int(dimension_matrix1[1]) != int(dimension_matrix2[0]):
+        print("Error: Matrix shapes invalid for mult")
+        return None
 
-def add_matrix(m1, m2):
+def add_matrix(m1, m2,dimension_matrix1, dimension_matrix2):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -22,6 +24,9 @@ def add_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
+    if int(dimension_matrix1[0]) != int(dimension_matrix1[0]) or int(dimension_matrix1[1]) != int(dimension_matrix2[1]):
+        print("Error: Matrix shapes invalid for addition")
+        return None
     m1_val = type_conv(m1)
     m2_val = type_conv(m2)
     added_matrix = []
@@ -51,14 +56,8 @@ def read_matrix(dimension_matrix1, matrix_1, dimension_matrix2, matrix_2, matrix
     if matrix_1_count != dimension_matrix1_ele or matrix_2_count != dimension_matrix2_ele:
         print("Error: Invalid input for the matrix")
         return None
-    if int(dimension_matrix1[1]) != int(dimension_matrix2[0]):
-        print("Error: Matrix shapes invalid for mult")
-        return None
-    if int(dimension_matrix1[0]) != int(dimension_matrix2[0]) or int(dimension_matrix1[1]) != int(dimension_matrix2[1]):
-        print("Error: Matrix shapes invalid for addition")
-        return None
-    added_matrix = add_matrix(matrix_1, matrix_2)
-    return added_matrix  
+    add_matrix(matrix_1, matrix_2, dimension_matrix1, dimension_matrix2)
+     
 def main():
     # read matrix 1
 
