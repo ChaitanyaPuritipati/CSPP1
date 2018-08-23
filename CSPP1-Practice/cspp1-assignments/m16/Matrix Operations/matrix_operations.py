@@ -43,6 +43,6 @@ def main():
     # multiply matrix 1 and matrix 2
     dimension_matrix1 = input().split(',')
     matrix_1 = read_matrix(dimension_matrix1)
-    print(row_dict)
+    print(matrix_1)
 if __name__ == '__main__':
     main()
