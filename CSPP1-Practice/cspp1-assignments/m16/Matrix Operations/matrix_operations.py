@@ -21,7 +21,7 @@ def mult_matrix(m1, m2, dimension_matrix1, dimension_matrix2):
     #multi_matrix = [[sum(a * b for a, b in zip(m1_val_row, m2_val_col)) for m2_val_col in zip(*m2_val)]for m1_val_row in m1_val] 
     for row_ele in range(len(m1_val)):
         row_list = []
-        for col_ele in range(len(m2_val)):
+        for col_ele in range(len(m2_val[0])):
             ele_list = []
             for var_ele in range(len(m2_val)):
                 ele_list.append((m1_val[row_ele][col_ele])*(m2_val[col_ele][row_ele]))
