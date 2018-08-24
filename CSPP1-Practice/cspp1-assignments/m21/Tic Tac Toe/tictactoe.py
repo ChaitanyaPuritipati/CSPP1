@@ -27,7 +27,8 @@ class Tictactoe(object):
             out_lst.append('o')
         if len(out_lst) > 1:
             return False
-        return out_lst[0]    
+        if len(out_lst) == 1:    
+            return out_lst[0]    
     def check_columns(self):
         out_lst = []
         if set([self.board[0][0],self.board[1][0], self.board[2][0]]) == {'x'} \
@@ -41,7 +42,8 @@ class Tictactoe(object):
             out_lst.append('o')
         if len(out_lst) > 1:
             return False
-        return out_lst[0]
+        if len(out_lst) == 1:    
+            return out_lst[0]
                 
     def check_diagonals(self):
         out_lst = []
