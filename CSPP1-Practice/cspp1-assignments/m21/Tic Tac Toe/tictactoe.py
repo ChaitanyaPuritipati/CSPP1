@@ -97,4 +97,5 @@ def main():
 	        #else:
 	            #print("Thanks for Playing the game!")
 	            #break
-main()	            
+if __name__ == '__main__':
+          	main()          
