@@ -79,11 +79,11 @@ def main():
     # print(game.check_rows())
     # print(game.check_columns())
     # print(game.check_diagonals())
-    if (game.check_rows() == 'x' or game.check_rows() == 'o') and (set([game.check_columns(), game.check_diagonals()]) == None):
+    if (game.check_rows() == 'x' or game.check_rows() == 'o') and (set([game.check_columns(), game.check_diagonals()]) == {None}):
         return game.check_rows()
-    if (game.check_columns() == 'x' or game.check_columns() == 'o') and (set([game.check_rows(), game.check_diagonals()]) == None):
+    if (game.check_columns() == 'x' or game.check_columns() == 'o') and (set([game.check_rows(), game.check_diagonals()]) == {None}):
         return game.check_columns()
-    if (game.check_diagonals() == 'x' or game.check_diagonals() == 'o') and (set([game.check_columns(), game.check_rows()]) == None):
+    if (game.check_diagonals() == 'x' or game.check_diagonals() == 'o') and (set([game.check_columns(), game.check_rows()]) == {None}):
         return game.check_diagonals() 
     if game.check_rows() == False or game.check_columns() == False or game.check_diagonals() == False :
         invalid_flag  = True    
