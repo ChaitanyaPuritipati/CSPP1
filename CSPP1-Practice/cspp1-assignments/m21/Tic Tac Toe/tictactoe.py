@@ -60,6 +60,7 @@ def main():
     board = []
     for i in range(3):
         board.append(input().split())
+        i += 1
     game = Tictactoe(board)
     invalid_flag = False
     if game.board_check() == 1:
