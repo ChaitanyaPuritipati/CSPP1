@@ -3,14 +3,16 @@ class Tictactoe(object):
         self.board = board
     def check_rows(self):
         out_lst = []
-        if set(self.board[0]) == {'x'} or set(self.board[1]) == {'x'} or set(self.board[2]) == {'x'}: 
+        if set(self.board[0]) == {'x'} or set(self.board[1]) == {'x'}
+            or set(self.board[2]) == {'x'}: 
             out_lst.append('x')
-        if set(self.board[0]) == {'o'} or set(self.board[1]) == {'o'} or set(self.board[2]) == {'o'}:
+        if set(self.board[0]) == {'o'} or set(self.board[1]) == {'o'}
+            or set(self.board[2]) == {'o'}:
             out_lst.append('o')
         if len(out_lst) > 1:
             return False
-        if len(out_lst) == 1:   
-            return out_lst[0]    
+        if len(out_lst) == 1:
+            return out_lst[0]
     def check_columns(self):
         out_lst = []
         if set([self.board[0][0],self.board[1][0], self.board[2][0]]) == {'x'} \
@@ -23,7 +25,7 @@ class Tictactoe(object):
             out_lst.append('o')
         if len(out_lst) > 1:
             return False
-        if len(out_lst) == 1:    
+        if len(out_lst) == 1:
             return out_lst[0]
     def check_diagonals(self):
         out_lst = []
@@ -36,14 +38,14 @@ class Tictactoe(object):
         if len(out_lst) > 1:
             return False
         if len(out_lst) == 1:
-            return out_lst[0]    
+            return out_lst[0]
     def board_check(self):
         check = 0
         for ele in self.board:
             check = check + ele.count('.') + ele.count('x') + ele.count('o')
         if check != 9:
-            return 1    
-        return 0                   
+            return 1
+        return 0
 def main():
     board = []
     for i in range(3):
@@ -67,6 +69,6 @@ def main():
     if  (game.check_rows() == game.check_columns()) or (game.check_columns() == game.check_diagonals()) or (game.check_rows() == game.check_diagonals()):
         invalid_flag = True
     if invalid_flag == True:
-        return "invalid game"    
+        return "invalid game"
 if __name__ == '__main__':
-    print(main())          
+    print(main())
