@@ -88,7 +88,7 @@ def main():
     if game.check_rows() == False or game.check_columns() == False or game.check_diagonals() == False :
         invalid_flag  = True    
     if (game.check_rows() == game.check_columns()) and (game.check_columns() == game.check_diagonals()):
-        invalid_flag  = True
+        return "draw"
     if  (game.check_rows() == game.check_columns()) or (game.check_columns() == game.check_diagonals()) or (game.check_rows() == game.check_diagonals()):
         invalid_flag  = True 
 
