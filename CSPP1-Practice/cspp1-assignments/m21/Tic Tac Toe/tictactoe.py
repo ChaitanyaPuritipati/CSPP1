@@ -56,7 +56,7 @@ class Tictactoe(object):
         if len(out_lst) > 1:
             return False
         if len(out_lst) == 1:
-            return out_lst[0]
+            return out_lst[0]    
     def board_check(self):
         check = 0
         for ele in self.board:
@@ -74,12 +74,13 @@ def main():
     game = Tictactoe(board)
     if game.board_check() == 1:
         return "invalid input"
+    if game.check_rows() == False or game.check_columns() == False or game.check_diagonals() == False :
+        return "invalid game"    
     if (game.check_rows() == game.check_columns()) and (game.check_columns() == game.check_diagonals()):
         return "invalid game"
     if  (game.check_rows() == game.check_columns()) or (game.check_columns() == game.check_diagonals()) or (game.check_rows() == game.check_diagonals()):
         return "invalid game"    
-    if game.check_rows() == False or game.check_columns() == False or game.check_diagonals() == False :
-        return "invalid game"    
+    
     #def displayboard(board):
         #for i in board:
             #for j in i:
