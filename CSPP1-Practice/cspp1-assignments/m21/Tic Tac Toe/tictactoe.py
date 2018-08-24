@@ -53,7 +53,8 @@ class Tictactoe(object):
             out_lst.append('o')
         if len(out_lst) > 1:
             return False
-        return out_lst[0]        
+        if len(out_lst) == 1:
+            return out_lst[0]
     def board_check(self):
         check = 0
         for ele in self.board:
