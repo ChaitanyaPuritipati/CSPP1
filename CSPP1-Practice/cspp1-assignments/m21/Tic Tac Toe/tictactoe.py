@@ -75,6 +75,8 @@ def main():
     if game.board_check() == 1:
         return "invalid input"
     if len(set([game.check_rows(), game.check_columns(), game.check_diagonals()])) == 1:
+        return "invalid game"
+    if  (game.check_rows() == game.check_columns()) or (game.check_columns() == game.check_diagonals()) or (game.check_rows() == game.check_diagonals()):
         return "invalid game"    
     if game.check_rows() == False or game.check_columns() == False or game.check_diagonals() == False :
         return "invalid game"    
