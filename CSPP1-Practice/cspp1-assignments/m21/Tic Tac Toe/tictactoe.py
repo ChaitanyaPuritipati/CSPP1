@@ -54,7 +54,7 @@ def displayboard(board):
             print(j," ", end="")
         print() 
 #displayboard(board) 
-print(board_print)    
+print(board)    
 while True:
     #player_1_input = input("Player 1 input enter here: ").split()
     #game.update_board(int(player_1_input[0]), int(player_1_input[1]), "X", 1)
