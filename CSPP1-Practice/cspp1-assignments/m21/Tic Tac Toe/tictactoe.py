@@ -56,15 +56,15 @@ class Tictactoe():
             return 1
         return 0
     def check_function(self):
-        if (check_rows() == 'x' or check_rows() == 'o') and \
-        (set([check_columns(), check_diagonals()]) == {"None"}):
-            return check_rows()
-        if (check_columns() == 'x' or check_columns() == 'o') and \
-        (set([check_rows(), check_diagonals()]) == {"None"}):
-            return check_columns()
-        if (check_diagonals() == 'x' or check_diagonals() == 'o') and \
-        (set([check_columns(), check_rows()]) == {"None"}):
-            return check_diagonals()
+        if (Tictactoe.check_rows() == 'x' or Tictactoe.check_rows() == 'o') and \
+        (set([Tictactoe.check_columns(), Tictactoe.check_diagonals()]) == {"None"}):
+            return Tictactoe.check_rows()
+        if (Tictactoe.check_columns() == 'x' or Tictactoe.check_columns() == 'o') and \
+        (set([Tictactoe.check_rows(), Tictactoe.check_diagonals()]) == {"None"}):
+            return Tictactoe.check_columns()
+        if (Tictactoe.check_diagonals() == 'x' or Tictactoe.check_diagonals() == 'o') and \
+        (set([Tictactoe.check_columns(), Tictactoe.check_rows()]) == {"None"}):
+            return Tictactoe.check_diagonals()
         return None
 
 def main():
