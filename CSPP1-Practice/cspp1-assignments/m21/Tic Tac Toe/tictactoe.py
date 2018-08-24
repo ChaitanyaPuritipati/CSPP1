@@ -76,8 +76,8 @@ def main():
         return "invalid input"
     
     invalid_flag  = False
-
-    if game.check_rows() != None or game.check_columns() != None or game.check_diagonals() != None:
+    
+    if game.check_rows() == None or game.check_columns() == None or game.check_diagonals() == None:
         invalid_flag = True
     if (game.check_rows() == 'x' or game.check_rows() == 'o') and invalid_flag == False:
         return game.check_rows()
