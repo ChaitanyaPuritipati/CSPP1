@@ -4,7 +4,7 @@ class Tictactoe(object):
     def check_rows(self):
         out_lst = []
         if set(self.board[0]) == {'x'} or set(self.board[1]) == {'x'} \
-        or set(self.board[2]) == {'x'}: 
+        or set(self.board[2]) == {'x'}:
             out_lst.append('x')
         if set(self.board[0]) == {'o'} or set(self.board[1]) == {'o'} \
         or set(self.board[2]) == {'o'}:
@@ -18,7 +18,7 @@ class Tictactoe(object):
         if set([self.board[0][0], self.board[1][0], self.board[2][0]]) == {'x'} \
         or set([self.board[0][1], self.board[1][1], self.board[2][1]]) == {'x'} \
         or set([self.board[0][2], self.board[1][2], self.board[2][2]]) == {'x'}:
-            out_lst.append('x') 
+            out_lst.append('x')
         if set([self.board[0][0], self.board[1][0], self.board[2][0]]) == {'o'} \
         or set([self.board[0][1], self.board[1][1], self.board[2][1]]) == {'o'} \
         or set([self.board[0][2], self.board[1][2], self.board[2][2]]) == {'o'}:
@@ -49,7 +49,7 @@ class Tictactoe(object):
 def main():
     board = []
     for i in range(3):
-        board.append(input().split()) 
+        board.append(input().split())
     game = Tictactoe(board)
     invalid_flag = False
     if game.board_check() == 1:
