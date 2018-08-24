@@ -1,4 +1,5 @@
-class Tictactoe(object):
+'''tic tac toe'''
+class Tictactoe():
     '''tic tac toe class'''
     def __init__(self, board):
         self.board = board
