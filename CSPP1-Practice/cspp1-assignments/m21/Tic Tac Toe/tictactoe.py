@@ -75,11 +75,11 @@ def main():
     if game.board_check() == 1:
         return "invalid input"
     if game.check_rows() == False or game.check_columns() == False or game.check_diagonals() == False :
-        return "invalid game"    
+        return "1 invalid game"    
     if (game.check_rows() == game.check_columns()) and (game.check_columns() == game.check_diagonals()):
-        return "invalid game"
+        return "2 invalid game"
     if  (game.check_rows() == game.check_columns()) or (game.check_columns() == game.check_diagonals()) or (game.check_rows() == game.check_diagonals()):
-        return "invalid game"    
+        return "3 invalid game"    
     
     #def displayboard(board):
         #for i in board:
