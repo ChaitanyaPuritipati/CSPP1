@@ -20,7 +20,7 @@ class Tictactoe(object):
     def get_board(self):
         return self.board
     def check_rows(self):
-        if set(self.board[0]) == {'x'} or set(self.board[1]) == {'x'} or set(self.board[2]) == {'x'} 
+        if set(self.board[0]) == {'x'} or set(self.board[1]) == {'x'} or set(self.board[2]) == {'x'}: 
             return 'x'
         if set(self.board[0]) == {'o'} or set(self.board[1]) == {'o'} or set(self.board[2]) == {'o'}:
             return 'o'
