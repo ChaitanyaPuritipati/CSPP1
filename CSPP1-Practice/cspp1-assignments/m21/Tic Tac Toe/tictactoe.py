@@ -20,27 +20,40 @@ class Tictactoe(object):
     def get_board(self):
         return self.board
     def check_rows(self):
+    	out_lst =[]
         if set(self.board[0]) == {'x'} or set(self.board[1]) == {'x'} or set(self.board[2]) == {'x'}: 
-            return 'x'
+            out_lst.append('x')
         if set(self.board[0]) == {'o'} or set(self.board[1]) == {'o'} or set(self.board[2]) == {'o'}:
-            return 'o'
+            out_lst.append('o')
+        if len(out_lst) != 1:
+            return False
+        return out_lst[0]    
     def check_columns(self):
+    	out_lst = []
         if set([self.board[0][0],self.board[1][0], self.board[2][0]]) == {'x'} \
         or set([self.board[0][1],self.board[1][1],self.board[2][1]]) == {'x'} \
         or set([self.board[0][2],self.board[1][2], self.board[2][2]]) == {'x'}:
-            return 'x'
+            out_lst.append('x') 
         
         if set([self.board[0][0],self.board[1][0], self.board[2][0]]) == {'o'} \
         or set([self.board[0][1],self.board[1][1], self.board[2][1]]) == {'o'} \
         or set([self.board[0][2],self.board[1][2], self.board[2][2]]) == {'o'}:
-            return 'y'
+            out_lst.append('o')
+        if len(out_lst) != 1:
+        	return False
+        return out_lst[0]
+                
     def check_diagonals(self):
+    	out_lst = []
         if set([self.board[0][0], self.board[1][1], self.board[2][2]]) == {'x'}\
         or set([self.board[0][2], self.board[1][1], self.board[2][0]]) == {'x'}:
-            return 'x'
+            out_lst.append('x')
         if set([self.board[0][0], self.board[1][1], self.board[2][2]]) == {'o'}\
         or set([self.board[0][2], self.board[1][1], self.board[2][0]]) == {'o'}:
-            return 'y'    
+            out_lst.append('o')
+        if len(out_lst) != 1:
+            return False
+        return out_lst[0]        
     def board_check(self):
         check = 0
         for ele in self.board:
@@ -58,6 +71,8 @@ def main():
 	game = Tictactoe(board)
 	if game.board_check() == 1:
 	    return "invalid input"
+	if game.check_rows() == False or game.check_columns() == False or game.check_diagonals() == False:
+		return "invalid game"
 	#def displayboard(board):
 	    #for i in board:
 	        #for j in i:
