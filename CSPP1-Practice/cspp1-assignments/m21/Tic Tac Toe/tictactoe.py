@@ -56,15 +56,15 @@ class Tictactoe():
             return 1
         return 0
     def check_function(self):
-        if (game.check_rows() == 'x' or game.check_rows() == 'o') and \
-        (set([game.check_columns(), game.check_diagonals()]) == {"None"}):
-            return game.check_rows()
-        if (game.check_columns() == 'x' or game.check_columns() == 'o') and \
-        (set([game.check_rows(), game.check_diagonals()]) == {"None"}):
-            return game.check_columns()
-        if (game.check_diagonals() == 'x' or game.check_diagonals() == 'o') and \
-        (set([game.check_columns(), game.check_rows()]) == {"None"}):
-            return game.check_diagonals()
+        if (check_rows() == 'x' or check_rows() == 'o') and \
+        (set([check_columns(), check_diagonals()]) == {"None"}):
+            return check_rows()
+        if (check_columns() == 'x' or check_columns() == 'o') and \
+        (set([check_rows(), check_diagonals()]) == {"None"}):
+            return check_columns()
+        if (check_diagonals() == 'x' or check_diagonals() == 'o') and \
+        (set([check_columns(), check_rows()]) == {"None"}):
+            return check_diagonals()
         return None
 
 def main():
