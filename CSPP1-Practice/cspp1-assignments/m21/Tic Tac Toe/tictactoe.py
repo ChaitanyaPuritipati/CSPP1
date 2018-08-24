@@ -15,13 +15,13 @@ class Tictactoe(object):
             return out_lst[0]
     def check_columns(self):
         out_lst = []
-        if set([self.board[0][0],self.board[1][0], self.board[2][0]]) == {'x'} \
-        or set([self.board[0][1],self.board[1][1],self.board[2][1]]) == {'x'} \
-        or set([self.board[0][2],self.board[1][2], self.board[2][2]]) == {'x'}:
+        if set([self.board[0][0], self.board[1][0], self.board[2][0]]) == {'x'} \
+        or set([self.board[0][1], self.board[1][1], self.board[2][1]]) == {'x'} \
+        or set([self.board[0][2], self.board[1][2], self.board[2][2]]) == {'x'}:
             out_lst.append('x') 
-        if set([self.board[0][0],self.board[1][0], self.board[2][0]]) == {'o'} \
-        or set([self.board[0][1],self.board[1][1], self.board[2][1]]) == {'o'} \
-        or set([self.board[0][2],self.board[1][2], self.board[2][2]]) == {'o'}:
+        if set([self.board[0][0], self.board[1][0], self.board[2][0]]) == {'o'} \
+        or set([self.board[0][1], self.board[1][1], self.board[2][1]]) == {'o'} \
+        or set([self.board[0][2], self.board[1][2], self.board[2][2]]) == {'o'}:
             out_lst.append('o')
         if len(out_lst) > 1:
             return False
