@@ -76,20 +76,22 @@ def main():
         return "invalid input"
     
     invalid_flag  = False
+
     if game.check_rows() != None or game.check_columns() != None or game.check_diagonals() != None:
         invalid_flag = True
-    if game.check_rows() == False or game.check_columns() == False or game.check_diagonals() == False :
-        invalid_flag  = True    
-    if (game.check_rows() == game.check_columns()) and (game.check_columns() == game.check_diagonals()):
-        invalid_flag  = True
-    if  (game.check_rows() == game.check_columns()) or (game.check_columns() == game.check_diagonals()) or (game.check_rows() == game.check_diagonals()):
-        invalid_flag  = True 
     if (game.check_rows() == 'x' or game.check_rows() == 'o') and invalid_flag == False:
         return game.check_rows()
     if (game.check_columns() == 'x' or game.check_columns() == 'o') and invalid_flag == False:
         return game.check_columns()
     if (game.check_diagonals() == 'x' or game.check_diagonals() == 'o') and invalid_flag == False:
         return game.check_diagonals() 
+    if game.check_rows() == False or game.check_columns() == False or game.check_diagonals() == False :
+        invalid_flag  = True    
+    if (game.check_rows() == game.check_columns()) and (game.check_columns() == game.check_diagonals()):
+        invalid_flag  = True
+    if  (game.check_rows() == game.check_columns()) or (game.check_columns() == game.check_diagonals()) or (game.check_rows() == game.check_diagonals()):
+        invalid_flag  = True 
+
     if invalid_flag == True:
         return "invalid game"
     
