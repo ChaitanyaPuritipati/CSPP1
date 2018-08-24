@@ -3,11 +3,11 @@ class Tictactoe(object):
         self.board = board
     def check_rows(self):
         out_lst = []
-        if set(self.board[0]) == {'x'} or set(self.board[1]) == {'x'}
-            or set(self.board[2]) == {'x'}: 
+        if set(self.board[0]) == {'x'} or set(self.board[1]) == {'x'} \
+        or set(self.board[2]) == {'x'}: 
             out_lst.append('x')
-        if set(self.board[0]) == {'o'} or set(self.board[1]) == {'o'}
-            or set(self.board[2]) == {'o'}:
+        if set(self.board[0]) == {'o'} or set(self.board[1]) == {'o'} \
+        or set(self.board[2]) == {'o'}:
             out_lst.append('o')
         if len(out_lst) > 1:
             return False
@@ -56,17 +56,24 @@ def main():
         return "invalid input"
     if set([game.check_columns(), game.check_diagonals(), game.check_rows()]) == {None}:
         return "draw"
-    if (game.check_rows() == 'x' or game.check_rows() == 'o') and (set([game.check_columns(), game.check_diagonals()]) == {None}):
+    if (game.check_rows() == 'x' or game.check_rows() == 'o') and \
+    (set([game.check_columns(), game.check_diagonals()]) == {None}):
         return game.check_rows()
-    if (game.check_columns() == 'x' or game.check_columns() == 'o') and (set([game.check_rows(), game.check_diagonals()]) == {None}):
+    if (game.check_columns() == 'x' or game.check_columns() == 'o') and \
+    (set([game.check_rows(), game.check_diagonals()]) == {None}):
         return game.check_columns()
-    if (game.check_diagonals() == 'x' or game.check_diagonals() == 'o') and (set([game.check_columns(), game.check_rows()]) == {None}):
+    if (game.check_diagonals() == 'x' or game.check_diagonals() == 'o') and \
+    (set([game.check_columns(), game.check_rows()]) == {None}):
         return game.check_diagonals() 
-    if game.check_rows() is False or game.check_columns() is False or game.check_diagonals() is False :
+    if game.check_rows() is False or game.check_columns() is False or \
+    game.check_diagonals() is False :
         invalid_flag = True
-    if (game.check_rows() == game.check_columns()) and (game.check_columns() == game.check_diagonals()):
+    if (game.check_rows() == game.check_columns()) and \
+    (game.check_columns() == game.check_diagonals()):
         invalid_flag = True
-    if  (game.check_rows() == game.check_columns()) or (game.check_columns() == game.check_diagonals()) or (game.check_rows() == game.check_diagonals()):
+    if  (game.check_rows() == game.check_columns()) or \
+    (game.check_columns() == game.check_diagonals()) or \
+    (game.check_rows() == game.check_diagonals()):
         invalid_flag = True
     if invalid_flag == True:
         return "invalid game"
