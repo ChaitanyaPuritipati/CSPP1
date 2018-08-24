@@ -64,9 +64,9 @@ def main():
         return game.check_columns()
     if (game.check_diagonals() == 'x' or game.check_diagonals() == 'o') and \
     (set([game.check_columns(), game.check_rows()]) == {None}):
-        return game.check_diagonals() 
+        return game.check_diagonals()
     if game.check_rows() is False or game.check_columns() is False or \
-    game.check_diagonals() is False :
+    game.check_diagonals() is False:
         invalid_flag = True
     if (game.check_rows() == game.check_columns()) and \
     (game.check_columns() == game.check_diagonals()):
