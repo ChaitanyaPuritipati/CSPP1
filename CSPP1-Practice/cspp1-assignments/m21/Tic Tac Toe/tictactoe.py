@@ -67,7 +67,7 @@ def main():
     if game.board_check() == 1:
         return "invalid input"
     if set([game.check_columns(), game.check_diagonals(), game.check_rows()]) == {"None"}:
-        return "draw"
+        return "draw" 
     if (game.check_rows() == 'x' or game.check_rows() == 'o') and \
     (set([game.check_columns(), game.check_diagonals()]) == {"None"}):
         return game.check_rows()
