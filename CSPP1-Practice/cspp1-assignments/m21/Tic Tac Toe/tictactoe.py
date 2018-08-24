@@ -55,7 +55,17 @@ class Tictactoe():
         if check != 9:
             return 1
         return 0
-
+def check_function():
+    if (game.check_rows() == 'x' or game.check_rows() == 'o') and \
+    (set([game.check_columns(), game.check_diagonals()]) == {"None"}):
+        return game.check_rows()
+    if (game.check_columns() == 'x' or game.check_columns() == 'o') and \
+    (set([game.check_rows(), game.check_diagonals()]) == {"None"}):
+        return game.check_columns()
+    if (game.check_diagonals() == 'x' or game.check_diagonals() == 'o') and \
+    (set([game.check_columns(), game.check_rows()]) == {"None"}):
+        return game.check_diagonals()
+    return None
 def main():
     '''main function'''
     board = []
@@ -67,16 +77,10 @@ def main():
     if game.board_check() == 1:
         return "invalid input"
     if set([game.check_columns(), game.check_diagonals(), game.check_rows()]) == {"None"}:
-        return "draw" 
-    if (game.check_rows() == 'x' or game.check_rows() == 'o') and \
-    (set([game.check_columns(), game.check_diagonals()]) == {"None"}):
-        return game.check_rows()
-    if (game.check_columns() == 'x' or game.check_columns() == 'o') and \
-    (set([game.check_rows(), game.check_diagonals()]) == {"None"}):
-        return game.check_columns()
-    if (game.check_diagonals() == 'x' or game.check_diagonals() == 'o') and \
-    (set([game.check_columns(), game.check_rows()]) == {"None"}):
-        return game.check_diagonals()
+        return "draw"
+    check_fun = check_function() 
+    if check_fun is not None:
+        return check_fun
     if game.check_rows() is False or game.check_columns() is False or \
     game.check_diagonals() is False:
         invalid_flag = True
