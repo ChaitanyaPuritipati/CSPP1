@@ -2,7 +2,7 @@ class Tictactoe(object):
     def __init__(self, board):
         self.board = board
     def check_rows(self):
-        out_lst =[]
+        out_lst = []
         if set(self.board[0]) == {'x'} or set(self.board[1]) == {'x'} or set(self.board[2]) == {'x'}: 
             out_lst.append('x')
         if set(self.board[0]) == {'o'} or set(self.board[1]) == {'o'} or set(self.board[2]) == {'o'}:
@@ -69,4 +69,4 @@ def main():
     if invalid_flag == True:
         return "invalid game"    
 if __name__ == '__main__':
-            print(main())          
+    print(main())          
