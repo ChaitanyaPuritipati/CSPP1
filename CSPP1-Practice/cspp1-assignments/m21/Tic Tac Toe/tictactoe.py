@@ -97,3 +97,4 @@ def main():
 	        #else:
 	            #print("Thanks for Playing the game!")
 	            #break
+main()	            
