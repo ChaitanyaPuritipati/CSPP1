@@ -89,5 +89,6 @@ def main():
         invalid_flag = True
     if invalid_flag:
         return "invalid game"
+    return "Thanks"
 if __name__ == '__main__':
     print(main())
