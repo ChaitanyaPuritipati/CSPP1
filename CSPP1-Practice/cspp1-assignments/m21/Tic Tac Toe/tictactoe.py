@@ -27,7 +27,7 @@ class Tictactoe(object):
             out_lst.append('o')
         if len(out_lst) > 1:
             return False
-        if len(out_lst) == 1:    
+        if len(out_lst) == 1:   
             return out_lst[0]    
     def check_columns(self):
         out_lst = []
@@ -79,6 +79,8 @@ def main():
     print(game.check_rows())
     print(game.check_columns())
     print(game.check_diagonals())
+    if set([game.check_columns(), game.check_diagonals(), game.check_rows()]) == {None}:
+        return "draw"
     if (game.check_rows() == 'x' or game.check_rows() == 'o') and (set([game.check_columns(), game.check_diagonals()]) == {None}):
         return game.check_rows()
     if (game.check_columns() == 'x' or game.check_columns() == 'o') and (set([game.check_rows(), game.check_diagonals()]) == {None}):
