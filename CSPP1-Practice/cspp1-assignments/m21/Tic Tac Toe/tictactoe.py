@@ -98,4 +98,4 @@ def main():
 	            #print("Thanks for Playing the game!")
 	            #break
 if __name__ == '__main__':
-          	main()          
+          	print(main())          
