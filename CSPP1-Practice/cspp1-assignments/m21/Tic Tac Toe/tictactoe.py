@@ -56,6 +56,7 @@ class Tictactoe():
             return 1
         return 0
     def check_function(self):
+        '''check function'''
         if (Tictactoe.check_rows(self) == 'x' or Tictactoe.check_rows(self) == 'o') and \
         (set([Tictactoe.check_columns(self), Tictactoe.check_diagonals(self)]) == {"None"}):
             return Tictactoe.check_rows(self)
@@ -79,7 +80,7 @@ def main():
         return "invalid input"
     if set([game.check_columns(), game.check_diagonals(), game.check_rows()]) == {"None"}:
         return "draw"
-    check_fun =game.check_function() 
+    check_fun = game.check_function()
     if check_fun is not None:
         return check_fun
     if game.check_rows() is False or game.check_columns() is False or \
