@@ -1,7 +1,9 @@
 class Tictactoe(object):
+    '''tic tac toe class'''
     def __init__(self, board):
         self.board = board
     def check_rows(self):
+        '''check rows'''
         out_lst = []
         if set(self.board[0]) == {'x'} or set(self.board[1]) == {'x'} \
         or set(self.board[2]) == {'x'}:
@@ -14,6 +16,7 @@ class Tictactoe(object):
         if len(out_lst) == 1:
             return out_lst[0]
     def check_columns(self):
+        '''check columns'''
         out_lst = []
         if set([self.board[0][0], self.board[1][0], self.board[2][0]]) == {'x'} \
         or set([self.board[0][1], self.board[1][1], self.board[2][1]]) == {'x'} \
@@ -28,6 +31,7 @@ class Tictactoe(object):
         if len(out_lst) == 1:
             return out_lst[0]
     def check_diagonals(self):
+        '''check diagonals'''
         out_lst = []
         if set([self.board[0][0], self.board[1][1], self.board[2][2]]) == {'x'}\
         or set([self.board[0][2], self.board[1][1], self.board[2][0]]) == {'x'}:
@@ -40,6 +44,7 @@ class Tictactoe(object):
         if len(out_lst) == 1:
             return out_lst[0]
     def board_check(self):
+        '''board check'''
         check = 0
         for ele in self.board:
             check = check + ele.count('.') + ele.count('x') + ele.count('o')
@@ -47,6 +52,7 @@ class Tictactoe(object):
             return 1
         return 0
 def main():
+    '''main function'''
     board = []
     for i in range(3):
         board.append(input().split())
