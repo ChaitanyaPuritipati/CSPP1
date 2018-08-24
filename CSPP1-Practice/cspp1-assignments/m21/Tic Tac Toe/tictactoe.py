@@ -55,7 +55,7 @@ class Tictactoe():
         if check != 9:
             return 1
         return 0
-    def check_function():
+    def check_function(self):
         if (game.check_rows() == 'x' or game.check_rows() == 'o') and \
         (set([game.check_columns(), game.check_diagonals()]) == {"None"}):
             return game.check_rows()
