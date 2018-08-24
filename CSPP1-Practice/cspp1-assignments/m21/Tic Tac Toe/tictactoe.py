@@ -56,7 +56,7 @@ for i in range(3):
 	board.append(input().split()) 
 game = Tictactoe(board)
 if game.board_check() == 1:
-    return "invalid input"
+    print("invalid input")
 #def displayboard(board):
     #for i in board:
         #for j in i:
