@@ -48,7 +48,7 @@ class Tictactoe(object):
 #board = [['_','_','_'],['_','_','_'],['_','_','_']]
 board = []
 for i in range(3):
-	board.append(input()) 
+	board.append(input().split()) 
 print(board)
 #game = Tictactoe(board)
 #def displayboard(board):
