@@ -16,7 +16,7 @@ def main():
     num_lines = int(input())
     input_str = ""
     for i in range(num_lines):
-        input_str = input_str.append(input())
+        input_str = input_str + input()
         input_str = (input_str.split())
         input_str = (' '.join(e for e in input_str if e.isalpha())).split()
     print(input_str)    
