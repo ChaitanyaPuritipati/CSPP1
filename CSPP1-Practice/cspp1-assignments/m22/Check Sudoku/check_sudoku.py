@@ -30,19 +30,21 @@ def check_col(sudoku):
     '''
     Function to check columns
     '''
+    print(len(sudoku))
     for every_row in range(len(sudoku)):
         col_set = set()
         for every_col in range(len(sudoku[0])):
             col_set.add(sudoku[every_col][every_row])
-        if len(col_set) != 9:
+        if len(col_set) != len(sudoku):
             return False
     return True
 def check_row(sudoku):
     '''
     function to check rows
     '''
+    print(len(sudoku))
     for every_row in sudoku:
-        if len(set(every_row)) != 9:
+        if len(set(every_row)) != len(sudoku):
             return False
     return True
 def check_sudoku(sudoku):
