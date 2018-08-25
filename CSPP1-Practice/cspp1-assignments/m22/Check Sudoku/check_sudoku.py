@@ -1,4 +1,9 @@
 '''
+    Author: P.Chaitanya Prasad Reddy
+    Roll no: 20186018
+    Date: 25-08-2018
+    CSPP1 EXAM WEEK 4
+    -----------------------------------------------------------------------------------------
     Sudoku is a logic-based, combinatorial number-placement puzzle.
     The objective is to fill a 9×9 grid with digits so that
     each column, each row, and each of the nine 3×3 subgrids that compose the grid
