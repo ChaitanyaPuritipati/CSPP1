@@ -10,6 +10,7 @@
 def check_grid(sudoku):
     new_rows = []
     for every_row in sudoku:
+        i = 0
         while i < (len(sudoku[0])-2):
             new_rows.append([sudoku[i:i+3]])
             i = i+3
