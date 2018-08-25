@@ -7,10 +7,11 @@
     Complete the check_sudoku function to check if the given grid
     satisfies all the sudoku rules given in the statement above.
 '''
-#def check_col(sudoku):
-	#for 
+# def check_col(sudoku):
+# 	for
 def check_row(sudoku):
     for every_row in sudoku:
+    	print(set(every_row))
     	if len(set(every_row)) != 9:
     		return False
     return True
