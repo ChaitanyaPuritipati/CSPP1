@@ -23,7 +23,7 @@ def check_grid(sudoku):
     for i in range(3):
         j = i
         while j <= i+2*(len(sudoku)):
-            test_matrix = new_rows[j:j+6:3]
+            test_matrix = new_rows[j:j+7:3]
             print(test_matrix)
             j = j + len(sudoku)            
 def check_col(sudoku):
