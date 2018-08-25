@@ -11,7 +11,7 @@
 # 	for
 def check_row(sudoku):
     for every_row in sudoku:
-    	print(set(every_row))
+    	print(set(every_row), len(set(every_row)))
     	if len(set(every_row)) != 9:
     		return False
     return True
