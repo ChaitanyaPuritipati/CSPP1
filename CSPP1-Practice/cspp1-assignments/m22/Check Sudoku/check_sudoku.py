@@ -16,19 +16,30 @@ def check_grid(sudoku):
             new_rows.append(every_row[i:i+3])
             i = i+3
     print(new_rows, len(new_rows))
-# def check_col(sudoku):
-#     for every_row in range(len(sudoku)):
-#         col_set = set()
-#         for every_col in range(len(sudoku[0])):
-#             col_set.add(sudoku[every_col][every_row])
-#         if len(col_set) != len(sudoku):
-#             return False
-#     return True            
-# def check_row(sudoku):
-#     for every_row in sudoku:
-#         if len(set(every_row)) != len(sudoku):
-#             return False
-#     return True
+    for i in range(3):
+        j = i + (2*len(sudoku))
+        k = 0
+        while  k <= j :
+            check_grid_matrix = new_rows[k:k+6:3]
+            if check_row(check_grid_matrix) is False:
+                return False
+            if check_col(check_grid_matrix) is False:
+                return False
+            k = k + len(sudoku)
+
+def check_col(sudoku):
+    for every_row in range(len(sudoku)):
+        col_set = set()
+        for every_col in range(len(sudoku[0])):
+            col_set.add(sudoku[every_col][every_row])
+        if len(col_set) != len(sudoku):
+            return False
+    return True            
+def check_row(sudoku):
+    for every_row in sudoku:
+        if len(set(every_row)) != len(sudoku):
+            return False
+    return True
 def check_sudoku(sudoku):
     '''
         Your solution goes here. You may add other helper functions as needed.
