@@ -20,7 +20,7 @@ def check_grid(sudoku):
         j = i + (2*len(sudoku))
         k = 0
         while  k <= j :
-            check_grid_matrix = new_rows[k:k+6:3]
+            check_grid_matrix = new_rows[k:k+9:3]
             print(check_grid_matrix)
             if check_row(check_grid_matrix) is False:
                 return False
