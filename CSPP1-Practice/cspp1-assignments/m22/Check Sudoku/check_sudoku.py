@@ -12,7 +12,7 @@ def check_col(sudoku):
     for every_row in range(len(sudoku)):
         col_set = set()
         for every_col in range(len(sudoku[0])):
-            col_set.add(sudoku[every_row][every_col])
+            col_set.add(sudoku[every_col][every_row])
         print(col_set, len(col_set))
         if len(col_set) != 9:
             return False
