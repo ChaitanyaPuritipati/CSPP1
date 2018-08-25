@@ -34,7 +34,7 @@ def check_sudoku(sudoku):
         return False 
     if check_row(sudoku) is False:
         return False
-    (check_grid())
+    (check_grid(sudoku))
 
 def main():
     '''
