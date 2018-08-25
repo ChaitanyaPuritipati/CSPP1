@@ -10,7 +10,7 @@
 def check_grid(sudoku):
     new_rows = []
     for every_row in sudoku:
-        new_rows.append(every_row.slice(,,3))
+        new_rows.append(every_row.slice(0,8,3))
     print(new_rows)    
 def check_col(sudoku):
     for every_row in range(len(sudoku)):
