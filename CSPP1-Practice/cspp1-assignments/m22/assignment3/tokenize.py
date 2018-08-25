@@ -8,8 +8,9 @@ def tokenize(string):
             
 def main():
     num_lines = int(input())
+    string = ""
     for i in range(num_lines):
-    	print(input())
-
+    	string += input()
+    print(string)
 if __name__ == '__main__':
     main()
