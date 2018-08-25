@@ -19,14 +19,14 @@ def check_grid(sudoku):
     for i in range(3):
         j = i + (2*len(sudoku))
         k = 0
-        while  k <= j :
+        while  k < 27 :
             check_grid_matrix = new_rows[k:k+9:3]
             print(check_grid_matrix)
             if check_row(check_grid_matrix) is False:
                 return False
             if check_col(check_grid_matrix) is False:
                 return False
-            k = k + 3
+            k = k + 9
 
 def check_col(sudoku):
     for every_row in range(len(sudoku)):
