@@ -8,9 +8,14 @@
     satisfies all the sudoku rules given in the statement above.
 '''
 def check_col(sudoku):
-    print(len(sudoku))
+    #print(len(sudoku))
     for every_row in range(len(sudoku)):
-        return "hello"
+        col_set = set()
+        for every_col in range(len(sudoku[0])):
+            col_set.add(sudoku[every_row][every_col])
+        if len(col_set) != 9:
+            return False
+    return True            
 def check_row(sudoku):
     for every_row in sudoku:
         if len(set(every_row)) != 9:
@@ -23,8 +28,9 @@ def check_sudoku(sudoku):
     '''
     if check_row(sudoku) is False:
         return False
-    print(check_col(sudoku)) 
-        #return False
+    if check_col(sudoku) is False:
+        return False    
+        
 
 def main():
     '''
