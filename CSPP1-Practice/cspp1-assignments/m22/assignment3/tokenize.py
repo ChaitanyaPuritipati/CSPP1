@@ -6,8 +6,8 @@ each word
 def tokenize(string, output_dict):
     string = (string.split())
     string = (' '.join(e for e in string if e.isalpha())).split()
-    print(string)
-    print(output_dict)
+    #print(string)
+    #print(output_dict)
     for every_ele in string:
     	if every_ele in output_dict:
     		output_dict[every_ele] += 1
@@ -20,6 +20,6 @@ def main():
     for i in range(num_lines):
     	input_str = input()
     	output_dict = tokenize(input_str, output_dict)
-    return output_dict
+    print(output_dict)
 if __name__ == '__main__':
     main()
