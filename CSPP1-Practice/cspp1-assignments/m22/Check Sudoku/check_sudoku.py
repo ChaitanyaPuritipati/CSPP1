@@ -7,13 +7,16 @@
     Complete the check_sudoku function to check if the given grid
     satisfies all the sudoku rules given in the statement above.
 '''
+def check_grid(sudoku):
+    new_rows = []
+    for every_row in sudoku:
+        new_rows.append(every_row.slice(,,3))
+    print(new_rows)    
 def check_col(sudoku):
-    #print(len(sudoku))
     for every_row in range(len(sudoku)):
         col_set = set()
         for every_col in range(len(sudoku[0])):
             col_set.add(sudoku[every_col][every_row])
-        #print(col_set, len(col_set))
         if len(col_set) != 9:
             return False
     return True            
@@ -31,9 +34,7 @@ def check_sudoku(sudoku):
         return False 
     if check_row(sudoku) is False:
         return False
-    # if check_col(sudoku) is False:
-    #     return False   
-        
+    (check_grid())
 
 def main():
     '''
