@@ -6,6 +6,8 @@ each word
 def tokenize(string, output_dict):
     string = (string.split())
     string = (' '.join(e for e in string if e.isalpha())).split()
+    print(string)
+    print(output_dict)
     for every_ele in string:
     	if every_ele in output_dict:
     		output_dict[every_ele] += 1
