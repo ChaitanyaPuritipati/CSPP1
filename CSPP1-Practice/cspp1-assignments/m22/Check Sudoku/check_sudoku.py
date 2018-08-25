@@ -35,12 +35,12 @@ def check_col(sudoku):
         col_set = set()
         for every_col in range(len(sudoku[0])):
             col_set.add(sudoku[every_col][every_row])
-        if len(col_set) != len(sudoku):
+        if len(col_set) != 9:
             return False
     return True          
 def check_row(sudoku):
     for every_row in sudoku:
-        if len(set(every_row)) != len(sudoku):
+        if len(set(every_row)) != 9:
             return False
     return True
 def check_sudoku(sudoku):
