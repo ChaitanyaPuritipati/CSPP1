@@ -6,9 +6,9 @@ alphabets in both upper and lower case and numbers.
 def clean_string(string):
     output_str = ""
     for e in string:
-        if e not in '!@#$%^&*':
+        if e not in '!@#$%^&*().,':
             output_str += e
-    return output_str        
+    return output_str       
 
 
 def main():
