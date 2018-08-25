@@ -12,7 +12,6 @@
     Complete the check_sudoku function to check if the given grid
     satisfies all the sudoku rules given in the statement above.
 '''
-def grid_check(sudoku):
 def check_grid(sudoku):
     new_rows = []
     for every_row in sudoku:
