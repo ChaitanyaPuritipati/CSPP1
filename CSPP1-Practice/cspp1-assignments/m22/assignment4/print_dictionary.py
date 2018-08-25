@@ -9,7 +9,7 @@ def print_dictionary(dictionary):
     dict_values = list(dictionary.values())
     dict_test_keys = dict_keys[:]
     dict_test_keys.sort()
-    print(dict_test_keys)
+    print(dict_values)
 
 def main():
     dictionary = eval(input())
