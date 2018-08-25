@@ -25,8 +25,7 @@ def check_grid(sudoku):
                 return False
             if check_col(check_grid_matrix) is False:
                 return False
-            k = k + 1
-
+            break
 def check_col(sudoku):
     for every_row in range(len(sudoku)):
         col_set = set()
