@@ -10,7 +10,7 @@
 def check_col(sudoku):
     print(len(sudoku))
     for every_row in range(len(sudoku)):
-
+        return "hello"
 def check_row(sudoku):
     for every_row in sudoku:
         if len(set(every_row)) != 9:
@@ -23,7 +23,7 @@ def check_sudoku(sudoku):
     '''
     if check_row(sudoku) is False:
         return False
-    #if check_col(sudoku) is False:
+    print(check_col(sudoku)) 
         #return False
 
 def main():
