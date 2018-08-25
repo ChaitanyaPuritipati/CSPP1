@@ -8,7 +8,7 @@ def tokenize(string, output_dict):
     print(string)
 
     for every_ele in string:
-        every_ele = every_ele.strip("")
+        every_ele = every_ele.strip('",')
         print(every_ele)
         if every_ele in output_dict:
             output_dict[every_ele] += 1
