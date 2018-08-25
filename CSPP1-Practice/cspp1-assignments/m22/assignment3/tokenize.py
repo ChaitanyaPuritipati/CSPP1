@@ -13,6 +13,7 @@ def tokenize(string, output_dict):
     	    output_dict[every_ele] = 1	
     return output_dict
 def main():
+    output_dict = {}
     num_lines = int(input())
     for i in range(num_lines):
     	input_str = input()
