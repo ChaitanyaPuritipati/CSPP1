@@ -12,13 +12,21 @@
     Complete the check_sudoku function to check if the given grid
     satisfies all the sudoku rules given in the statement above.
 '''
+def grid_check(sudoku):
+def check_grid(sudoku):
+    new_rows = []
+    for every_row in sudoku:
+        i = 0
+        while i < (len(sudoku[0])-2):
+            new_rows.append(every_row[i:i+3])
+            i = i+3
+    print(new_rows)        
 def check_col(sudoku):
     '''
     Function to check columns
     '''
     for every_row in range(len(sudoku)):
         col_set = set()
-        print(len(sudoku[0]))
         for every_col in range(len(sudoku[0])):
             col_set.add(sudoku[every_col][every_row])
         if len(col_set) != 9:
