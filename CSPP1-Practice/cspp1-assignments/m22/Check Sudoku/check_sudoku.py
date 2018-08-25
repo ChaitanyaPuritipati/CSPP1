@@ -26,7 +26,7 @@ def check_grid(sudoku):
                 return False
             if check_col(check_grid_matrix) is False:
                 return False
-            k = k + len(sudoku)
+            k = k + 3
 
 def check_col(sudoku):
     for every_row in range(len(sudoku)):
