@@ -8,6 +8,9 @@
     satisfies all the sudoku rules given in the statement above.
 '''
 def check_col(sudoku):
+    '''
+    Function to check columns
+    '''
     for every_row in range(len(sudoku)):
         col_set = set()
         for every_col in range(len(sudoku[0])):
@@ -16,6 +19,9 @@ def check_col(sudoku):
             return False
     return True
 def check_row(sudoku):
+    '''
+    function to check rows
+    '''
     for every_row in sudoku:
         if len(set(every_row)) != 9:
             return False
@@ -54,4 +60,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-    
