@@ -7,29 +7,6 @@
     Complete the check_sudoku function to check if the given grid
     satisfies all the sudoku rules given in the statement above.
 '''
-# def check_grid(sudoku):
-#     new_rows = []
-#     for every_row in sudoku:
-#         i = 0
-#         while i < (len(sudoku[0])-2):
-#             #print(every_row[i:i+3])
-#             new_rows.append(every_row[i:i+3])
-#             i = i+3
-#     #print(new_rows, len(new_rows))
-#     k = 0
-#     # for i in range(3):
-#     #     while  k < 3:
-#     #         l = k
-#     #         while l < (i + 2*len(sudoku)):
-#     #             check_grid_matrix = new_rows[l:l+9:3]
-#     #             print(check_grid_matrix)
-#     #             if check_row(check_grid_matrix) is False:
-#     #                 return False
-#     #             if check_col(check_grid_matrix) is False:
-#     #                 return False
-#     #             l = l + len(sudoku)
-#     #         k = k + 1
-#     return True
 def check_col(sudoku):
     for every_row in range(len(sudoku)):
         col_set = set()
@@ -55,9 +32,7 @@ def check_sudoku(sudoku):
     for every_row in sudoku:
         for i in every_row:
             if i not in "1234567890":
-                return False    
-    # if check_grid(sudoku) is False:
-    #     return False
+                return False
     return True
 
 def main():
