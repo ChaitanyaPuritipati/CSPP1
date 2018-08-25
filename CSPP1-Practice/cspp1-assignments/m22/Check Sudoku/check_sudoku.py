@@ -26,7 +26,7 @@ def check_grid(sudoku):
 #         if len(set(every_row)) != len(sudoku):
 #             return False
 #     return True
-# def check_sudoku(sudoku):
+ def check_sudoku(sudoku):
 #     '''
 #         Your solution goes here. You may add other helper functions as needed.
 #         The function has to return True for a valid sudoku grid and false otherwise
