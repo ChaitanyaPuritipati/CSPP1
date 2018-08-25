@@ -5,7 +5,7 @@ each word
 
 def tokenize(string):
     string = (string.split())
-    string = (e for e in string if e.isalpha())
+    string = ''.join(e for e in string if e.isalpha())
     print(string)
             
 def main():
