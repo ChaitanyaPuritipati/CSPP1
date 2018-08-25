@@ -24,7 +24,6 @@ def check_grid(sudoku):
         j = i
         while j <= i+2*(len(sudoku)):
             test_matrix = new_rows[j:j+7:3]
-            print(test_matrix)
             if check_col(test_matrix) is False:
                 return False
             if check_row(test_matrix) is False:
@@ -41,7 +40,9 @@ def check_col(sudoku):
         for every_col in range(len(sudoku[0])):
             col_set.add(sudoku[every_col][every_row])
         if len(col_set) != len(sudoku):
+            print("False")
             return False
+    print("true")        
     return True
 def check_row(sudoku):
     '''
