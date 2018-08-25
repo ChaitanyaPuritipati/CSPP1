@@ -48,6 +48,8 @@ def check_sudoku(sudoku):
         return False
     if check_col(sudoku) is False:
         return False
+    if check_grid(sudoku) is False:
+        return False    
     for every_row in sudoku:
         for i in every_row:
             if i not in "1234567890":
