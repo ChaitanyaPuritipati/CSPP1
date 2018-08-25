@@ -6,9 +6,9 @@ each word
 def tokenize(string, output_dict):
     string = (string.split())
     print(string)
-    #print(string)
-    #print(output_dict)
+
     for every_ele in string:
+        print(every_ele)
     	if every_ele in output_dict:
     		output_dict[every_ele] += 1
     	else:
