@@ -19,13 +19,18 @@ def check_grid(sudoku):
         while i < (len(sudoku[0])-2):
             new_rows.append(every_row[i:i+3])
             i = i+3
-    print(new_rows)
+    #print(new_rows)
     for i in range(3):
         j = i
         while j <= i+2*(len(sudoku)):
             test_matrix = new_rows[j:j+7:3]
             print(test_matrix)
-            j = j + len(sudoku)            
+            if check_col(test_matrix) is False:
+                return False
+            if check_row(test_matrix) is False:
+                return False    
+            j = j + len(sudoku)
+
 def check_col(sudoku):
     '''
     Function to check columns
