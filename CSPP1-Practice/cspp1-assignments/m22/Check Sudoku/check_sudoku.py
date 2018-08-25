@@ -7,6 +7,8 @@
     Complete the check_sudoku function to check if the given grid
     satisfies all the sudoku rules given in the statement above.
 '''
+def check_col(sudoku):
+	for 
 def check_row(sudoku):
     for every_row in sudoku:
     	if len(set(every_row)) != 9:
@@ -17,8 +19,10 @@ def check_sudoku(sudoku):
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
-    if check_row(sudoku):
-        return True
+    if check_row(sudoku) is False:
+        return False
+    #if check_col(sudoku) is False:
+        #return False
 
 def main():
     '''
