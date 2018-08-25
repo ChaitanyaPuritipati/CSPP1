@@ -5,7 +5,7 @@ each word
 
 def tokenize(string, output_dict):
     string = (string.split())
-    string = (' '.join(e for e in string if e.isalphanum())).split()
+    print(string)
     #print(string)
     #print(output_dict)
     for every_ele in string:
