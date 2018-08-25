@@ -13,7 +13,7 @@ def check_grid(sudoku):
         i = 0
         while i < (len(sudoku[0])-2):
             print(every_row[i:i+3])
-            new_rows.append([every_row[i:i+3]])
+            new_rows.append(every_row[i:i+3])
             i = i+3
     print(new_rows)
 # def check_col(sudoku):
