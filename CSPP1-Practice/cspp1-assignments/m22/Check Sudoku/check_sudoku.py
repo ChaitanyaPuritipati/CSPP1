@@ -27,7 +27,7 @@
 #     #                 return False
 #     #             if check_col(check_grid_matrix) is False:
 #     #                 return False
-#     #             l = l + len(sudoku)   
+#     #             l = l + len(sudoku)
 #     #         k = k + 1
 #     return True
 def check_col(sudoku):
@@ -37,7 +37,7 @@ def check_col(sudoku):
             col_set.add(sudoku[every_col][every_row])
         if len(col_set) != 9:
             return False
-    return True          
+    return True
 def check_row(sudoku):
     for every_row in sudoku:
         if len(set(every_row)) != 9:
@@ -51,7 +51,11 @@ def check_sudoku(sudoku):
     if check_row(sudoku) is False:
         return False
     if check_col(sudoku) is False:
-        return False    
+        return False
+    for every_row in sudoku:
+        for i in every_row:
+            if i not in "1234567890":
+                return False    
     # if check_grid(sudoku) is False:
     #     return False
     
@@ -66,10 +70,11 @@ def main():
     sudoku = []
 
     # loop to read 9 lines of input from console
-    for i in range(9):
+    for i_num in range(9):
         # read a line, split it on SPACE and append row to list
         row = input().split(' ')
         sudoku.append(row)
+        i_num += 1
     # call solution function and print result to console
     print(check_sudoku(sudoku))
 
