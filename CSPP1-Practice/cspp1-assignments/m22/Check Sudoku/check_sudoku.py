@@ -18,14 +18,15 @@ def check_grid(sudoku):
     #print(new_rows, len(new_rows))
     k = 0
     for i in range(3):
-        while  k < 3:
+        j = i + 2*len(sudoku)
+        while  k <= j:
             check_grid_matrix = new_rows[k:k+9:3]
             print(check_grid_matrix)
             if check_row(check_grid_matrix) is False:
                 return False
             if check_col(check_grid_matrix) is False:
                 return False
-            k = k + 1
+            k = k + len(sudoku)
 def check_col(sudoku):
     for every_row in range(len(sudoku)):
         col_set = set()
