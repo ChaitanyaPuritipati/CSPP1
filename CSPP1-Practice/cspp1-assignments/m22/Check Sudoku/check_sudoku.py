@@ -33,7 +33,6 @@ def check_col(sudoku):
     '''
     Function to check columns
     '''
-    print(len(sudoku))
     for every_row in range(len(sudoku)):
         col_set = set()
         for every_col in range(len(sudoku[0])):
@@ -57,7 +56,6 @@ def check_sudoku(sudoku):
     for every_row in sudoku:
         for i in every_row:
             if i not in "1234567890":
-                print("executed")
                 return False
     if check_row(sudoku) is False:
         return False
