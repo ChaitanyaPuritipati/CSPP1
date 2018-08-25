@@ -9,7 +9,8 @@ def print_dictionary(dictionary):
     dict_values = list(dictionary.values())
     dict_test_keys = dict_keys[:]
     dict_test_keys.sort()
-    print(dict_keys)
+    for every_val in dict_test_keys:
+    	print(every_val + " " + "-" + " "+ str(dict_values[dict_test_keys.index(every_val)]))
 
 def main():
     dictionary = eval(input())
